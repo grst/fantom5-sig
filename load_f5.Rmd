@@ -1,0 +1,25 @@
+Loading Fantom 5 into an Expression Set
+========================================================
+
+```{r}
+library(Biobase)
+library(testit)
+```
+
+
+Load Gene Expression data from the Fantom5 Dataset
+```{r}
+data.file = file.path("fantom5_head2000.txt")
+data.tab = read.table(data.file, sep="\t", row.names=1, header=TRUE, as.is=TRUE, na.strings=c(NA))
+exprs.mat = as.matrix(data.tab[3:nrow(data.tab),7:ncol(data.tab)])
+
+assert("didn't get all rows", nrow(exprs.mat)==27)
+assert("didn't get all cols", ncol(exprs.mat)==23)
+
+expr.set = ExpressionSet(assayData=exprs.mat)
+```
+
+Load phenotypic data (covariates per Sample, such as sex, age, ...). 
+```{r}
+pdata.file = file.path("samples1829_simplified")
+pdata.tab
