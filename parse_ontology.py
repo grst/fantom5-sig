@@ -205,12 +205,12 @@ def get_annotation_from_ontology(obo, tags):
 
     Returns:
         time_o: term_id of a TIME ontology or None if not specified.
-        tech_rep_o: True, if the sample is a technical replicate, else False
-        biol_rep_o, True, if the sample is a biological replicate, else False
+        tech_rep_o: True, if the sample is a technical replicate, else None
+        biol_rep_o, True, if the sample is a biological replicate, else None
 
     """
-    tech_rep_o = False
-    biol_rep_o = False
+    tech_rep_o = None
+    biol_rep_o = None
     time_o = None
     for tag, tag_value, _, _ in tags:
         if tag == "is_a":
@@ -254,44 +254,47 @@ def process_time(obo, time_n, time_o):
         return None
 
 
+def process_sample_description(obo, sample_info):
+    """
+    Get sample annotation from ontology and from the sample name.
+    Check for consistency between name and Ontology and merge the
+    two sources in case the data is only available in one.
 
+    Args:
+        obo: OBOOntology Object
+        sample_info: one line from the extracted column_vars, e.g.
+            "tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4"
 
+    Returns:
+        annot: dictionary with column annotations
 
-if __name__ == "__main__":
-    obo = OBOOntology()
-    logging.info("loading ontology.")
-    obo.load(open("data/ff-phase2-140729.obo"))
+    """
+    obo_id = get_obo_id(sample_info)
+    obo_term = obo.term(obo_id)
+    tags = obo_term.tags()
+    name = obo_term.name
 
-    logging.info("loading column vars. ")
-    with open("data/column_vars.txt") as sample_info_file:
-        sample_info = sample_info_file.readlines()
+    # values parsed from name
+    donor_n = get_donor(name)
+    time_n = get_time(name)
+    tech_rep_n = get_tech_replicate(name)
+    biol_rep_n = get_biol_replicate(name)
 
-        logging.info("processing column vars line by line. ")
-        for info_line in sample_info:
-            obo_id = get_obo_id(info_line)
-            obo_term = obo.term(obo_id)
-            tags = obo_term.tags()
-            name = obo_term.name
+    # values parsed from ontology
+    time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
 
-            # values parsed from name
-            donor_n = get_donor(name)
-            time_n = get_time(name)
-            tech_rep_n = get_tech_replicate(name)
-            biol_rep_n = get_biol_replicate(name)
+    # make annotation dict
+    annot = {
+        "name": name,
+        "obo_id": obo_id,
+        "donor": donor_n,
+        "time": process_time(obo, time_n, time_o),
+        "biol_rep": (bool(biol_rep_o) or bool(biol_rep_n)),
+        "tech_rep": (bool(tech_rep_o) or bool(tech_rep_n))
+    }
 
-            # values parsed from ontology
-            time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
+    return annot
 
-            # make annotation dict
-            annot = {
-                "name": name,
-                "donor": donor_n,
-                "time": process_time(obo, time_n, time_o),
-                "biol_rep": (bool(biol_rep_o) or bool(biol_rep_n)),
-                "tech_rep": (bool(tech_rep_o) or bool(tech_rep_n))
-            }
-
-            print(annot)
 
 
 
