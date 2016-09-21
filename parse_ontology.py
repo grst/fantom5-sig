@@ -1,6 +1,14 @@
-from itertools import repeat
 import re
 from orangecontrib.bio.ontology import OBOOntology
+import itertools
+import logging
+
+# The IDs from the ontology file
+TECH_REP = "EFO:0002090"
+BIOL_REP = "EFO:0002091"
+HOUR_TERM = "UO:0000032"
+MINUTE_TERM = "UO:0000031"
+DAY_TERM = "UO:0000033"
 
 
 def get_rex_value(regex, str):
@@ -69,17 +77,31 @@ def get_donor(str):
     return get_rex_value(DONOR_REGEX, str)
 
 
-def get_replicate(str):
+def get_biol_replicate(str):
     """
-    Parse replicate from column header
+    Parse biological replicate from column header.
+    Both rep1 and biol_rep1 are considered as a biological replicate.
 
-    >>> get_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, biol_rep1.CNhs14406.13541-145H4")
+    >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, biol_rep1.CNhs14406.13541-145H4")
     'biol_rep1'
-    >>> get_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, rep1.CNhs14406.13541-145H4")
+    >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, rep1.CNhs14406.13541-145H4")
     'rep1'
 
     """
-    REPLICATE_REGEX = re.compile(r'((biol|tech)_)?rep(\d+)')
+    REPLICATE_REGEX = re.compile(r'(biol_)?rep(\d+)')
+    return get_rex_value(REPLICATE_REGEX, str)
+
+
+def get_tech_replicate(str):
+    """
+    Parse replicate from column header
+
+    >>> get_tech_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, tech_rep1.CNhs14406.13541-145H4")
+    'tech_rep1'
+    >>> get_tech_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, rep1.CNhs14406.13541-145H4")
+
+    """
+    REPLICATE_REGEX = re.compile(r'tech_rep(\d+)')
     return get_rex_value(REPLICATE_REGEX, str)
 
 
@@ -87,7 +109,29 @@ def contains_term(term, tag_name, tag_value):
     """Check if a set of tags (from a certain term) contains a certain annotation (e.g. is_a: 24-hour-sample)"""
     return any(a == tag_name and b == tag_value for a, b in term.tags())
 
-def compare_time(string, obo_id, obo):
+
+def get_time_terms(obo):
+    hour_terms = [term.id for term in obo.child_terms(HOUR_TERM)]
+    minute_terms = [term.id for term in obo.child_terms(MINUTE_TERM)]
+    day_terms = [term.id for term in obo.child_terms(DAY_TERM)]
+    return hour_terms, minute_terms, day_terms
+
+
+def is_time_term(obo, term_id):
+    """
+    Return true if the term_id is a time-ontology
+
+    >>> obo = OBOOntology()
+    >>> obo.load(open("data/ff-phase2-140729.obo"))
+    >>> is_time_term(obo, "FF:0000357")
+    True
+    >>> is_time_term(obo, "FF:0350357")
+    False
+    """
+    return True if term_id in itertools.chain(*get_time_terms(obo)) else False
+
+
+def compare_time(obo, string, obo_id):
     """
     Compare the time-string from the header and the corresponding ontology term.
     Return true if the two times are considered to be identical.
@@ -99,14 +143,12 @@ def compare_time(string, obo_id, obo):
 
     >>> obo = OBOOntology()
     >>> obo.load(open("data/ff-phase2-140729.obo"))
-    >>> compare_time("00hr", "FF:0000357", obo)
+    >>> compare_time(obo, "00hr", "FF:0000357")
     True
-    >>> compare_time("24hr", "FF:0000357", obo)
+    >>> compare_time(obo, "24hr", "FF:0000357")
     False
     """
-    hour_terms = [term.id for term in obo.child_terms("UO:0000032")]
-    minute_terms = [term.id for term in obo.child_terms("UO:0000031")]
-    day_terms = [term.id for term in obo.child_terms("UO:0000033")]
+    hour_terms, minute_terms, day_terms = get_time_terms(obo)
 
     NO_REGEX = re.compile(r'(\d+)')
     if 'day' in string:
@@ -128,30 +170,128 @@ def compare_time(string, obo_id, obo):
         return False
 
 
-def compare_replicates(string, obo_id):
+def ontology_to_time(obo, obo_id):
     """
-    return true, if the replicate type is considered to be identical
+    Convert an ontology id to a readable time string.
 
-    >>> compare_replicates("biol_rep1", "EFO:0002091")
-    True
-    >>> compare_replicates("tech_rep1", "EFO:0002091")
-    False
+    >>> obo = OBOOntology()
+    >>> obo.load(open("data/ff-phase2-140729.obo"))
+    >>> ontology_to_time(obo, "FF:0000357")
+    '0hr'
 
     """
-    tech_rep = "EFO:0002090"
-    biol_rep = "EFO:0002091"
-
-    if "tech_rep" in string and obo_id == tech_rep:
-        return True
-    elif "biol_rep" in string and obo_id == biol_rep:
-        return True
+    hour_terms, minute_terms, day_terms = get_time_terms(obo)
+    NO_REGEX = re.compile(r'(\d+)')
+    term = obo.term(obo_id)
+    number = NO_REGEX.search(term.name).group()
+    if obo_id in hour_terms:
+        return "{0}hr".format(number)
+    elif obo_id in minute_terms:
+        return "{0}min".format(number)
+    elif obo_id in day_terms:
+        return "day{0}".format(number)
     else:
-        return False
+        return None
+
+
+def get_annotation_from_ontology(obo, tags):
+    """
+    loops through all is_a relationships in tags and look if it contains any relevant annotation.
+    Here, we extract the time and whether the sample is a biological or technical replicate.
+
+    Args:
+        obo: OBOOntology Object
+        tags: tags of an obo term
+
+    Returns:
+        time_o: term_id of a TIME ontology or None if not specified.
+        tech_rep_o: True, if the sample is a technical replicate, else False
+        biol_rep_o, True, if the sample is a biological replicate, else False
+
+    """
+    tech_rep_o = False
+    biol_rep_o = False
+    time_o = None
+    for tag, tag_value, _, _ in tags:
+        if tag == "is_a":
+            if is_time_term(obo, tag_value):
+                assert time_o is None, 'multiple matches: {0}'.format(tags)
+                time_o = tag_value
+            if tag_value == TECH_REP:
+                assert tech_rep_o is None, 'multiple matches: {0}'.format(tags)
+                tech_rep_o = True
+            if tag_value == BIOL_REP:
+                assert biol_rep_o is None, 'multiple matches: {0}'.format(tags)
+                biol_rep_o = True
+    return time_o, tech_rep_o, biol_rep_o
+
+
+def process_time(obo, time_n, time_o):
+    """
+    Compares the time extracted from the sample name and from the ontology.
+
+    Asserts that both times are equal, if available.
+    Ontology term-ids are converted to a readable time output (e.g. 12hr instead of FF:0000374)
+
+    Args:
+        obo: OBOOntology Object
+        time_n: time extracted from the sample name (something like 12hr)
+        time_o: time extracted from the sample ontology (term-id)
+
+    Returns:
+        time_string (e.g. 12hr) or None of no time found.
+
+    """
+    if time_n and time_o:
+        assert compare_time(obo, time_n, time_o), "mismatching times: {0}, {1}".format(time_n, time_o)
+        return time_n
+    elif time_o:
+        return ontology_to_time(obo, time_o)
+    elif time_n:
+        # Could write back to ontology here
+        return time_n
+    else:
+        return None
+
+
+
 
 
 if __name__ == "__main__":
     obo = OBOOntology()
-    obo.load(open("data/ff-phase2-140729.obo.txt"))
+    logging.info("loading ontology.")
+    obo.load(open("data/ff-phase2-140729.obo"))
 
-    
+    logging.info("loading column vars. ")
+    with open("data/column_vars.txt") as sample_info_file:
+        sample_info = sample_info_file.readlines()
+
+        logging.info("processing column vars line by line. ")
+        for info_line in sample_info:
+            obo_id = get_obo_id(info_line)
+            obo_term = obo.term(obo_id)
+            tags = obo_term.tags()
+            name = obo_term.name
+
+            # values parsed from name
+            donor_n = get_donor(name)
+            time_n = get_time(name)
+            tech_rep_n = get_tech_replicate(name)
+            biol_rep_n = get_biol_replicate(name)
+
+            # values parsed from ontology
+            time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
+
+            # make annotation dict
+            annot = {
+                "name": name,
+                "donor": donor_n,
+                "time": process_time(obo, time_n, time_o),
+                "biol_rep": (bool(biol_rep_o) or bool(biol_rep_n)),
+                "tech_rep": (bool(tech_rep_o) or bool(tech_rep_n))
+            }
+
+            print(annot)
+
+
 

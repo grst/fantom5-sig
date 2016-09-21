@@ -1,5 +1,6 @@
 data/*
 !data/ff-phase2-140729.obo
+!data/column_vars.txt
 
 # History files
 .Rhistory
