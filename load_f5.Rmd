@@ -4,14 +4,16 @@ Loading Fantom 5 into an Expression Set
 ```{r}
 library(Biobase)
 library(testit)
+library(readr)
 ```
 
 
 ### Load Gene Expression data from the Fantom5 Dataset
 ```{r}
 data.file = file.path("data/fantom5_head2000.txt")
-data.tab = read.table(data.file, sep="\t", row.names=1, header=TRUE, as.is=TRUE, na.strings=c(NA))
-exprs.mat = as.matrix(data.tab[3:nrow(data.tab),7:ncol(data.tab)]) # skip statistics and annotation
+data.tab = read_tsv(data.file, col_names=TRUE, comment="#")
+rownames(data.tab) = data.tab[,1]
+exprs.mat = as.matrix(data.tab[3:nrow(data.tab),8:ncol(data.tab)]) # skip statistics and annotation
 
 assert("didn't get all rows", nrow(exprs.mat)==27)
 assert("didn't get all cols", ncol(exprs.mat)==23)
@@ -56,8 +58,8 @@ pdata.annotated = new("AnnotatedDataFrame", data=pdata.tab, varMetadata=col.meta
 
 ### Annotation of the features (genes)
 ```{r}
-fdata.tab = data.tab[3:nrow(data.tab),1:6] # skip statistics
-fdata.annotated = new("AnnotatedDataFrame", data=fdata.tab)
+fdata.tab = data.tab[3:nrow(data.tab),2:7] # skip statistics
+fdata.annotated = new("AnnotatedDataFrame", data=as.data.frame(fdata.tab))
 ```
 
 
