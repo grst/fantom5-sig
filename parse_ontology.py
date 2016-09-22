@@ -274,7 +274,9 @@ def process_time(obo, time_n, time_o):
         # we have to handle cases such as 01hr40min
         out = []
         if time_n["day"] is not None:
-            out.append(time_n["day"] + ";")
+            out.append(time_n["day"])
+            if time_n["hr"] is not None or time_n['min'] is not None:
+                out.append(";")  # we need a separator in that case
         if time_n['hr'] is not None:
             out.append(time_n['hr'])
         if time_n['min'] is not None:
@@ -302,15 +304,19 @@ def process_sample_description(obo, sample_info):
     """
     logging.info("Processing sample '{}'".format(sample_info))
     obo_id = get_obo_id(sample_info)
+    lib_id = get_lib_id(sample_info)
     obo_term = obo.term(obo_id)
     tags = obo_term.tags()
+    name_orig = sample_info
     name = obo_term.name
 
     # values parsed from name
-    donor_n = get_donor(name)
-    time_n = get_time(name)
-    tech_rep_n = get_tech_replicate(name)
-    biol_rep_n = get_biol_replicate(name)
+    # we use the 'original' name here, as some information e.g. tech_rep is not available
+    # in the name retrieved from the ontology.
+    donor_n = get_donor(sample_info)
+    time_n = get_time(sample_info)
+    tech_rep_n = get_tech_replicate(sample_info)
+    biol_rep_n = get_biol_replicate(sample_info)
 
     # values parsed from ontology
     time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
@@ -323,7 +329,9 @@ def process_sample_description(obo, sample_info):
 
     # make annotation dict
     annot = {
+        "lib_id": lib_id,
         "name": name,
+        "name_orig": name_orig,
         "obo_id": obo_id,
         "donor": donor_n,
         "time": process_time(obo, time_n, time_o),
