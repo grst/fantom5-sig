@@ -10,13 +10,13 @@ library(readr)
 
 ### Load Gene Expression data from the Fantom5 Dataset
 ```{r}
-data.file = file.path("data/fantom5_head2000.txt")
+data.file = file.path("data/hg19.cage_peak_phase1and2combined_tpm_ann.osc.txt")
 data.tab = read_tsv(data.file, col_names=TRUE, comment="#")
 rownames(data.tab) = data.tab[,1]
 exprs.mat = as.matrix(data.tab[3:nrow(data.tab),8:ncol(data.tab)]) # skip statistics and annotation
 
-assert("didn't get all rows", nrow(exprs.mat)==27)
-assert("didn't get all cols", ncol(exprs.mat)==23)
+assert("didn't get all rows", nrow(exprs.mat)==201802)
+assert("didn't get all cols", ncol(exprs.mat)==1829)
 
 # set the colnames to a 'primary' key
 lib_ids = regmatches(colnames(exprs.mat), regexpr("CNhs(\\d+)", colnames(exprs.mat)))
@@ -29,7 +29,7 @@ pdata.file = file.path("data/column_vars.processed.csv")
 colClasses = c('logical', 'factor', 'character', 'character', 'character', 'character', 'logical', 'factor')
 names(colClasses) = c('biol_rep', 'donor', 'lib_id', 'name', 'name_orig', 'obo_id', 'tech_rep', 'time')
 pdata.tab = read.csv(pdata.file, header=TRUE, row.names="lib_id", colClasses=colClasses)
-pdata.tab = pdata.tab[1:23,2:ncol(pdata.tab)] # skip first col (numerical ids)
+pdata.tab = pdata.tab[,2:ncol(pdata.tab)] # skip first col (numerical ids)
 
 assert("sample keys do not match", all(rownames(pdata.tab) == colnames(exprs.mat)))
 
