@@ -2,6 +2,7 @@ import re
 from orangecontrib.bio.ontology import OBOOntology
 import itertools
 import logging
+from pprint import pprint
 
 # The IDs from the ontology file
 TECH_REP = "EFO:0002090"
@@ -54,14 +55,26 @@ def get_time(str):
     Parse time from column header
 
     >>> get_time("tpm of 293SLAM rinderpestday01 infectionday01, 00hr, biol_rep1.CNhs14406.13541-145H4")
-    'day01'
-    >>> get_time("tpm of 293SLAM rinderpestdayd01 infectionddady01, 00hr, biol_rep1.CNhs14406.13541-145H4")
-    '00hr'
-    >>> get_time("tpm of 293SLAM rinderpestdayd01 infectionddady01, 15min biol_rep1.CNhs14406.13541-145H4")
-    '15min'
+    Traceback (most recent call last):
+    ...
+    AssertionError: multiple times per unit day not allowed: tpm of 293SLAM rinderpestday01 infectionday01, 00hr, biol_rep1.CNhs14406.13541-145H4
+    >>> pprint(get_time("tpm of 293SLAM rinderpestd infectionday01, 00hr, biol_rep1.CNhs14406.13541-145H4"))
+    {'day': 'day01', 'hr': '00hr', 'min': None}
+    >>> pprint(get_time("tpm of 293SLAM rinderpestdayd01 infectionddady01, 00hxr, biol_rep1.CNhs14406.13541-145H4"))
+    {'day': None, 'hr': None, 'min': None}
+    >>> pprint(get_time("tpm of 293SLAM rinderpestd infectiond, 01hr40min, biol_rep1.CNhs14406.13541-145H4"))
+    {'day': None, 'hr': '01hr', 'min': '40min'}
     """
+    time = {"hr": None, "min": None, "day": None}
     TIME_REGEX = re.compile(r'(\d+)(hr|min)|day(\d+)')
-    return get_rex_value(TIME_REGEX, str)
+    for match_obj in TIME_REGEX.finditer(str):
+        time_str = match_obj.group()
+        for unit in time:
+            if unit in time_str:
+                assert time[unit] is None, 'multiple times per unit {} not allowed: {}'.format(unit, str)
+                time[unit] = time_str
+
+    return time
 
 
 def get_donor(str):
@@ -235,22 +248,38 @@ def process_time(obo, time_n, time_o):
 
     Args:
         obo: OBOOntology Object
-        time_n: time extracted from the sample name (something like 12hr)
+        time_n: time extracted from the sample name (something like 12hr) with get_time, i.e.
+                a dictionary {'day': ..., 'hr': ..., 'min': ...}
         time_o: time extracted from the sample ontology (term-id)
 
     Returns:
         time_string (e.g. 12hr) or None of no time found.
 
     """
-    if time_n and time_o:
-        assert compare_time(obo, time_n, time_o), "mismatching times: {0}, {1}".format(time_n, time_o)
-        return time_n
+    if any(time_n.values()) and time_o:
+        assert sum(x is not None for x in time_n.values()) == 1, 'multiple time units in name string, but only one in ' \
+                                                                 'ontology'
+        time_n_val = next(x for x in time_n.values() if x is not None)  # get the one element that is not None
+        assert compare_time(obo, time_n_val, time_o), "mismatching times: {0}, {1}".format(time_n, time_o)
+        logging.debug("consistent time information between term name and ontoloty.")
+        return time_n_val
     elif time_o:
+        logging.debug("using time information from ontology only.")
         return ontology_to_time(obo, time_o)
-    elif time_n:
+    elif any(time_n.values()):
+        logging.debug("using time information from term name only.")
         # Could write back to ontology here
-        return time_n
+        # we have to handle cases such as 01hr40min
+        out = []
+        if time_n["day"] is not None:
+            out.append(time_n["day"] + ";")
+        if time_n['hr'] is not None:
+            out.append(time_n['hr'])
+        if time_n['min'] is not None:
+            out.append(time_n['min'])
+        return "".join(out)
     else:
+        logging.debug("no time information available.")
         return None
 
 
@@ -269,6 +298,8 @@ def process_sample_description(obo, sample_info):
         annot: dictionary with column annotations
 
     """
+    logging.basicConfig(level=logging.DEBUG)
+    logging.info("Processing sample '{}'.format(sample_info)")
     obo_id = get_obo_id(sample_info)
     obo_term = obo.term(obo_id)
     tags = obo_term.tags()
@@ -282,6 +313,12 @@ def process_sample_description(obo, sample_info):
 
     # values parsed from ontology
     time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
+
+    # verbose logging
+    if bool(biol_rep_o) and bool(biol_rep_n):
+        logging.debug("consistent annotation of biological replicate. ")
+    if bool(tech_rep_o) and bool(tech_rep_n):
+        logging.debug("consistent annotation of technical replicate. ")
 
     # make annotation dict
     annot = {
