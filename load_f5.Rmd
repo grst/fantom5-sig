@@ -7,19 +7,55 @@ library(testit)
 ```
 
 
-Load Gene Expression data from the Fantom5 Dataset
+### Load Gene Expression data from the Fantom5 Dataset
 ```{r}
-data.file = file.path("fantom5_head2000.txt")
+data.file = file.path("data/fantom5_head2000.txt")
 data.tab = read.table(data.file, sep="\t", row.names=1, header=TRUE, as.is=TRUE, na.strings=c(NA))
 exprs.mat = as.matrix(data.tab[3:nrow(data.tab),7:ncol(data.tab)])
 
 assert("didn't get all rows", nrow(exprs.mat)==27)
 assert("didn't get all cols", ncol(exprs.mat)==23)
 
-expr.set = ExpressionSet(assayData=exprs.mat)
+# set the colnames to a 'primary' key
+lib_ids = regmatches(colnames(exprs.mat), regexpr("CNhs(\\d+)", colnames(exprs.mat)))
+colnames(exprs.mat) = lib_ids
 ```
 
-Load phenotypic data (covariates per Sample, such as sex, age, ...). 
+### Load phenotypic data (covariates per Sample, such as sex, age, ...). 
 ```{r}
-pdata.file = file.path("samples1829_simplified")
-pdata.tab
+pdata.file = file.path("data/column_vars.processed.csv")
+colClasses = c('logical', 'factor', 'character', 'character', 'character', 'character', 'logical', 'factor')
+names(colClasses) = c('biol_rep', 'donor', 'lib_id', 'name', 'name_orig', 'obo_id', 'tech_rep', 'time')
+pdata.tab = read.csv(pdata.file, header=TRUE, row.names="lib_id", colClasses=colClasses)
+pdata.tab = pdata.tab[1:23,2:ncol(pdata.tab)] # skip first col (numerical ids)
+
+assert("sample keys do not match", all(rownames(pdata.tab) == colnames(exprs.mat)))
+
+summary(pdata.tab)
+```
+
+Create more extensive column description as metadata
+```{r}
+col.metadata = data.frame(labelDescription=
+                            c("Biological Replicate", 
+                              "Donor", 
+                              "Sample name (from ontology)",
+                              "Sample name (original column name in expression data)",
+                              "Accession Number for the F5 ontology",
+                              "Technical Replicate",
+                              "Time Point"), 
+                          row.names=
+                            c('biol_rep', 'donor', 'name',
+                              'name_orig', 'obo_id', 'tech_rep', 'time'))
+
+col.metadata
+
+# Convert to AnnotatedDataFrame for the ExpressionSet
+pdata.annotated = new("AnnotatedDataFrame", data=pdata.tab, varMetadata=col.metadata)
+```
+
+### Assemble the ExpressionSet
+```{r}
+experimentData = new("MIAME",
+                     title="FANTOM5 human expression data. ")
+expr.set = ExpressionSet(assayData=exprs.mat, phenoData=pdata.annotated)
