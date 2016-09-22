@@ -99,6 +99,8 @@ def get_biol_replicate(str):
     'biol_rep1'
     >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, rep1.CNhs14406.13541-145H4")
     'rep1'
+    >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, CNhs14406.13541-145H4")
+
 
     """
     REPLICATE_REGEX = re.compile(r'(biol_)?rep(\d+)')
@@ -298,8 +300,7 @@ def process_sample_description(obo, sample_info):
         annot: dictionary with column annotations
 
     """
-    logging.basicConfig(level=logging.DEBUG)
-    logging.info("Processing sample '{}'.format(sample_info)")
+    logging.info("Processing sample '{}'".format(sample_info))
     obo_id = get_obo_id(sample_info)
     obo_term = obo.term(obo_id)
     tags = obo_term.tags()
@@ -331,7 +332,3 @@ def process_sample_description(obo, sample_info):
     }
 
     return annot
-
-
-
-
