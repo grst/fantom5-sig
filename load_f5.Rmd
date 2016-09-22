@@ -11,7 +11,7 @@ library(testit)
 ```{r}
 data.file = file.path("data/fantom5_head2000.txt")
 data.tab = read.table(data.file, sep="\t", row.names=1, header=TRUE, as.is=TRUE, na.strings=c(NA))
-exprs.mat = as.matrix(data.tab[3:nrow(data.tab),7:ncol(data.tab)])
+exprs.mat = as.matrix(data.tab[3:nrow(data.tab),7:ncol(data.tab)]) # skip statistics and annotation
 
 assert("didn't get all rows", nrow(exprs.mat)==27)
 assert("didn't get all cols", ncol(exprs.mat)==23)
@@ -54,8 +54,21 @@ col.metadata
 pdata.annotated = new("AnnotatedDataFrame", data=pdata.tab, varMetadata=col.metadata)
 ```
 
+### Annotation of the features (genes)
+```{r}
+fdata.tab = data.tab[3:nrow(data.tab),1:6] # skip statistics
+fdata.annotated = new("AnnotatedDataFrame", data=fdata.tab)
+```
+
+
 ### Assemble the ExpressionSet
 ```{r}
 experimentData = new("MIAME",
                      title="FANTOM5 human expression data. ")
-expr.set = ExpressionSet(assayData=exprs.mat, phenoData=pdata.annotated)
+expr.set = ExpressionSet(assayData=exprs.mat, 
+                         phenoData=pdata.annotated,
+                         experimentData=experimentData,
+                         featureData=fdata.annotated)
+
+save(expr.set, file="data/f5_expressionset.Rdata")
+```
