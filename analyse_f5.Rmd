@@ -1,0 +1,18 @@
+We do some simple analysis experiments with the fantom 5 data.
+
+First, let's load the expression set
+```{r}
+load("data/f5_expressionset.Rdata")
+```
+
+Correlation Matrix with hierarchical clustering:
+```{r}
+corr.mat = cor(exprs(expr.set))
+heatmap(corr.mat)
+```
+
+Principal component Analysis.
+Since this is fairly slow, we need to do some preprocessing. We can remove samples with high correlation and low variance.
+```{r}
+
+```
