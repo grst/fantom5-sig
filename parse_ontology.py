@@ -101,10 +101,14 @@ def get_biol_replicate(str):
     'rep1'
     >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, CNhs14406.13541-145H4")
 
+    >>> get_biol_replicate("tpm of 293SLAM rinderpestdayd01 infection, 00hr, donor1, some_rep1.CNhs14406.13541-145H4")
 
     """
-    REPLICATE_REGEX = re.compile(r'(biol_)?rep(\d+)')
-    return get_rex_value(REPLICATE_REGEX, str)
+    REPLICATE_REGEX = re.compile(r'([ ]+|biol_)rep(\d+)')
+    rep = get_rex_value(REPLICATE_REGEX, str)
+    if rep is not None:
+        rep = rep.strip()
+    return rep
 
 
 def get_tech_replicate(str):
@@ -241,7 +245,7 @@ def get_annotation_from_ontology(obo, tags):
     return time_o, tech_rep_o, biol_rep_o
 
 
-def process_time(obo, time_n, time_o):
+def process_time(obo, time_n, time_o, annot_notes = lambda x: None):
     """
     Compares the time extracted from the sample name and from the ontology.
 
@@ -270,7 +274,6 @@ def process_time(obo, time_n, time_o):
         return ontology_to_time(obo, time_o)
     elif any(time_n.values()):
         logging.debug("using time information from term name only.")
-        # Could write back to ontology here
         # we have to handle cases such as 01hr40min
         out = []
         if time_n["day"] is not None:
@@ -281,13 +284,34 @@ def process_time(obo, time_n, time_o):
             out.append(time_n['hr'])
         if time_n['min'] is not None:
             out.append(time_n['min'])
-        return "".join(out)
+
+        time_out = "".join(out)
+        # create a note in annot_notes for the sake of fixing the ontology later
+        annot_notes(time_out)
+        return time_out
     else:
         logging.debug("no time information available.")
         return None
 
 
-def process_sample_description(obo, sample_info):
+def add_annotation_note(annot_notes, lib_id, obo_id, field_name, new_value):
+    """
+    add note, that an annotation is missing in the ontology
+
+    Args:
+        annot_notes: list, to which the note will be appended
+        lib_id: CNhs?????
+        obo_id: FF:?????-?????
+        field_name: either "biol_rep", "tech_rep", or "time"
+        new_value: the value that was extracted from the name and is missing in the ontology.
+
+    """
+    assert field_name in ["biol_rep", "tech_rep", "time"]
+    logging.debug("{} missing in ontology. ".format(field_name))
+    annot_notes.append({"lib_id": lib_id, "obo_id": obo_id, "field_name": field_name, "new_value": new_value})
+
+
+def process_sample_description(obo, sample_info, annot_notes=[]):
     """
     Get sample annotation from ontology and from the sample name.
     Check for consistency between name and Ontology and merge the
@@ -297,11 +321,41 @@ def process_sample_description(obo, sample_info):
         obo: OBOOntology Object
         sample_info: one line from the extracted column_vars, e.g.
             "tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4"
+        annot_notes: list passed by reference that will be filled with a note if an annotation is
+            missing in the ontology.
 
     Returns:
         annot: dictionary with column annotations
 
+
+    >>> obo = OBOOntology()
+    >>> obo.load(open("data/ff-phase2-140729.obo"))
+    >>> annotation_notes = []
+    >>> pprint(process_sample_description(obo, \
+            "tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4", \
+            annotation_notes))
+    {'biol_rep': True,
+     'donor': None,
+     'lib_id': 'CNhs14406',
+     'name': '293SLAM rinderpest infection, 00hr, biol_rep1',
+     'name_orig': 'tpm of 293SLAM rinderpest infection, 00hr, '
+                  'biol_rep1.CNhs14406.13541-145H4',
+     'obo_id': 'FF:13541-145H4',
+     'tech_rep': False,
+     'time': '00hr'}
+    >>> pprint(annotation_notes)
+    [{'field_name': 'biol_rep',
+      'lib_id': 'CNhs14406',
+      'new_value': 'biol_rep1',
+      'obo_id': 'FF:13541-145H4'}]
+    apparently, for CNhs14406, the ontology contains no information, that is is a biological replicate. 
+
     """
+
+    def add_time_annotation_note(time_value):
+        """same as add_annotation_note, only specific for the time annotation"""
+        add_annotation_note(annot_notes, lib_id, obo_id, "time", time_value)
+
     logging.info("Processing sample '{}'".format(sample_info))
     obo_id = get_obo_id(sample_info)
     lib_id = get_lib_id(sample_info)
@@ -313,19 +367,31 @@ def process_sample_description(obo, sample_info):
     # values parsed from name
     # we use the 'original' name here, as some information e.g. tech_rep is not available
     # in the name retrieved from the ontology.
-    donor_n = get_donor(sample_info)
+    donor_n = get_donor(sample_info)  # donor is some sort of biological replicate
     time_n = get_time(sample_info)
     tech_rep_n = get_tech_replicate(sample_info)
     biol_rep_n = get_biol_replicate(sample_info)
+
+    assert not (bool(biol_rep_n) and bool(donor_n)), "as donor is a form of biological replicate they should" \
+                                                     "not co-occur in a name: {}".format(sample_info)
 
     # values parsed from ontology
     time_o, tech_rep_o, biol_rep_o = get_annotation_from_ontology(obo, tags)
 
     # verbose logging
-    if bool(biol_rep_o) and bool(biol_rep_n):
+    if bool(biol_rep_o) and (bool(biol_rep_n) or bool(donor_n)):
         logging.debug("consistent annotation of biological replicate. ")
     if bool(tech_rep_o) and bool(tech_rep_n):
         logging.debug("consistent annotation of technical replicate. ")
+
+    # values are missing in ontology
+    if (bool(biol_rep_n) or bool(donor_n)) and not bool(biol_rep_o):
+        add_annotation_note(annot_notes, lib_id, obo_id, "biol_rep", biol_rep_n if bool(biol_rep_n) else donor_n)
+    if bool(tech_rep_n) and not bool(tech_rep_o):
+        add_annotation_note(annot_notes, lib_id, obo_id, "tech_rep", tech_rep_n)
+
+    # logging and missing values for time are handled here:
+    time = process_time(obo, time_n, time_o, add_time_annotation_note)
 
     # make annotation dict
     annot = {
@@ -334,8 +400,8 @@ def process_sample_description(obo, sample_info):
         "name_orig": name_orig,
         "obo_id": obo_id,
         "donor": donor_n,
-        "time": process_time(obo, time_n, time_o),
-        "biol_rep": (bool(biol_rep_o) or bool(biol_rep_n)),
+        "time": time,
+        "biol_rep": (bool(biol_rep_o) or bool(biol_rep_n) or bool(donor_n)),
         "tech_rep": (bool(tech_rep_o) or bool(tech_rep_n))
     }
 
