@@ -348,7 +348,7 @@ def process_sample_description(obo, sample_info, annot_notes=[]):
       'lib_id': 'CNhs14406',
       'new_value': 'biol_rep1',
       'obo_id': 'FF:13541-145H4'}]
-    apparently, for CNhs14406, the ontology contains no information, that is is a biological replicate. 
+    apparently, for CNhs14406, the ontology contains no information, that is is a biological replicate.
 
     """
 
