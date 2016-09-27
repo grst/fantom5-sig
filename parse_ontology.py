@@ -257,12 +257,10 @@ def process_sample_name(sample_info):
     """
     info_n = dict()
     info_n["obo_id"] = get_obo_id(sample_info)
-    logging.info("{}: Parsing information from sample name".format(info_n["obo_id"]))
-
     info_n["lib_id"] = get_lib_id(sample_info)
     info_n["name_orig"] = sample_info
+    logging.info("{}: Parsing information from sample name".format(info_n["lib_id"]))
 
-    # values parsed from name
     # we use the 'original' name here, as some information e.g. tech_rep is not available
     # in the name retrieved from the ontology.
     info_n["donor"] = get_donor(sample_info)  # donor is some sort of biological replicate
