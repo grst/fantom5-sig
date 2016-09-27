@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 
+
 def tag2name(obo, obo_id):
     """Add name to obo_id for a more meaningful naming of network nodes"""
     return obo_id + ": " + obo.term(obo_id).name

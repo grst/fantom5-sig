@@ -309,6 +309,7 @@ def process_sample_ontology(obo, sample_info):
     }
     logging.info("{}: Searching Ontology".format(info_o["lib_id"]))
     obo_term = obo.term(info_o["obo_id"])
+    info_o["name"] = obo_term.name
     tags = obo_term.tags()
     for tag, tag_value, _, _ in tags:
         if tag == "is_a":
