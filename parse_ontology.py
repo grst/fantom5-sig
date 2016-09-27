@@ -233,11 +233,10 @@ def get_sample_type_from_ontology(obo, obo_term):
         "FF:0000003": "cell line",
     }
     super_terms = [term.id for term in obo.super_terms(obo_term.id)]
-    sample_type = None
+    sample_type = []  # cases like FF:11931-125I5 which are not unique
     for key, val in mapping.items():
         if key in super_terms:
-            assert sample_type is None, "sample has multiple sample_types"
-            sample_type = val
+            sample_type.append(val)
     return sample_type
 
 
@@ -258,6 +257,8 @@ def process_sample_name(sample_info):
     """
     info_n = dict()
     info_n["obo_id"] = get_obo_id(sample_info)
+    logging.info("{}: Parsing information from sample name".format(info_n["obo_id"]))
+
     info_n["lib_id"] = get_lib_id(sample_info)
     info_n["name_orig"] = sample_info
 
@@ -303,8 +304,10 @@ def process_sample_ontology(obo, sample_info):
         "tech_rep": None,
         "biol_rep": None,
         "time": None,
-        "obo_id": get_obo_id(sample_info)
+        "obo_id": get_obo_id(sample_info),
+        "lib_id": get_lib_id(sample_info),
     }
+    logging.info("{}: Searching Ontology".format(info_o["lib_id"]))
     obo_term = obo.term(info_o["obo_id"])
     tags = obo_term.tags()
     for tag, tag_value, _, _ in tags:
@@ -364,10 +367,9 @@ def merge_sample_info(info_n, info_o, info_si, annot_notes=[]):
     apparently, for CNhs14406, the ontology contains no information, that is is a biological replicate.
 
     """
-    assert info_n["obo_id"] == info_o["obo_id"] == info_si["obo_id"], "obo_ids not matching"
-    assert info_n["lib_id"] is not None, "library id missing"
-
-    # fields = ["biol_rep", "donor", "lib_id", "obo_id", "name", "name_orig", "tech_rep", "time", "sample_type"]
+    assert info_n["obo_id"] == info_o["obo_id"] == info_si["obo_id"] is not None, "obo_ids not matching"
+    assert info_n["lib_id"] == info_o["lib_id"] == info_si["lib_id"] is not None, "lib_ids not matching"
+    logging.info("{}: Merging Information".format(info_n["lib_id"]))
 
     def add_annotation_note(field_name, new_value):
         """add note, that an annotation is missing in the ontology"""
@@ -404,12 +406,17 @@ def merge_sample_info(info_n, info_o, info_si, annot_notes=[]):
 
     def merge_sample_type():
         # here, we tolerate inconsistencies and prefer the ontology if available
-        if info_o["sample_type"] is not None:
-            if info_si["sample_type"] != info_o["sample_type"]:
+        if len(info_o["sample_type"]) > 0:
+            if info_si["sample_type"] is not None and (info_si["sample_type"] not in info_o["sample_type"]):
                 logging.warning("sample_type: inconsistent. Ontology: {}, SI: {}".format(
                     info_o["sample_type"], info_si["sample_type"]))
-            return info_o["sample_type"]
+            if len(info_o["sample_type"]) == 1:  # there are cases with multiple sample types in the ontology
+                return info_o["sample_type"][0]
+            else:
+                logging.warning("sample_type: multiple sample types in ontology: {}".format(info_o["sample_type"]))
+                return "multiple"
         else:
+            add_annotation_note("sample_type", info_si["sample_type"])
             return info_si["sample_type"]
 
     annot = {
