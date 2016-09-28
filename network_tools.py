@@ -1,5 +1,22 @@
 import networkx as nx
 import numpy as np
+import re
+
+
+def is_sample_id(obo_id):
+    """
+    Return true, if the obo_id is the id of a sample, i.e. a leaf of the network.
+
+    The network also contains a lot of 'meta' nodes (i.e. inner nodes) that do not represent a sample,
+    but an annotation.
+    Samples have an ID FF:?????-?????.
+    """
+    return re.match(r'FF:(.{5})-(.{5})', obo_id) is not None
+
+
+def intersects(a, b):
+    """Return true if there is an intersection between a and b"""
+    return any([i in a for i in b])
 
 
 def tag2name(obo, obo_id):
@@ -73,3 +90,47 @@ def numpy_conv(var):
         return np.asscalar(var)
     else:
         return var
+
+
+def add_superelements_to_graph(obo, term, graph,
+                               delimiter_nodes=("FF:0000002", "FF:0000004", "FF:0000003"),
+                               add_delimiter_nodes=False):
+    """
+    Add all elements from ontology that are superelements of `obo` and children of `delimiter_nodes`.
+
+    Args:
+        obo: OBOOntology
+        term: obo id, add the superelements of this term
+        graph: networkx graph to add the elements to. Nodes must be named with obo-ids
+        delimiter_nodes: list of nodes that serve as stopping criterion.
+    """
+    parents = obo.parent_terms(term)
+    if intersects(delimiter_nodes, [t.id for t in parents]):
+        return graph
+    for parent in parents:
+        if intersects(delimiter_nodes, [t.id for t in obo.super_terms(parent.id)]):
+            graph.add_edge(term, parent.id)
+            add_superelements_to_graph(obo, parent.id, graph, delimiter_nodes)
+    return graph
+
+
+def add_superelements_to_graph_inclusive(obo, term, graph,
+                               delimiter_nodes=("FF:0000002", "FF:0000004", "FF:0000003")):
+    """
+    Add all elements from ontology that are superelements of `obo` and children of `delimiter_nodes`.
+
+    Args:
+        obo: OBOOntology
+        term: obo id, add the superelements of this term
+        graph: networkx graph to add the elements to. Nodes must be named with obo-ids
+        delimiter_nodes: list of nodes that serve as stopping criterion.
+    """
+    parents = obo.parent_terms(term)
+    if term in delimiter_nodes:
+        return graph
+    for parent in parents:
+        if intersects(delimiter_nodes, [t.id for t in obo.super_terms(parent.id)] + [parent.id]):
+            graph.add_edge(term, parent.id)
+            add_superelements_to_graph(obo, parent.id, graph, delimiter_nodes)
+    return graph
+
