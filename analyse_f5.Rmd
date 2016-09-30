@@ -2,8 +2,33 @@ We do some simple analysis experiments with the fantom 5 data.
 
 First, let's load the expression set
 ```{r}
+source("./eset_analysis_tools.R")
 load("data/f5_expressionset.Rdata")
 ```
+
+We are interested in generating cell-specific signatures. 
+Single cell experiments are annotated with sample_type 'primary cell'. 
+```{r}
+pdata = pData(expr.set)
+eset.primary = expr.set[,pdata$sample_type == "primary cell"]
+```
+
+Merge technichal replicates to single sample. 
+```{r}
+tech_reps = unique(pData(eset.primary)[pData(eset.primary)$tech_rep == TRUE,]["obo_id"])
+print(tech_reps)
+eset.primary.notechrep = eset.primary[,]
+for (tech_rep in tech_reps[,1]) { 
+  sample.ids = which(pData(eset.primary.notechrep)$obo_id == tech_rep)
+  new.name = pData(eset.primary.notechrep)[sample.ids[1],]$name
+  eset.primary.notechrep = mergeSamples(eset.primary.notechrep, sample.ids, new.name)
+}
+dim(eset.primary.notechrep)
+dim(eset.primary)
+
+save(eset.primary.notechrep, file="data/f5_eset_primary_cells.Rdata")
+```
+
 
 Correlation Matrix with hierarchical clustering:
 ```{r}

@@ -3,6 +3,8 @@ data/*
 !data/ff-phase2-140729.obo
 !data/column_vars.txt
 
+R_tmp
+
 ###### R and Rstudio
 # History files
 .Rhistory

@@ -26,8 +26,8 @@ colnames(exprs.mat) = lib_ids
 ### Load phenotypic data (covariates per Sample, such as sex, age, ...). 
 ```{r}
 pdata.file = file.path("data/column_vars.processed.csv")
-colClasses = c('logical', 'factor', 'character', 'character', 'character', 'character', 'logical', 'factor')
-names(colClasses) = c('biol_rep', 'donor', 'lib_id', 'name', 'name_orig', 'obo_id', 'tech_rep', 'time')
+colClasses = c('logical', 'factor', 'character', 'character', 'character', 'character', 'factor', 'logical', 'factor')
+names(colClasses) = c('biol_rep', 'donor', 'lib_id', 'name', 'name_orig', 'obo_id', 'sample_type', 'tech_rep', 'time')
 pdata.tab = read.csv(pdata.file, header=TRUE, row.names="lib_id", colClasses=colClasses)
 pdata.tab = pdata.tab[,2:ncol(pdata.tab)] # skip first col (numerical ids)
 
@@ -44,11 +44,12 @@ col.metadata = data.frame(labelDescription=
                               "Sample name (from ontology)",
                               "Sample name (original column name in expression data)",
                               "Accession Number for the F5 ontology",
+                              "Sample Type",
                               "Technical Replicate",
                               "Time Point"), 
                           row.names=
                             c('biol_rep', 'donor', 'name',
-                              'name_orig', 'obo_id', 'tech_rep', 'time'))
+                              'name_orig', 'obo_id', 'sample_type', 'tech_rep', 'time'))
 
 col.metadata
 
