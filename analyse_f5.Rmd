@@ -31,6 +31,7 @@ save(eset.primary.notechrep, file="data/f5_eset_primary_cells.Rdata")
 
 
 Correlation Matrix with hierarchical clustering:
+Maybe use https://www.r-bloggers.com/large-correlation-in-parallel/? 
 ```{r}
 corr.mat = cor(exprs(expr.set))
 heatmap(corr.mat)
