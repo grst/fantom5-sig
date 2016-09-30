@@ -33,8 +33,11 @@ save(eset.primary.notechrep, file="data/f5_eset_primary_cells.Rdata")
 Correlation Matrix with hierarchical clustering:
 Maybe use https://www.r-bloggers.com/large-correlation-in-parallel/? 
 ```{r}
-corr.mat = cor(exprs(expr.set))
-heatmap(corr.mat)
+load("R_tmp/corr.mat.Rdata")
+dissim = 1-corr.mat
+dist = as.dist(dissim)
+par(cex=0.2)
+plot(as.dendrogram(hclust(dist)))
 ```
 
 Principal component Analysis.
