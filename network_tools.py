@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 import re
+import itertools
 
 
 def is_sample_id(obo_id):
@@ -92,9 +93,7 @@ def numpy_conv(var):
         return var
 
 
-def add_superelements_to_graph(obo, term, graph,
-                               delimiter_nodes=("FF:0000002", "FF:0000004", "FF:0000003"),
-                               add_delimiter_nodes=False):
+def add_superelements_to_graph(obo, term, graph, delimiter_nodes, inclusive=False):
     """
     Add all elements from ontology that are superelements of `obo` and children of `delimiter_nodes`.
 
@@ -104,33 +103,28 @@ def add_superelements_to_graph(obo, term, graph,
         graph: networkx graph to add the elements to. Nodes must be named with obo-ids
         delimiter_nodes: list of nodes that serve as stopping criterion.
     """
-    parents = obo.parent_terms(term)
-    if intersects(delimiter_nodes, [t.id for t in parents]):
-        return graph
-    for parent in parents:
-        if intersects(delimiter_nodes, [t.id for t in obo.super_terms(parent.id)]):
-            graph.add_edge(term, parent.id)
-            add_superelements_to_graph(obo, parent.id, graph, delimiter_nodes)
+    parent_ids = [t.id for t in obo.parent_terms(term)]
+    super_term_ids = {parent_id: [t.id for t in obo.super_terms(parent_id)] for parent_id in parent_ids}
+    if inclusive:
+        for parent_id in super_term_ids:
+            # add parent to list of 'potential superelements'.
+            # recursion will no be aborted when parent element is reached, but it will also be added
+            super_term_ids[parent_id].append(parent_id)
+    if intersects(delimiter_nodes, parent_ids):
+        # is there are other delimiter nodes closer to the root we must continue, since
+        # we want to include these as well
+        if not intersects(delimiter_nodes, itertools.chain(*super_term_ids.values())):
+            return graph
+    for parent_id in parent_ids:
+        if intersects(delimiter_nodes, super_term_ids[parent_id]):
+            graph.add_edge(term, parent_id)
+            add_superelements_to_graph(obo, parent_id, graph, delimiter_nodes)
     return graph
 
 
-def add_superelements_to_graph_inclusive(obo, term, graph,
-                               delimiter_nodes=("FF:0000002", "FF:0000004", "FF:0000003")):
+def add_superelements_to_graph_inclusive(obo, term, graph, delimiter_nodes):
     """
-    Add all elements from ontology that are superelements of `obo` and children of `delimiter_nodes`.
-
-    Args:
-        obo: OBOOntology
-        term: obo id, add the superelements of this term
-        graph: networkx graph to add the elements to. Nodes must be named with obo-ids
-        delimiter_nodes: list of nodes that serve as stopping criterion.
+    Alias of add_superelements_to_graph(..., inclusive=True) [DEPRECATED]
     """
-    parents = obo.parent_terms(term)
-    if term in delimiter_nodes:
-        return graph
-    for parent in parents:
-        if intersects(delimiter_nodes, [t.id for t in obo.super_terms(parent.id)] + [parent.id]):
-            graph.add_edge(term, parent.id)
-            add_superelements_to_graph(obo, parent.id, graph, delimiter_nodes)
-    return graph
+    return add_superelements_to_graph(obo, term, graph, delimiter_nodes, True)
 
