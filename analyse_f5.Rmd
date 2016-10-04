@@ -13,7 +13,7 @@ pdata = pData(expr.set)
 eset.primary = expr.set[,pdata$sample_type == "primary cell"]
 ```
 
-Merge technichal replicates to single sample. 
+## Merge technichal replicates to single sample. 
 ```{r}
 tech_reps = unique(pData(eset.primary)[pData(eset.primary)$tech_rep == TRUE,]["obo_id"])
 print(tech_reps)
@@ -30,17 +30,31 @@ save(eset.primary.notechrep, file="data/f5_eset_primary_cells.Rdata")
 ```
 
 
-Correlation Matrix with hierarchical clustering:
+## Correlation Matrix with hierarchical clustering:
 Maybe use https://www.r-bloggers.com/large-correlation-in-parallel/? 
+Alternative hiearchical clustering: http://research.stowers-institute.org/efg/R/Visualization/cor-cluster/
+```{r}
+getName = function(lib_id) {
+  return(paste(pData(expr.set)[lib_id, 'obo_id'], "-", pData(expr.set)[lib_id, 'name']))
+}
+```
 ```{r}
 load("R_tmp/corr.mat.Rdata")
+write.table(corr.mat, file="data/corr_mat.primary.tsv")
+rownames(corr.mat) = getName(rownames(corr.mat))
+colnames(corr.mat) = getName(colnames(corr.mat))
 dissim = 1-corr.mat
-dist = as.dist(dissim)
-par(cex=0.2)
-plot(as.dendrogram(hclust(dist)))
+dist = as.dist(corr.mat)
+clust = hclust(dist)
+par(cex=0.2, mar=c(30, 4, 4, 2)+0.1)
+plot(as.dendrogram(clust))
 ```
 
-Principal component Analysis.
+
+## Annotate the dendrogram
+http://stackoverflow.com/questions/33450549/r-python-heirarchical-clustering-dendrogram-annotation
+
+## Principal component Analysis.
 Since this is fairly slow, we need to do some preprocessing. We can remove samples with high correlation and low variance.
 ```{r}
 
