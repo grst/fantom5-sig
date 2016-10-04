@@ -2,6 +2,7 @@
 data/*
 !data/ff-phase2-140729.obo
 !data/column_vars.txt
+.idea
 
 R_tmp
 
