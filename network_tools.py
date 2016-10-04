@@ -36,7 +36,7 @@ def relabel_nodes(obo, graph):
     return nx.relabel_nodes(graph, dict([(name, tag2name(obo, name)) for name in graph.nodes()]))
 
 
-def build_tree(obo, term, graph=nx.Graph(), maxdepth=None):
+def build_tree(obo, term, graph=nx.Graph(), maxdepth=None, filter_fun=lambda x: True):
     """
     Recursively build a nxnetwork graph starting with 'term'.
 
@@ -47,6 +47,7 @@ def build_tree(obo, term, graph=nx.Graph(), maxdepth=None):
         term: the OBOOntology 'term' to start with
         graph: networkX graph to add the nodes to
         maxdepth: maximal recursion depth
+        filter_fun: call back function on term.id, return True to include the element, False to exclude.
     """
     if maxdepth is not None:
         maxdepth -= 1
@@ -54,16 +55,17 @@ def build_tree(obo, term, graph=nx.Graph(), maxdepth=None):
             return graph
     children = obo.child_terms(term)
     for child in children:
-        graph.add_edge(term, child.id)
-        build_tree(obo, child.id, graph, maxdepth)
+        if filter_fun(child.id):
+            graph.add_edge(term, child.id)
+            build_tree(obo, child.id, graph, maxdepth)
     return graph
 
 
-def build_and_export_tree(obo, term, filename, maxdepth=None, annotation_df=None, df_col='obo_id'):
+def build_and_export_tree(obo, term, filename, maxdepth=None, annotation_df=None, df_col='obo_id', filter_fun=lambda x: True):
     """
     Wrapper for build_tree. Build a tree and export it to graphml.
     """
-    graph = build_tree(obo, term, nx.Graph(), maxdepth)
+    graph = build_tree(obo, term, nx.Graph(), maxdepth, filter_fun=filter_fun)
     if annotation_df is not None:
         graph = annotate_graph(graph, annotation_df, df_col=df_col)
     graph_ = relabel_nodes(obo, graph)
@@ -128,3 +130,21 @@ def add_superelements_to_graph_inclusive(obo, term, graph, delimiter_nodes):
     """
     return add_superelements_to_graph(obo, term, graph, delimiter_nodes, True)
 
+
+def add_parents(obo, term, graph, max_depth=None, filter_fun=lambda x: True):
+    parent_ids = [t.id for t in obo.parent_terms(term)]
+    if max_depth is None or max_depth > 0:
+        for parent_id in parent_ids:
+            if filter_fun(parent_id):
+                graph.add_edge(term, parent_id)
+                add_parents(obo, parent_id, graph, max_depth=None if max_depth is None else max_depth-1, filter_fun=filter_fun)
+    return graph
+
+
+def add_superelements_to_graph2(obo, term, graph, delimiter_nodes):
+    parent_ids = [t.id for t in obo.parent_terms(term)]
+    for parent_id in parent_ids:
+        # if a parent is in delimiter_nodes we discard that branch.
+        if parent_id not in delimiter_nodes:
+            graph.add_edge(term, parent_id)
+            add_superelements_to_graph2(obo, parent_id, graph, delimiter_nodes)

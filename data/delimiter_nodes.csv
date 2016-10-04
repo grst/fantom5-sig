@@ -38,70 +38,70 @@
 36	780	1	Mammalia	NCBITaxon:40674
 37	780	1	Teleostomi	NCBITaxon:117570
 38	780	1	sample by species	FF:0000101
-39	779	0	cell	GO:0005623
-40	779	0	tissue	UBERON:0000479
-41	779	0	multicellular anatomical structure	UBERON:0010000
-42	779	0	anatomical structure	UBERON:0000061
-43	779	0	material anatomical entity	UBERON:0000465
-44	779	0	cellular_component	GO:0005575
-45	779	0	native cell	CL:0000003
-46	779	0	anatomical entity	UBERON:0001062
-47	779	0	multi-cellular organism	UBERON:0000468
-48	779	0	cell	CL:0000000
-49	772	0	animal cell	CL:0000548
-50	772	0	somatic cell	CL:0002371
-51	772	0	eukaryotic cell	CL:0000255
-52	764	0	role	Role
-53	764	0	material property	SpecificallyDependentContinuant
-54	756	0	sample by type	FF:0000102
-55	756	0	in vivo cell sample	FF:0000002
-56	756	0	replicate	EFO:0000683
-57	755	0	biological replicate	EFO:0002091
-58	667	0	anatomical group	UBERON:0000480
-59	660	0	anatomical system	UBERON:0000467
-60	609	0	developing anatomical structure	UBERON:0005423
-61	609	0	embryo	UBERON:0000922
-62	604	0	presumptive structure	UBERON:0006598
-63	599	0	blastula	UBERON:0000307
-64	599	0	embryonic tissue	UBERON:0005291
-65	599	0	epiblast (generic)	UBERON:0002532
-66	599	0	cleaving embryo	UBERON:0007010
-67	599	0	germ layer	UBERON:0000923
-68	599	0	germ layer / neural crest	UBERON:0010316
-69	599	0	embryonic structure	UBERON:0002050
-70	551	0	somatic stem cell	CL:0000723
-71	551	0	stem cell	CL:0000034
-72	547	0	multi fate stem cell	CL:0000048
-73	504	0	motile cell	CL:0000219
-74	495	0	connective tissue	UBERON:0002384
-75	495	0	connective tissue cell	CL:0002320
+39	779	1	cell	GO:0005623
+40	779	1	tissue	UBERON:0000479
+41	779	1	multicellular anatomical structure	UBERON:0010000
+42	779	1	anatomical structure	UBERON:0000061
+43	779	1	material anatomical entity	UBERON:0000465
+44	779	1	cellular_component	GO:0005575
+45	779	1	native cell	CL:0000003
+46	779	1	anatomical entity	UBERON:0001062
+47	779	1	multi-cellular organism	UBERON:0000468
+48	779	1	cell	CL:0000000
+49	772	1	animal cell	CL:0000548
+50	772	1	somatic cell	CL:0002371
+51	772	1	eukaryotic cell	CL:0000255
+52	764	1	role	Role
+53	764	1	material property	SpecificallyDependentContinuant
+54	756	1	sample by type	FF:0000102
+55	756	1	in vivo cell sample	FF:0000002
+56	756	1	replicate	EFO:0000683
+57	755	1	biological replicate	EFO:0002091
+58	667	1	anatomical group	UBERON:0000480
+59	660	1	anatomical system	UBERON:0000467
+60	609	1	developing anatomical structure	UBERON:0005423
+61	609	1	embryo	UBERON:0000922
+62	604	1	presumptive structure	UBERON:0006598
+63	599	1	blastula	UBERON:0000307
+64	599	1	embryonic tissue	UBERON:0005291
+65	599	1	epiblast (generic)	UBERON:0002532
+66	599	1	cleaving embryo	UBERON:0007010
+67	599	1	germ layer	UBERON:0000923
+68	599	1	germ layer / neural crest	UBERON:0010316
+69	599	1	embryonic structure	UBERON:0002050
+70	551	1	somatic stem cell	CL:0000723
+71	551	1	stem cell	CL:0000034
+72	547	1	multi fate stem cell	CL:0000048
+73	504	1	motile cell	CL:0000219
+74	495	1	connective tissue	UBERON:0002384
+75	495	1	connective tissue cell	CL:0002320
 76	479	0	mesenchymal cell	CL:0000134
-77	447	0	organ	UBERON:0000062
-78	447	0	mesoderm	UBERON:0000926
-79	447	0	presumptive mesoderm	UBERON:0006603
+77	447	1	organ	UBERON:0000062
+78	447	1	mesoderm	UBERON:0000926
+79	447	1	presumptive mesoderm	UBERON:0006603
 80	367	0	mesoderm-derived structure	UBERON:0004120
 81	361	0	mesenchyme	UBERON:0003104
-82	353	0	anatomical cluster	UBERON:0000477
+82	353	1	anatomical cluster	UBERON:0000477
 83	314	0	dense mesenchyme tissue	UBERON:0007524
 84	300	0	immune system	UBERON:0002405
 85	284	0	lateral plate mesoderm	UBERON:0003081
 86	265	0	embryonic cell	CL:0002321
-87	260	0	experimentally modified sample	FF:0000350
-88	247	0	protocol	OBI:0000272
-89	247	0	development or differentiation design	EFO:0001746
-90	247	0	information entity	IAO:0000030
-91	247	0	biological variation design	EFO:0004667
-92	247	0	study design	EFO:0001426
+87	260	1	experimentally modified sample	FF:0000350
+88	247	1	protocol	OBI:0000272
+89	247	1	development or differentiation design	EFO:0001746
+90	247	1	information entity	IAO:0000030
+91	247	1	biological variation design	EFO:0004667
+92	247	1	study design	EFO:0001426
 93	245	0	hematopoietic stem cell	CL:0000037
 94	245	0	angioblastic mesenchymal cell	CL:0000566
 95	245	0	hematopoietic precursor cell	CL:0008001
 96	245	0	hematopoietic cell	CL:0000988
-97	240	0	treatment	EFO:0000727
+97	240	1	treatment	EFO:0000727
 98	240	0	musculoskeletal system	UBERON:0002204
-99	240	0	experimental process	EFO:0002694
+99	240	1	experimental process	EFO:0002694
 100	240	0	anatomical conduit	UBERON:0004111
-101	240	0	process	ProcessualEntity
-102	240	0	planned process	EFO:0004542
+101	240	1	process	ProcessualEntity
+102	240	1	planned process	EFO:0004542
 103	237	0	hemolymphoid system	UBERON:0002193
 104	235	0	hematopoietic oligopotent progenitor cell	CL:0002032
 105	235	0	hematopoietic multipotent progenitor cell	CL:0000837
@@ -111,9 +111,9 @@
 109	225	0	stuff accumulating cell	CL:0000325
 110	215	0	hematopoietic lineage restricted progenitor cell	CL:0002031
 111	204	0	nongranular leukocyte	CL:0002087
-112	204	0	derived unit	UO:0000046
-113	204	0	derived time unit	UO:0000149
-114	204	0	unit	UO:0000000
+112	204	1	derived unit	UO:0000046
+113	204	1	derived time unit	UO:0000149
+114	204	1	unit	UO:0000000
 115	199	0	skeletal system	UBERON:0001434
 116	192	0	compound based treatment	EFO:0000369
 117	191	0	primordium	UBERON:0001048
@@ -162,7 +162,7 @@
 160	116	0	multi-tissue structure	UBERON:0000481
 161	113	0	non-terminally differentiated cell	CL:0000055
 162	109	0	lateral structure	UBERON:0015212
-163	107	0	hour	UO:0000032
+163	107	1	hour	UO:0000032
 164	107	0	structure with developmental contribution from neural crest	UBERON:0010314
 165	104	0	human macrophage sample	FF:0000086
 166	104	0	macrophage	CL:0000235
@@ -182,7 +182,7 @@
 180	85	0	subdivision of digestive tract	UBERON:0004921
 181	85	0	organ component layer	UBERON:0004923
 182	83	0	splanchnic layer of lateral plate mesoderm	UBERON:0004872
-183	82	0	minute	UO:0000031
+183	82	1	minute	UO:0000031
 184	80	0	simple columnar epithelium	UBERON:0000485
 185	80	0	LPS treatment sample	FF:0000335
 186	80	0	human endothelial cell sample	FF:0000046
@@ -423,7 +423,7 @@
 421	15	0	developing mesenchymal condensation	UBERON:0005856
 422	15	0	systemic artery	UBERON:0004573
 423	15	0	skeletal musculature	UBERON:0018254
-424	15	0	day	UO:0000033
+424	15	1	day	UO:0000033
 425	15	0	muscle organ	UBERON:0001630
 426	15	0	muscle structure	UBERON:0005090
 427	15	0	integumentary system layer	UBERON:0013754
