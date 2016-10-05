@@ -173,7 +173,7 @@ def is_time_term(obo, term_id):
     Return true if the term_id is a time-ontology
 
     >>> obo = OBOOntology()
-    >>> obo.load(open("testdata/ff-phase2-140729.obo"))
+    >>> obo.load(open("test/testdata/ff-phase2-140729.obo"))
     >>> is_time_term(obo, "FF:0000357")
     True
     >>> is_time_term(obo, "FF:0350357")
@@ -187,7 +187,7 @@ def ontology_to_time(obo, obo_id):
     Convert an ontology id to a readable time string.
 
     >>> obo = OBOOntology()
-    >>> obo.load(open("testdata/ff-phase2-140729.obo"))
+    >>> obo.load(open("test/testdata/ff-phase2-140729.obo"))
     >>> ontology_to_time(obo, "FF:0000357")
     '00hr'
 
@@ -213,19 +213,23 @@ def get_sample_type_from_ontology(obo, obo_term):
     There are three sample types defined in the ontology. The sample belongs to
     a certain type if it is a descendant of the respective type definition object.
 
+    There are certain cases which are not unique. Thus a list of the associated types is returned.
+
     Args:
         obo: OBOOntology Object
         obo_term: OBOObject (term)
 
     Returns:
-        None/primary cell/tissue/cell line
+        List containing None/primary cell/tissue/cell line
 
     >>> obo = OBOOntology()
-    >>> obo.load(open("testdata/ff-phase2-140729.obo"))
+    >>> obo.load(open("test/testdata/ff-phase2-140729.obo"))
     >>> obo_term = obo.term("FF:10100-102D1")  # tpm of uterus, adult, pool1.CNhs1167...
     >>> get_sample_type_from_ontology(obo, obo_term)
-    'tissue'
-
+    ['tissue']
+    >>> obo_term = obo.term("FF:11931-125I5") # not unique
+    >>> sorted(get_sample_type_from_ontology(obo, obo_term))
+    ['primary cell', 'tissue']
     """
     mapping = {
         "FF:0000002": "primary cell",
@@ -289,12 +293,14 @@ def process_sample_ontology(obo, sample_info):
          biol_rep_o, True, if the sample is a biological replicate, else None
 
     >>> obo = OBOOntology()
-    >>> obo.load(open("testdata/ff-phase2-140729.obo"))
+    >>> obo.load(open("test/testdata/ff-phase2-140729.obo"))
     >>> sample_info = "tpm of occipital lobe, fetal, donor1.CNhs11784.10073-102A1"
     >>> pprint(process_sample_ontology(obo, sample_info))
     {'biol_rep': True,
+     'lib_id': 'CNhs11784',
+     'name': 'occipital lobe, fetal, donor1',
      'obo_id': 'FF:10073-102A1',
-     'sample_type': 'tissue',
+     'sample_type': ['tissue'],
      'tech_rep': None,
      'time': None}
     """
@@ -340,17 +346,17 @@ def merge_sample_info(info_n, info_o, info_si, annot_notes=[]):
         annot, dict with the merged annotations
 
     >>> obo = OBOOntology()
-    >>> obo.load(open("testdata/ff-phase2-140729.obo"))
+    >>> obo.load(open("test/testdata/ff-phase2-140729.obo"))
     >>> sample_info = "tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4"
     >>> info_n = process_sample_name(sample_info)
     >>> info_o = process_sample_ontology(obo, sample_info)
-    >>> info_si = {"obo_id": "FF:13541-145H4", "sample_type": "tissue"}
+    >>> info_si = {"obo_id": "FF:13541-145H4", "lib_id": 'CNhs14406', "sample_type": "tissue"}
     >>> annotation_notes = []
     >>> pprint(merge_sample_info(info_n, info_o, info_si, annotation_notes))
     {'biol_rep': True,
      'donor': None,
      'lib_id': 'CNhs14406',
-     'name': None,
+     'name': '293SLAM rinderpest infection, 00hr, biol_rep1',
      'name_orig': 'tpm of 293SLAM rinderpest infection, 00hr, '
                   'biol_rep1.CNhs14406.13541-145H4',
      'obo_id': 'FF:13541-145H4',
@@ -361,7 +367,12 @@ def merge_sample_info(info_n, info_o, info_si, annot_notes=[]):
     [{'field_name': 'biol_rep',
       'lib_id': 'CNhs14406',
       'new_value': 'biol_rep1',
+      'obo_id': 'FF:13541-145H4'},
+     {'field_name': 'sample_type',
+      'lib_id': 'CNhs14406',
+      'new_value': 'tissue',
       'obo_id': 'FF:13541-145H4'}]
+
 
     apparently, for CNhs14406, the ontology contains no information, that is is a biological replicate.
 

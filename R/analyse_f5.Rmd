@@ -3,7 +3,7 @@ We do some simple analysis experiments with the fantom 5 data.
 First, let's load the expression set
 ```{r}
 source("./eset_analysis_tools.R")
-load("data/f5_expressionset.Rdata")
+load("../data/f5_expressionset.Rdata")
 ```
 
 We are interested in generating cell-specific signatures. 
@@ -26,7 +26,7 @@ for (tech_rep in tech_reps[,1]) {
 dim(eset.primary.notechrep)
 dim(eset.primary)
 
-save(eset.primary.notechrep, file="data/f5_eset_primary_cells.Rdata")
+save(eset.primary.notechrep, file="../data/f5_eset_primary_cells.Rdata")
 ```
 
 
@@ -40,7 +40,7 @@ getName = function(lib_id) {
 ```
 ```{r}
 load("R_tmp/corr.mat.Rdata")
-write.table(corr.mat, file="data/corr_mat.primary.tsv")
+write.table(corr.mat, file="../data/corr_mat.primary.tsv")
 rownames(corr.mat) = getName(rownames(corr.mat))
 colnames(corr.mat) = getName(colnames(corr.mat))
 dissim = 1-corr.mat

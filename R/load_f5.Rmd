@@ -10,7 +10,7 @@ library(readr)
 
 ### Load Gene Expression data from the Fantom5 Dataset
 ```{r}
-data.file = file.path("data/hg19.cage_peak_phase1and2combined_tpm_ann.osc.txt")
+data.file = file.path("../data/hg19.cage_peak_phase1and2combined_tpm_ann.osc.txt")
 data.tab = read_tsv(data.file, col_names=TRUE, comment="#")
 rownames(data.tab) = data.tab[,1]
 exprs.mat = as.matrix(data.tab[3:nrow(data.tab),8:ncol(data.tab)]) # skip statistics and annotation
@@ -25,7 +25,7 @@ colnames(exprs.mat) = lib_ids
 
 ### Load phenotypic data (covariates per Sample, such as sex, age, ...). 
 ```{r}
-pdata.file = file.path("data/column_vars.processed.csv")
+pdata.file = file.path("../data/column_vars.processed.csv")
 colClasses = c('logical', 'factor', 'character', 'character', 'character', 'character', 'factor', 'logical', 'factor')
 names(colClasses) = c('biol_rep', 'donor', 'lib_id', 'name', 'name_orig', 'obo_id', 'sample_type', 'tech_rep', 'time')
 pdata.tab = read.csv(pdata.file, header=TRUE, row.names="lib_id", colClasses=colClasses)
@@ -73,5 +73,5 @@ expr.set = ExpressionSet(assayData=exprs.mat,
                          experimentData=experimentData,
                          featureData=fdata.annotated)
 
-save(expr.set, file="data/f5_expressionset.Rdata")
+save(expr.set, file="../data/f5_expressionset.Rdata")
 ```

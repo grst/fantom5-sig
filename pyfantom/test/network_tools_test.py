@@ -1,8 +1,9 @@
 from unittest import TestCase
-from orangecontrib.bio.ontology import OBOOntology, OBOObject
+
 import pandas as pd
-import networkx as nx
-from network_tools import *
+
+from orangecontrib.bio.ontology import OBOOntology
+from pyfantom.network_tools import *
 
 
 class TestNetworkTools(TestCase):
@@ -834,8 +835,8 @@ class TestNetworkTools(TestCase):
 
     def setUp(self):
         self.obo = OBOOntology()
-        self.obo.load(open("testdata/ff-phase2-140729.obo"))
-        self.col_vars = pd.read_csv("testdata/column_vars.processed.csv", index_col=0)
+        self.obo.load(open("pyfantom/test/testdata/ff-phase2-140729.obo"))
+        self.col_vars = pd.read_csv("pyfantom/test/testdata/column_vars.processed.csv", index_col=0)
 
     def prepare_graph(self):
         graph = nx.Graph()
