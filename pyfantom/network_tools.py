@@ -146,6 +146,8 @@ def build_tree_bottom_up_with_delimiters(obo, term, graph, delimiter_nodes):
     This is essentially the same as add_superelements_to_graph, except that that
     function considers children of *any* delimiter node.
 
+    Note: function does not terminate if ontology contains circles.
+
     Example:
          ---------- A ---------
         |                      |
