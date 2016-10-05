@@ -1,0 +1,30 @@
+format-version: 1.2
+
+[Term]
+id: A
+name: A
+is_a: B
+is_a: E
+
+[Term]
+id: B
+name: B
+is_a: C
+
+[Term]
+id: C
+name: C
+is_a: D
+
+[Term]
+id: D
+name: D
+
+[Term]
+id: E
+name: E
+is_a: F
+
+[Term]
+id: F
+name: F
