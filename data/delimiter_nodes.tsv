@@ -549,7 +549,7 @@ UBERON:0001630	24	0	muscle organ
 UBERON:0005095	24	0	kidney rudiment
 FF:0000361	24	1	4 hr sample
 UBERON:0003918	24	0	kidney mesenchyme
-FF:0000344	24	0	0 minute sample
+FF:0000344	24	1	0 minute sample
 UBERON:0007687	24	0	kidney field
 UBERON:0000079	24	0	male reproductive system
 UBERON:0014403	24	0	male anatomical structure
