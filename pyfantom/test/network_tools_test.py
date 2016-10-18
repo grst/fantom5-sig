@@ -835,8 +835,8 @@ class TestNetworkTools(TestCase):
 
     def setUp(self):
         self.obo = OBOOntology()
-        self.obo.load(open("pyfantom/test/testdata/ff-phase2-140729.obo"))
-        self.col_vars = pd.read_csv("pyfantom/test/testdata/column_vars.processed.csv", index_col=0)
+        self.obo.load(open("testdata/ff-phase2-140729.obo"))
+        self.col_vars = pd.read_csv("testdata/column_vars.processed.csv", index_col=0)
 
     def prepare_graph(self):
         graph = nx.Graph()
@@ -870,10 +870,10 @@ class TestNetworkTools(TestCase):
         graph2 = self.prepare_graph()
         delimiter_nodes = ["FF:0200009", "FF:0200006", "FF:0200005", "FF:0200008", "FF:0300101"]
         for node in graph1.nodes():
-            add_superelements_to_graph_inclusive(self.obo, node, graph1, delimiter_nodes)
+            add_superelements_to_graph(self.obo, node, graph1, delimiter_nodes, inclusive=True)
         for node in graph2.nodes():
             for delimiter_node in delimiter_nodes:
-                add_superelements_to_graph_inclusive(self.obo, node, graph2, [delimiter_node])
+                add_superelements_to_graph(self.obo, node, graph2, [delimiter_node], inclusive=True)
         set1 = set(graph1.nodes())
         set2 = set(graph2.nodes())
         self.assertEqual(set1, set2)
@@ -886,7 +886,7 @@ class TestNetworkTools(TestCase):
         for node in graph_inc.nodes():
             add_superelements_to_graph(self.obo, node, graph_exc, delimiter_nodes)
         for node in graph_exc.nodes():
-            add_superelements_to_graph_inclusive(self.obo, node, graph_inc, delimiter_nodes)
+            add_superelements_to_graph(self.obo, node, graph_inc, delimiter_nodes, inclusive=True)
         set_exc = set(graph_exc.nodes())
         set_inc = set(graph_inc.nodes())
         self.assertEqual(delimiter_nodes, set_inc - set_exc)
