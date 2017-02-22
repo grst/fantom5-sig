@@ -6,6 +6,7 @@ data/*
 .idea
 networks/*
 !networks/*.cys
+results
 
 R/R_tmp
 
