@@ -1,12 +1,10 @@
 ##### Custom Rules
-data/*
-!data/ff-phase2-140729.obo
-!data/column_vars.txt
-!data/delimiter_nodes.tsv
+data
 .idea
 networks/*
 !networks/*.cys
 results
+results_*
 
 R/R_tmp
 
