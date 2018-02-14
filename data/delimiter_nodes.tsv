@@ -1,0 +1,2649 @@
+obo_id	count	delimiter	name
+BFO:0000040	1829	1	material entity
+NCBITaxon:33154	1829	1	Opisthokonta
+NCBITaxon:33213	1829	1	Bilateria
+NCBITaxon:6072	1829	1	Eumetazoa
+NCBITaxon:117570	1829	1	Teleostomi
+NCBITaxon:9605	1829	1	Homo
+NCBITaxon:9604	1829	1	Hominidae
+NCBITaxon:1	1829	1	root
+NCBITaxon:2759	1829	1	Eukaryota
+FF:0000001	1829	1	sample
+BFO:0000030	1829	1	object
+NCBITaxon:131567	1829	1	cellular organisms
+FF:0000210	1829	1	human sample
+NCBITaxon_2759	1829	1	Eukaryota
+NCBITaxon:89593	1829	1	Craniata <chordata>
+OBI:0100026	1829	1	organism
+FF:0000101	1829	1	sample by species
+NCBITaxon:32524	1829	1	Amniota
+EFO:0000001	1829	1	experimental factor
+NCBITaxon:32523	1829	1	Tetrapoda
+NCBITaxon:314295	1829	1	Hominoidea
+MaterialEntity	1829	1	material entity
+NCBITaxon:32525	1829	1	Theria <Mammalia>
+NCBITaxon:117571	1829	1	Euteleostomi
+NCBITaxon:33208	1829	1	Metazoa
+NCBITaxon:40674	1829	1	Mammalia
+NCBITaxon:314146	1829	1	Euarchontoglires
+NCBITaxon:8287	1829	1	Sarcopterygii
+NCBITaxon:9443	1829	1	Primates
+NCBITaxon:9347	1829	1	Eutheria
+NCBITaxon:9606	1829	1	Homo sapiens
+NCBITaxon:9526	1829	1	Catarrhini
+NCBITaxon:7742	1829	1	Vertebrata <Metazoa>
+NCBITaxon:33511	1829	1	Deuterostomia
+NCBITaxon:376913	1829	1	Haplorrhini
+NCBITaxon:207598	1829	1	Homininae
+NCBITaxon:7776	1829	1	Gnathostomata <vertebrate>
+NCBITaxon:314293	1829	1	Simiiformes
+NCBITaxon:7711	1829	1	Chordata
+SpecificallyDependentContinuant	1670	1	material property
+UBERON:0000465	1666	1	material anatomical entity
+UBERON:0001062	1666	1	anatomical entity
+UBERON:0000061	1666	1	anatomical structure
+UBERON:0010000	1666	1	multicellular anatomical structure
+UBERON:0000468	1666	1	multi-cellular organism
+Role	1631	1	role
+FF:0000102	1580	1	sample by type
+EFO:0000683	1549	1	replicate
+EFO:0002091	1548	1	biological replicate
+UBERON:0000479	1525	1	tissue
+GO:0005575	1502	1	cellular_component
+CL:0000003	1502	1	native cell
+CL:0000000	1502	1	cell
+GO:0005623	1502	1	cell
+CL:0000548	1467	1	animal cell
+CL:0000255	1467	1	eukaryotic cell
+UBERON:0000922	1254	1	embryo
+CL:0002371	1244	1	somatic cell
+UBERON:0005423	1210	1	developing anatomical structure
+UBERON:0002050	1191	1	embryonic structure
+UBERON:0006598	1180	1	presumptive structure
+UBERON:0000480	1176	1	anatomical group
+UBERON:0005291	1175	1	embryonic tissue
+UBERON:0000307	1175	1	blastula
+UBERON:0002532	1175	1	epiblast (generic)
+UBERON:0010316	1175	1	germ layer / neural crest
+UBERON:0007010	1175	1	cleaving embryo
+UBERON:0000923	1175	1	germ layer
+UBERON:0000467	1167	1	anatomical system
+CL:0000034	853	1	stem cell
+UBERON:0000062	805	1	organ
+UBERON:0000477	793	1	anatomical cluster
+FF:0000002	783	1	in vivo cell sample
+CL:0000723	770	1	somatic stem cell
+IAO:0000030	763	1	information entity
+CL:0000048	758	1	multi fate stem cell
+CL:0000219	724	1	motile cell
+EFO:0004667	724	1	biological variation design
+EFO:0001426	724	1	study design
+OBI:0000272	724	1	protocol
+EFO:0001746	724	1	development or differentiation design
+UBERON:0000926	672	1	mesoderm
+UBERON:0006603	672	1	presumptive mesoderm
+UBERON:0002384	663	1	connective tissue
+CL:0002320	653	1	connective tissue cell
+CL:0000134	637	0	mesenchymal cell
+FF:0000350	626	1	experimentally modified sample
+FF:0000003	623	1	cell line sample
+ProcessualEntity	607	1	process
+EFO:0004542	607	1	planned process
+EFO:0000727	607	1	treatment
+EFO:0002694	607	1	experimental process
+UO:0000000	596	1	unit
+UO:0000149	596	1	derived time unit
+UO:0000046	596	1	derived unit
+DOID:4	569	1	disease
+CL:0002321	562	0	embryonic cell
+UBERON:0001048	557	0	primordium
+UBERON:0000119	549	0	cell layer
+UBERON:0000483	546	0	epithelium
+EFO:0000369	541	1	compound based treatment
+UBERON:0004120	520	0	mesoderm-derived structure
+CL:0000066	519	0	epithelial cell
+UBERON:0003104	516	0	mesenchyme
+UBERON:0004111	511	0	anatomical conduit
+UBERON:0000490	477	0	unilaminar epithelium
+DOID:14566	465	1	disease of cellular proliferation
+DOID:162	460	1	cancer
+UBERON:0000475	455	0	organism subdivision
+UBERON:0013701	446	0	main body axis
+UBERON:0013702	446	0	body proper
+UBERON:0000064	441	0	organ part
+UBERON:0011676	439	0	subdivision of organism along main body axis
+UBERON:0000924	435	0	ectoderm
+UBERON:0006601	435	0	presumptive ectoderm
+UBERON:0004121	427	0	ectoderm-derived structure
+UBERON:0007524	424	0	dense mesenchyme tissue
+DOID:0050686	384	1	organ system cancer
+UBERON:0003081	383	0	lateral plate mesoderm
+CL:0000988	373	0	hematopoietic cell
+CL:0000037	370	0	hematopoietic stem cell
+CL:0000566	370	0	angioblastic mesenchymal cell
+CL:0008001	370	0	hematopoietic precursor cell
+UBERON:0000025	358	0	tube
+UBERON:0015212	355	0	lateral structure
+CL:0000837	349	0	hematopoietic multipotent progenitor cell
+CL:0002032	349	0	hematopoietic oligopotent progenitor cell
+UBERON:0016880	347	0	future nervous system
+UBERON:0010314	347	0	structure with developmental contribution from neural crest
+CL:0000325	346	0	stuff accumulating cell
+UBERON:0002405	341	0	immune system
+UBERON:0016879	339	0	future central nervous system
+FF:0101120	333	0	epithelial cell line sample
+UBERON:0010371	333	0	ecto-epithelium
+CL:0000055	324	0	non-terminally differentiated cell
+UBERON:0002204	323	0	musculoskeletal system
+UBERON:0000485	315	0	simple columnar epithelium
+UBERON:0012274	315	0	columnar epithelium
+UBERON:0002100	313	0	trunk
+UBERON:0007497	306	0	developing epithelial placode
+CL:0000222	303	0	mesodermal cell
+UBERON:0000481	301	0	multi-tissue structure
+CL:0002031	298	0	hematopoietic lineage restricted progenitor cell
+UBERON:0002346	286	0	neurectoderm
+CL:0000049	279	0	common myeloid progenitor
+CL:0000763	277	0	myeloid cell
+UBERON:0003075	276	0	neural plate
+UBERON:0004734	276	0	gastrula
+UBERON:0007284	276	0	presumptive neural plate
+UO:0000032	275	1	hour
+UBERON:0002193	267	0	hemolymphoid system
+CL:0000738	263	0	leukocyte
+DOID:0050687	246	1	cell type cancer
+UBERON:0011216	242	0	organ system subdivision
+CL:0002087	232	0	nongranular leukocyte
+CL:0000211	231	0	electrically active cell
+CL:0000393	231	0	electrically responsive cell
+UBERON:0004535	229	0	cardiovascular system
+UBERON:0001009	229	0	circulatory system
+UBERON:0009569	229	0	subdivision of trunk
+CL:0000839	227	0	myeloid lineage restricted progenitor cell
+UBERON:0001434	216	0	skeletal system
+UBERON:0002390	211	0	hematopoietic system
+UBERON:0003061	211	0	blood island
+FF:0100297	204	0	carcinoma cell line sample
+DOID:305	204	1	carcinoma
+UBERON:0004765	202	0	skeletal element
+UBERON:0013522	202	0	subdivision of tube
+FF:0000004	199	0	tissue sample
+UBERON:0001474	195	0	bone element
+UO:0000031	195	1	minute
+UBERON:0002049	194	0	vasculature
+UBERON:0007798	194	0	vascular system
+UBERON:0000060	190	0	anatomical wall
+CL:0000183	188	0	contractile cell
+CL:0002242	188	0	nucleate cell
+UBERON:0012429	187	0	hemopoietic tissue
+UBERON:0002371	187	0	bone marrow
+CL:0000766	187	0	myeloid leukocyte
+CL:0000680	186	0	muscle precursor cell
+CL:0001035	186	0	bone cell
+UBERON:0001016	185	0	nervous system
+CL:0002092	185	0	bone marrow cell
+UBERON:0001007	184	0	digestive system
+UBERON:0007026	184	0	primitive gut
+UBERON:0001555	184	0	digestive tract
+UBERON:0004923	183	0	organ component layer
+CL:0000056	183	0	myoblast
+UBERON:0003914	183	0	epithelial tube
+UBERON:0000055	181	0	vessel
+CL:0000187	180	0	muscle cell
+CL:0001060	176	0	hematopoietic oligopotent progenitor cell, lineage-negative
+CL:0000557	176	0	granulocyte monocyte progenitor cell
+CL:1001610	176	0	bone marrow hematopoietic cell
+UBERON:0000063	176	0	organ segment
+CL:0000221	176	0	ectodermal cell
+CL:0001012	176	0	CD7-negative lymphoid progenitor OR granulocyte monocyte progenitor
+UBERON:0004921	176	0	subdivision of digestive tract
+UBERON:0000915	167	0	thoracic segment of trunk
+UBERON:0003056	164	0	pre-chordal neural plate
+UBERON:0001017	163	0	central nervous system
+CL:0002009	161	0	macrophage dendritic cell progenitor
+CL:0000133	161	0	neurectodermal cell
+UBERON:0005157	161	0	epithelial fold
+CL:0000040	159	0	monoblast
+CL:0000559	159	0	promonocyte
+CL:0002194	159	0	monopoietic cell
+CL:0000576	159	0	monocyte
+UBERON:0006595	157	0	presumptive endoderm
+UBERON:0000925	157	0	endoderm
+UBERON:0004872	155	0	splanchnic layer of lateral plate mesoderm
+UBERON:0007023	153	0	adult organism
+UBERON:0004716	152	0	conceptus
+FF:0000998	152	0	adult tissue sample
+UBERON:0000153	143	0	anterior region of body
+UBERON:0007811	142	0	craniocervical region
+CL:0000473	137	0	defensive cell
+CL:0000234	137	0	phagocyte
+UBERON:0000033	135	0	head
+UBERON:0003103	135	0	compound organ
+FF:0000625	133	0	experimental infection sample
+UBERON:0005177	131	0	trunk region element
+UBERON:0004537	126	0	blood vasculature
+UBERON:0006965	126	0	vascular cord
+UBERON:0003929	126	0	gut epithelium
+UBERON:0011695	126	0	embryonic cardiovascular system
+UBERON:0001981	126	0	blood vessel
+UBERON:0014903	126	0	primordial vasculature
+UO:0000033	126	1	day
+UBERON:0012275	123	0	meso-epithelium
+UBERON:0004119	122	0	endoderm-derived structure
+CL:0000192	121	0	smooth muscle cell
+CL:0000514	121	0	smooth muscle myoblast
+CL:0008007	121	0	visceral muscle cell
+CL:0008000	121	0	non-striated muscle cell
+CL:0000147	120	0	pigment cell
+UBERON:0001041	118	0	foregut
+DOID:299	117	1	adenocarcinoma
+FF:0100167	117	0	adenocarcinoma cell line sample
+UBERON:0005062	115	0	neural fold
+UBERON:0005061	115	0	neural groove
+UBERON:0002342	115	0	neural crest
+FF:0101035	115	0	hematopoietic cell line sample
+UBERON:0005911	113	0	endo-epithelium
+UBERON:0003509	107	0	arterial blood vessel
+UBERON:0004572	107	0	arterial system
+CL:0000215	106	0	barrier cell
+DOID:0060083	106	1	immune system cancer
+CL:0000213	106	0	lining cell
+CL:0000057	106	0	fibroblast
+UBERON:0001015	105	0	musculature
+DOID:2531	105	1	hematologic cancer
+UBERON:0000383	105	0	musculature of body
+CL:0000235	104	0	macrophage
+FF:0000086	104	0	human macrophage sample
+UBERON:0002385	103	0	muscle tissue
+FF:0100669	102	0	embryonic cell line sample
+UBERON:0000310	102	0	breast
+UBERON:0001443	102	0	chest
+UBERON:0006238	100	0	future brain
+UBERON:0000955	100	0	brain
+UBERON:0000020	98	0	sense organ
+UBERON:0001032	98	0	sensory system
+UBERON:0004456	98	0	entire sense organ system
+CL:0000333	97	0	migratory neural crest cell
+CL:0007004	97	0	premigratory neural crest cell
+UBERON:0001456	96	0	face
+UBERON:0001444	96	0	subdivision of head
+FF:0100816	95	0	breast cell line sample
+DOID:5093	95	1	thoracic cancer
+FF:0100356	95	0	breast cancer cell line sample
+DOID:1612	95	1	breast cancer
+FF:0100093	94	0	MCF-7 cell sample
+UBERON:0003071	94	0	eye primordium
+UBERON:0004128	94	0	optic vesicle
+FF:0100737	94	0	leukemia cell line sample
+UBERON:0000970	94	0	eye
+UBERON:0002104	94	0	visual system
+UBERON:0003072	94	0	optic cup
+UBERON:0000019	94	0	camera-type eye
+UBERON:0010312	94	0	immature eye
+DOID:1240	94	1	leukemia
+FF:0101912	94	0	breast adenocarcinoma cell line sample
+UBERON:0004088	94	0	ocular region
+CL:0000359	94	0	vascular associated smooth muscle cell
+UBERON:0000047	94	0	simple eye
+FF:0000057	93	0	fibroblast sample
+UBERON:0009142	91	0	entire embryonic mesenchyme
+UBERON:0001049	91	0	neural tube
+UBERON:0005068	91	0	neural rod
+UBERON:0004571	91	0	systemic arterial system
+UBERON:0007135	91	0	neural keel
+UBERON:0017650	91	0	developing mesenchymal structure
+CL:0002319	90	0	neural cell
+UBERON:0001004	89	0	respiratory system
+UBERON:0010230	89	0	eyeball of camera-type eye
+CL:0002078	88	0	meso-epithelial cell
+UBERON:0013768	86	0	great vessel of heart
+UBERON:0000073	86	0	regional part of nervous system
+UBERON:0002616	86	0	regional part of brain
+CL:0002322	83	0	embryonic stem cell
+FF:0101581	83	0	embryonic stem cell line sample
+EFO:0001461	82	1	control
+UBERON:0010191	82	0	aortic system
+UBERON:0000947	82	0	aorta
+FF:0000335	80	0	LPS treatment sample
+CL:0000115	80	0	endothelial cell
+FF:0000046	80	0	human endothelial cell sample
+DOID:0060100	80	1	musculoskeletal system cancer
+CL:0002077	80	0	ecto-epithelial cell
+CL:0000136	79	0	fat cell
+UBERON:0005256	79	0	trunk mesenchyme
+UBERON:0011823	78	0	dense connective tissue
+UBERON:0001135	78	0	smooth muscle tissue
+UBERON:0000065	77	0	respiratory tract
+UBERON:0015833	77	0	foregut epithelium
+UBERON:0003258	77	0	endoderm of foregut
+UBERON:0001005	77	0	respiratory airway
+UBERON:0008947	77	0	respiratory primordium
+UBERON:0002530	76	0	gland
+UBERON:0002416	75	0	integumental system
+DOID:201	74	1	connective tissue cancer
+UBERON:0015808	74	0	eye epithelium
+UBERON:0007625	74	0	pigment epithelium of eye
+UBERON:0011822	73	0	dense irregular connective tissue
+UBERON:0011821	73	0	irregular connective tissue
+UBERON:0013765	73	0	digestive system element
+UBERON:0000990	71	0	reproductive system
+CL:0000075	71	0	columnar/cuboidal epithelial cell
+UBERON:0005156	71	0	reproductive structure
+UBERON:0001013	71	0	adipose tissue
+UBERON:0001802	70	0	posterior segment of eyeball
+CL:0000542	70	0	lymphocyte
+CL:0000051	70	0	common lymphoid progenitor
+UBERON:0003080	70	0	anterior neural tube
+UBERON:0000966	69	0	retina
+UBERON:0005388	69	0	photoreceptor array
+CL:0002139	69	0	endothelial cell of vascular tree
+CL:0000838	69	0	lymphoid lineage restricted progenitor cell
+UBERON:0003102	68	0	surface structure
+FF:0000266	67	0	human mature adipocyte sample
+UBERON:0001781	67	0	layer of retina
+CL:0002539	66	0	aortic smooth muscle cell
+CL:0009004	66	0	retinal cell
+UBERON:0004178	66	0	aorta smooth muscle tissue
+UBERON:0001890	66	0	forebrain
+UBERON:0004695	66	0	arterial system smooth muscle
+UBERON:0001782	66	0	pigmented layer of retina
+CL:0000076	66	0	squamous epithelial cell
+UBERON:0004237	66	0	blood vessel smooth muscle
+UBERON:0002780	66	0	regional part of forebrain
+CL:0002586	66	0	retinal pigment epithelial cell
+UBERON:0006240	66	0	future forebrain
+CL:0000149	66	0	visual pigment cell
+UBERON:0014402	65	0	sex-specific anatomical structure
+DOID:0060124	64	1	skeletal system cancer
+CL:0000710	64	0	neurecto-epithelial cell
+DOID:184	64	1	bone cancer
+FF:0100385	64	0	bone cancer cell line sample
+UBERON:0005181	63	0	thoracic segment organ
+FF:0000329	63	0	adipogenic induction sample
+UBERON:0002417	62	0	abdominal segment of trunk
+FF:0010012	62	0	human brain - adult sample
+UBERON:0005178	62	0	thoracic cavity element
+FF:0300100	62	0	ARPE-19 EMT induced with TGF-beta and TNF-alpha sample
+CL:0002570	61	0	mesenchymal stem cell of adipose
+FF:0000096	61	0	human mesenchymal stem cell of adipose sample
+UBERON:0000072	61	0	segment of respiratory tract
+UBERON:0000916	60	0	abdomen
+FF:0100407	59	0	osteosarcoma cell line sample
+UBERON:0003133	59	0	reproductive organ
+DOID:3347	59	1	osteosarcoma
+CL:0000737	59	0	striated muscle cell
+FF:0100971	57	0	SAOS-2 cell sample
+CL:0000547	56	0	proerythroblast
+UBERON:0000076	56	0	external ectoderm
+UBERON:0002465	56	0	lymphoid system
+CL:0000765	56	0	erythroblast
+CL:0000764	56	0	erythroid lineage cell
+CL:0000050	56	0	megakaryocyte-erythroid progenitor cell
+CL:0000228	56	0	multinucleate cell
+CL:0002372	56	0	myotube
+CL:0000038	56	0	erythroid progenitor cell
+DOID:0050117	55	1	disease by infectious agent
+UBERON:0005173	54	0	abdominal segment element
+FF:0000402	54	0	human K562 erythroblastic leukemia cell line sample
+UBERON:0001473	54	0	lymphatic vessel
+UBERON:0004536	54	0	lymph vasculature
+CL:0000223	54	0	endodermal cell
+FF:0000332	54	0	calcification induced with ascorbate and BPG sample
+FF:0000338	54	0	hemin treatment sample
+UBERON:0014371	54	0	future telencephalon
+UBERON:0001893	54	0	telencephalon
+UBERON:0005172	54	0	abdomen element
+FF:0000401	54	0	erythroblastic leukemia cell line sample
+UBERON:0006558	54	0	lymphatic part of lymphoid system
+CL:0000047	53	0	neuronal stem cell
+FF:0200006	53	0	myoblast differentiation to myotubes, control sample
+CL:0000148	53	0	melanocyte
+CL:0000541	53	0	melanoblast
+UBERON:0002199	53	0	integument
+CL:0000540	51	0	neuron
+CL:0002138	51	0	endothelial cell of lymphatic vessel
+CL:0000031	51	0	neuroblast
+CL:0005020	51	0	lymphangioblast
+FF:0000049	51	0	human lymphatic endothelial cell sample
+CL:0000404	51	0	electrically signaling cell
+CL:0005022	51	0	vascular lymphangioblast
+UBERON:0000486	49	0	multilaminar epithelium
+CL:0002076	49	0	endo-epithelial cell
+UBERON:0001869	49	0	cerebral hemisphere
+FF:0000341	48	0	Vegfc treatment sample
+FF:0000167	48	0	smooth muscle cell sample
+FF:0200005	48	0	iPS differentiation to neuron sample
+FF:0000330	48	0	EGF1 treatment sample
+FF:0000400	47	0	H9 embryonic stem cell line sample
+UBERON:0002097	47	0	skin of body
+UBERON:0011272	47	0	embryonic skin basal layer
+UBERON:0002368	47	0	endocrine gland
+UBERON:0000949	47	0	endocrine system
+UBERON:0005153	46	0	epithelial bud
+UBERON:0001008	45	0	renal system
+FF:0000331	45	0	HRG treatment sample
+UBERON:0006554	45	0	urinary system structure
+CL:0000827	44	0	pro-T cell
+CL:0000084	44	0	T cell
+UBERON:0007503	44	0	epithelial vesicle
+UBERON:0001558	44	0	lower respiratory tract
+FF:0000334	44	0	melanocytic induction sample
+UBERON:0014404	41	0	female anatomical structure
+UBERON:0003077	41	0	paraxial mesoderm
+UBERON:0003100	41	0	female organism
+UBERON:0007285	41	0	presumptive paraxial mesoderm
+UBERON:0000474	41	0	female reproductive system
+UBERON:0006914	41	0	squamous epithelium
+EFO:0000544	39	1	infection
+UBERON:0002329	39	0	somite
+UBERON:0009618	39	0	trunk paraxial mesoderm
+FF:0200010	39	0	rinderpest infection sample
+CL:0001054	39	0	CD14-positive monocyte
+UBERON:0002365	39	0	exocrine gland
+CL:0000151	39	0	secretory cell
+Disposition	39	1	disposition
+UBERON:0007282	39	0	presumptive segmental plate
+UBERON:0002330	39	0	exocrine system
+UBERON:0003059	39	0	presomitic mesoderm
+EFO:0000408	39	1	disease
+UBERON:0004185	37	0	endodermal part of digestive tract
+UBERON:0003064	37	0	intermediate mesoderm
+FF:0000651	36	0	cardiomyocyte differentiation treatment sample
+CL:0002419	35	0	mature T cell
+CL:0000790	35	0	immature alpha-beta T cell
+CL:0002420	35	0	immature T cell
+DOID:7	35	1	disease of anatomical entity
+DOID:193	35	1	reproductive organ cancer
+UBERON:0005162	35	0	multi cell component structure
+UBERON:0004807	35	0	respiratory system epithelium
+CL:0000789	35	0	alpha-beta T cell
+CL:0000791	35	0	mature alpha-beta T cell
+UBERON:0004802	35	0	respiratory tract epithelium
+UBERON:0000487	34	0	simple squamous epithelium
+UBERON:0000930	34	0	stomodeum
+UBERON:0011215	34	0	central nervous system cell part cluster
+UBERON:0000165	34	0	mouth
+UBERON:0004906	34	0	ectodermal part of digestive tract
+CL:0002057	33	0	CD14-positive, CD16-negative classical monocyte
+UBERON:0004290	33	0	dermomyotome
+UBERON:0016888	33	0	transitional anatomical structure
+UBERON:0001637	33	0	artery
+UBERON:0002020	33	0	gray matter
+FF:0011111	33	0	human CD14-positive CD16-negative Monocytes sample
+UBERON:0016526	33	0	lobe of cerebral hemisphere
+CL:0000860	33	0	classical monocyte
+UBERON:0003528	33	0	brain grey matter
+DOID:8692	32	1	myeloid leukemia
+FF:0100740	32	0	myeloid leukemia cell line sample
+UBERON:0007651	32	0	anatomical junction
+UBERON:0009856	32	0	sac
+UBERON:0000489	32	0	cavitated compound organ
+CL:0000499	31	0	stromal cell
+DOID:120	31	1	female reproductive organ cancer
+UBERON:0004176	31	0	external genitalia
+FF:0000340	31	0	IL1-beta treatment sample
+UBERON:0007499	31	0	epithelial sac
+FF:0000339	30	0	FGF2 treatment sample
+UBERON:0009196	30	0	indifferent external genitalia
+FF:0000363	30	1	6 hr sample
+UBERON:0000948	29	0	heart
+UBERON:0004141	29	0	heart tube
+UBERON:0009550	29	0	endoderm of foregut-midgut junction
+UBERON:0009881	29	0	anterior lateral plate mesoderm
+UBERON:0001353	29	0	anal region
+UBERON:0006235	29	0	foregut-midgut junction
+UBERON:0015228	29	0	circulatory organ
+UBERON:0003084	29	0	heart primordium
+UBERON:0005498	29	0	primitive heart tube
+UBERON:0004291	29	0	heart rudiment
+UBERON:0015410	29	0	heart plus pericardium
+UBERON:0004140	29	0	primary heart field
+UBERON:0009497	29	0	epithelium of foregut-midgut junction
+UBERON:0007005	29	0	cardiac mesoderm
+UBERON:0007100	29	0	primary circulatory organ
+UBERON:0004139	29	0	cardiogenic plate
+UBERON:0004175	29	0	internal genitalia
+FF:0000359	28	1	2 hr sample
+DOID:3119	28	1	gastrointestinal system cancer
+FF:0000999	28	0	fetal tissue sample
+UBERON:0002423	28	0	hepatobiliary system
+FF:0101533	28	0	gastrointestinal cancer cell sample
+UBERON:0004161	28	0	septum transversum
+UBERON:0004815	28	0	lower respiratory tract epithelium
+FF:0000347	27	1	45 minutes sample
+UBERON:0005597	27	0	lung primordium
+UBERON:0004638	27	0	blood vessel endothelium
+FF:0000343	27	0	control treatment sample
+UBERON:0000171	27	0	respiration organ
+UBERON:0000118	27	0	lung bud
+UBERON:0002048	27	0	lung
+UBERON:0001986	27	0	endothelium
+FF:0000346	27	1	30 minutes sample
+FF:0200009	27	0	COBL-a rinderpest infection sample
+UBERON:0004852	27	0	cardiovascular system endothelium
+FF:0000345	27	1	15 minutes sample
+UBERON:0007530	27	0	migrating mesenchyme population
+UBERON:0000170	27	0	pair of lungs
+UBERON:0005409	27	0	gastrointestinal system
+UBERON:0000344	26	0	mucosa
+UBERON:0000993	26	0	oviduct
+UBERON:0009854	26	0	digestive tract diverticulum
+UBERON:0013515	26	0	subdivision of uterine tube
+UBERON:0016887	26	0	entire extraembryonic component
+UBERON:0000478	26	0	extraembryonic structure
+UBERON:0005795	26	0	embryonic uterus
+UBERON:0000995	25	0	uterus
+UBERON:0008835	25	0	hepatic diverticulum
+CL:0002620	25	0	skin fibroblast
+UBERON:0003894	25	0	liver primordium
+FF:0000373	25	1	24 hr sample
+UBERON:0002036	25	0	striated muscle tissue
+UBERON:0002791	25	0	regional part of telencephalon
+FF:0200003	25	0	iPS differentiation to neuron, control sample
+UBERON:0002113	24	0	kidney
+UBERON:0003101	24	0	male organism
+UBERON:0011143	24	0	upper urinary tract
+CL:0000349	24	0	extraembryonic cell
+DOID:630	24	1	genetic disease
+UBERON:0001630	24	0	muscle organ
+UBERON:0005095	24	0	kidney rudiment
+FF:0000361	24	1	4 hr sample
+UBERON:0003918	24	0	kidney mesenchyme
+FF:0000344	24	1	0 minute sample
+UBERON:0007687	24	0	kidney field
+UBERON:0000079	24	0	male reproductive system
+UBERON:0014403	24	0	male anatomical structure
+FF:0000360	24	1	3 hr sample
+UBERON:0005090	24	0	muscle structure
+CL:0002251	23	0	epithelial cell of alimentary canal
+FF:0000250	23	0	human fibroblast of skin sample
+FF:0000031	23	0	CD4-positive T cell sample
+UBERON:0014892	23	0	skeletal muscle organ
+CL:0000095	23	0	neuron associated cell
+UBERON:0018254	23	0	skeletal musculature
+DOID:0080014	23	1	chromosomal disease
+CL:0000624	23	0	CD4-positive, alpha-beta T cell
+UBERON:0003082	23	0	myotome
+FF:0200004	23	0	iPS differentiation to neuron, down-syndrome donor sample
+DOID:14250	23	1	Down syndrome
+CL:0000123	23	0	neuron associated cell (sensu Vertebrata)
+UBERON:0006925	22	0	digestive gland
+UBERON:0008836	22	0	liver bud
+CL:0000077	22	0	mesothelial cell
+UBERON:0005564	22	0	gonad primordium
+UBERON:0000991	22	0	gonad
+UBERON:0003729	22	0	mouth mucosa
+CL:0000826	22	0	pro-B cell
+UBERON:0001134	22	0	skeletal muscle tissue
+UBERON:0000117	22	0	respiratory tube
+FF:0101883	22	0	acute myeloid leukemia cell line sample
+UBERON:0002107	22	0	liver
+CL:0000945	22	0	lymphocyte of B lineage
+UBERON:0009117	22	0	indifferent gonad
+FF:0100400	21	0	sarcoma cell line sample
+FF:0000408	21	0	cellular fractionation sample
+FF:0000354	21	1	150 minutes sample
+UBERON:0010313	21	0	neural crest-derived structure
+UBERON:0000115	21	0	lung epithelium
+UBERON:0001046	21	0	hindgut
+FF:0000358	21	1	1 hr sample
+UBERON:0000125	21	0	neural nucleus
+CL:0000030	21	0	glioblast
+UBERON:0011300	21	0	gray matter of telencephalon
+FF:0000351	21	1	80 minutes sample
+FF:0000352	21	1	100 minutes sample
+CL:0000339	21	0	glioblast (sensu Vertebrata)
+UBERON:0003057	21	0	chordal neural plate
+UBERON:0002308	21	0	nucleus of brain
+UBERON:0000077	21	0	mixed endoderm/mesoderm-derived structure
+CL:0000082	21	0	epithelial cell of lung
+UBERON:0003076	21	0	posterior neural tube
+DOID:1115	21	1	sarcoma
+UBERON:0005856	20	0	developing mesenchymal condensation
+UBERON:0007245	20	0	nuclear complex of neuraxis
+CL:0000125	20	0	glial cell
+UBERON:0011585	20	0	cell condensation
+UBERON:0000058	20	0	duct
+UBERON:0002420	20	0	basal ganglion
+UBERON:0010009	20	0	aggregate regional part of brain
+UBERON:0010011	20	0	collection of basal ganglia
+CL:0000243	20	0	glial cell (sensu Vertebrata)
+UBERON:0011595	20	0	jaw region
+DOID:0050615	20	1	respiratory system cancer
+UBERON:0002075	20	0	viscus
+DOID:1324	19	1	lung cancer
+UBERON:0012361	19	0	internal anal region
+DOID:3095	19	1	germ cell and embryonal cancer
+FF:0100762	19	0	lung cancer cell line sample
+UBERON:0001801	19	0	anterior segment of eyeball
+UBERON:0004122	19	0	genitourinary system
+FF:0100353	19	0	lung cell line sample
+UBERON:0005085	19	0	ectodermal placode
+UBERON:0004874	19	0	somatopleure
+UBERON:0013754	19	0	integumentary system layer
+DOID:2994	19	1	germ cell cancer
+UBERON:0011814	19	0	non-neurogenic ectodermal placode
+CL:0000327	18	0	extracellular matrix secreting cell
+UBERON:0000158	18	0	membranous layer
+UBERON:0000463	18	0	organism substance
+UBERON:0000160	18	0	intestine
+FF:0000367	18	1	12 hr sample
+CL:0002546	18	0	embryonic blood vessel endothelial progenitor cell
+CL:0000071	18	0	blood vessel endothelial cell
+UBERON:0005971	18	0	amniotic fold
+UBERON:0006876	18	0	vasculature of organ
+UBERON:0005631	18	0	extraembryonic membrane
+FF:0000362	18	1	5 hr sample
+UBERON:0014387	18	0	mesenchyme derived from neural crest
+CL:0000630	18	0	supportive cell
+FF:0102424	17	0	mesothelioma cell line sample
+DOID:2394	17	1	ovarian cancer
+FF:0102024	17	0	squamous cell carcinoma cell line sample
+UBERON:0005253	17	0	head mesenchyme
+UBERON:0006314	17	0	bodily fluid
+UBERON:0004732	17	0	segmental subdivision of nervous system
+DOID:1749	17	1	squamous cell carcinoma
+FF:0000166	17	0	human small airway epithelial cell sample
+UBERON:0007196	17	0	tracheobronchial tree
+UBERON:0000164	17	0	primitive urogenital sinus
+CL:0002368	17	0	respiratory epithelial cell
+UBERON:0000163	17	0	embryonic cloaca
+UBERON:0009145	17	0	pharyngeal region of foregut
+UBERON:0000162	17	0	cloaca
+UBERON:0001557	17	0	upper respiratory tract
+UBERON:0003513	16	0	trunk blood vessel
+DOID:934	16	1	viral infectious disease
+UBERON:0001003	16	0	skin epidermis
+UBERON:0001828	16	0	gingiva
+CL:0002494	16	0	cardiocyte
+UBERON:0007376	16	0	outer epithelium
+UBERON:0007277	16	0	presumptive hindbrain
+UBERON:3000961	16	0	external integument structure
+UBERON:0000203	16	0	pallium
+UBERON:0008814	16	0	pharyngeal arch system
+UBERON:0003134	16	0	female reproductive organ
+FF:0000647	16	0	udorn influenza infection sample
+UBERON:0004733	16	0	segmental subdivision of hindbrain
+UBERON:0000178	16	0	blood
+CL:0002159	16	0	general ecto-epithelial cell
+FF:0000364	16	1	7 hr sample
+UBERON:0006596	16	0	presumptive blood
+UBERON:0003089	16	0	sclerotome
+UBERON:0002028	16	0	hindbrain
+DOID:8469	16	1	influenza
+UBERON:0007383	16	0	enveloping layer of ectoderm
+UBERON:0000179	16	0	haemolymphatic fluid
+CL:0002518	15	0	kidney epithelial cell
+UBERON:0003099	15	0	cranial neural crest
+UBERON:0001917	15	0	endothelium of artery
+UBERON:0004573	15	0	systemic artery
+CL:0000188	15	0	cell of skeletal muscle
+UBERON:0000075	15	0	subdivision of skeletal system
+CL:1000497	15	0	kidney cell
+UBERON:0004458	15	0	body cavity or lining
+FF:0000356	15	1	210 minutes sample
+UBERON:0003915	15	0	endothelial tube
+UBERON:0000042	15	0	serous membrane
+UBERON:0007213	15	0	mesenchyme derived from head neural crest
+FF:0000365	15	1	8 hr sample
+UBERON:0004457	15	0	cavity lining
+UBERON:0004700	15	0	arterial system endothelium
+UBERON:0006555	14	0	excretory tube
+CL:0000451	14	0	dendritic cell
+CL:0000236	14	0	B cell
+CL:0002334	14	0	preadipocyte
+FF:0000357	14	1	0 hr sample
+FF:0000389	14	1	12 days sample
+UBERON:0000353	14	0	parenchyma
+FF:0000137	14	0	human preadipocyte sample
+UBERON:0004819	14	0	kidney epithelium
+UBERON:0009663	13	0	telencephalic nucleus
+CL:0000081	13	0	blood cell
+CL:0002552	13	0	fibroblast of gingiva
+CL:0000417	13	0	endopolyploid cell
+DOID:3905	13	1	lung carcinoma
+CL:1000449	13	0	epithelial cell of nephron
+FF:0000063	13	0	human fibroblast of gingiva sample
+UBERON:0009773	13	0	renal tubule
+FF:0000384	13	1	4 days sample
+UBERON:0003937	13	0	sex gland
+UBERON:0005399	13	0	male reproductive gland
+CL:0000412	13	0	polyploid cell
+CL:0000181	13	0	metabolising cell
+FF:0000272	13	0	human ovarian cancer mesenchymal precursor cell sample
+UBERON:0001285	13	0	nephron
+UBERON:0004208	13	0	nephrogenic mesenchyme
+UBERON:0004211	13	0	nephron epithelium
+UBERON:0000992	13	0	female gonad
+UBERON:0001231	13	0	nephron tubule
+UBERON:0006562	13	0	pharynx
+CL:0005026	13	0	hepatoblast
+CL:0000182	13	0	hepatocyte
+UBERON:0007684	13	0	uriniferous tubule
+UBERON:0000956	12	0	cerebral cortex
+UBERON:0002680	12	0	regional part of metencephalon
+CL:0002191	12	0	granulocytopoietic cell
+UBERON:0002367	12	0	prostate gland
+UBERON:0003353	12	0	epithelium of hindgut
+UBERON:0000010	12	0	peripheral nervous system
+UBERON:0010147	12	0	male accessory sex gland
+DOID:3093	12	1	nervous system cancer
+UBERON:0016548	12	0	central nervous system gray matter layer
+UBERON:0003135	12	0	male reproductive organ
+FF:0200008	12	0	293SLAM rinderpest infection sample
+UBERON:0009846	12	0	embryonic cloacal epithelium
+UBERON:0010092	12	0	future metencephalon
+UBERON:0009891	12	0	facial mesenchyme
+UBERON:0011137	12	0	axial skeletal system
+UBERON:0004902	12	0	urogenital sinus epithelium
+UBERON:0001042	12	0	chordate pharynx
+FF:0000406	12	0	nuclear fraction sample
+UBERON:0012481	12	0	cloacal epithelium
+UBERON:0001894	12	0	diencephalon
+UBERON:0009847	12	0	prostate field
+UBERON:0005401	12	0	cerebral hemisphere grey matter
+UBERON:0006222	12	0	future diencephalon
+CL:0000990	12	0	conventional dendritic cell
+UBERON:0001895	12	0	metencephalon
+UBERON:0003820	12	0	prostate bud
+CL:0000094	12	0	granulocyte
+FF:0000162	12	0	human skeletal muscle cell sample
+UBERON:0002200	11	0	vasculature of head
+UBERON:0003408	11	0	gland of gut
+FF:0000375	11	1	48 hr sample
+CL:0000625	11	0	CD8-positive, alpha-beta T cell
+CL:0000153	11	0	GAG secreting cell
+UBERON:0004876	11	0	urogenital ridge
+FF:0101522	11	0	B-lymphocyte cell line sample
+UBERON:0001264	11	0	pancreas
+UBERON:0001871	11	0	temporal lobe
+UBERON:0003314	11	0	eye mesenchyme
+FF:0000030	11	0	CD8-positive T cell sample
+UBERON:0012469	11	0	external anal region
+FF:0010193	11	0	human diencephalon - adult sample
+UBERON:0000200	11	0	gyrus
+UBERON:0012292	11	0	embryonic cloacal fold
+UBERON:0001851	11	0	cortex
+FF:0000025	11	0	CD19-positive B cell sample
+CL:0000447	11	0	carbohydrate secreting cell
+UBERON:0009920	11	0	optic neural crest
+FF:0100104	10	0	lymphoma cell line sample
+UBERON:0001225	10	0	cortex of kidney
+UBERON:0001173	10	0	biliary tree
+CL:0002632	10	0	epithelial cell of lower respiratory tract
+UBERON:0010260	10	0	umbilical blood vessel
+UBERON:0004755	10	0	skeletal tissue
+EFO:0000324	10	1	cell type
+CL:0002584	10	0	renal cortical epithelial cell
+UBERON:0001638	10	0	vein
+UBERON:0002067	10	0	dermis
+UBERON:0004225	10	0	respiratory system smooth muscle
+UBERON:0002294	10	0	biliary system
+GS:0005	10	0	human airway smooth muscle cell sample
+CL:0000362	10	0	epidermal cell
+UBERON:0004797	10	0	blood vessel layer
+CL:0002681	10	0	kidney cortical cell
+UBERON:0004770	10	0	articular system
+CL:0000163	10	0	endocrine cell
+FF:0100453	10	0	fibroblast cell line sample
+DOID:0060058	10	1	lymphoma
+UBERON:0004016	10	0	dermatome
+FF:0000387	10	1	8 days sample
+UBERON:0004912	10	0	biliary bud
+DOID:171	10	1	neuroectodermal tumor
+CL:0002202	10	0	epithelial cell of tracheobronchial tree
+UBERON:0003920	10	0	venous blood vessel
+UBERON:0003297	10	0	gland of integumental system
+UBERON:0008987	10	0	renal parenchyma
+UBERON:0003068	10	0	axial mesoderm
+UBERON:0003124	10	0	chorion
+UBERON:0004582	10	0	venous system
+UBERON:0000982	10	0	skeletal joint
+UBERON:0004905	10	0	articulation
+UBERON:0010083	10	0	future dermis
+CL:0002028	9	0	basophil mast progenitor cell
+EFO:0003042	9	1	H1-hESC
+UBERON:0000369	9	0	corpus striatum
+UBERON:0002743	9	0	basal forebrain
+UBERON:0000473	9	0	testis
+FF:0010053	9	0	human blood - adult sample
+UBERON:0002201	9	0	vasculature of trunk
+FF:0000383	9	1	3 days sample
+UBERON:0010039	9	0	food storage organ
+CL:0000831	9	0	mast cell progenitor
+UBERON:0010323	9	0	cranial skeletal system
+UBERON:0005057	9	0	immune organ
+UBERON:0002298	9	0	brainstem
+CL:0002274	9	0	histamine secreting cell
+UBERON:0004907	9	0	lower digestive tract
+UBERON:0000204	9	0	ventral part of telencephalon
+CL:0000097	9	0	mast cell
+CL:0000457	9	0	biogenic amine secreting cell
+FF:0000405	9	0	cytoplasmic fraction sample
+UBERON:0001737	9	0	larynx
+CL:1000413	9	0	endothelial cell of artery
+UBERON:0006003	9	0	integumentary adnexa
+UBERON:0000059	9	0	large intestine
+DOID:3908	9	1	non-small cell lung carcinoma
+UBERON:0002435	9	0	striatum
+DOID:3355	9	1	fibrosarcoma
+UBERON:0006098	9	0	basal nuclear complex
+UBERON:0001950	9	0	neocortex
+EFO:0000322	9	1	cell line
+FF:0000047	9	0	human endothelial cell of the artery sample
+FF:0104978	9	0	HEp-2 cell sample
+DOID:3620	9	1	central nervous system cancer
+UBERON:0002185	9	0	bronchus
+UBERON:0000945	9	0	stomach
+FF:0200007	9	0	H1 embryonic stem cells differentiation to CD34+ HSC sample
+FF:0000632	9	0	group A streptococci treatment sample
+FF:0102553	9	0	non-small cell lung cancer cell line sample
+FF:0100460	9	0	fibrosarcoma cell line sample
+UBERON:0002619	9	0	regional part of cerebral cortex
+FF:0000260	9	0	mast cell sample
+DOID:1036	9	1	chronic leukemia
+UBERON:0000085	8	0	morula
+UBERON:0011932	8	0	pilosebaceous unit
+CL:1000494	8	0	nephron tubule epithelial cell
+UBERON:0000091	8	0	bilaminar disc
+UBERON:0007806	8	0	connecting stalk
+UBERON:0004810	8	0	nephron tubule epithelium
+DOID:3571	8	1	liver cancer
+DOID:1319	8	1	brain cancer
+FF:0000281	8	0	human whole blood sample
+UBERON:0002784	8	0	regional part of diencephalon
+DOID:3904	8	1	bronchogenic carcinoma
+CL:1000507	8	0	kidney tubule cell
+DOID:170	8	1	endocrine gland cancer
+FF:0010016	8	0	human heart - adult sample
+UBERON:0002331	8	0	umbilical cord
+UBERON:0004177	8	0	hemopoietic organ
+UBERON:0005383	8	0	caudate-putamen
+UBERON:0005292	8	0	extraembryonic tissue
+FF:0100711	8	0	glioma cell line sample
+FF:0102061	8	0	bronchogenic carcinoma cell sample
+UBERON:0003126	8	0	trachea
+UBERON:0000358	8	0	blastocyst
+UBERON:0016529	8	0	cortex of cerebral lobe
+UBERON:0000349	8	0	limbic system
+UBERON:0000087	8	0	inner cell mass
+FF:0100773	8	0	lymphoblastoid cell line sample
+UBERON:0000305	8	0	amnion
+UBERON:0001897	8	0	dorsal plus ventral thalamus
+UBERON:0010225	8	0	thalamic complex
+FF:0100690	8	0	brain cancer cell line sample
+FF:0000151	8	0	human renal epithelial cell sample
+UBERON:0005382	8	0	dorsal striatum
+FF:0000648	8	0	mock infection sample
+UBERON:0008780	8	0	inner cell mass derived epiblast
+CL:0000154	8	0	protein secreting cell
+FF:0100255	8	0	brain cell line sample
+UBERON:0005728	8	0	extraembryonic mesoderm
+DOID:3070	8	1	malignant glioma
+DOID:1325	8	1	bronchus cancer
+FF:0101531	8	0	glial cell line sample
+FF:0100224	8	0	liver cell line sample
+UBERON:0010409	8	0	eye surface
+CL:0000586	7	0	germ cell
+CL:0002328	7	0	bronchial epithelial cell
+UBERON:0005910	7	0	transitional epithelium
+UBERON:0007297	7	0	presumptive pronephric mesoderm
+UBERON:0004340	7	0	allantois
+FF:0200002	7	0	olfactory epithelial cell sample
+FF:0000732	7	0	human adipocyte differentiation day8 sample
+CL:0002503	7	0	adventitial cell
+UBERON:0002037	7	0	cerebellum
+UBERON:0002203	7	0	vasculature of eye
+UBERON:0004814	7	0	upper respiratory tract epithelium
+CL:0007009	7	0	prechondroblast
+UBERON:0005333	7	0	mammary bud
+UBERON:0001155	7	0	colon
+CL:0002167	7	0	olfactory epithelial cell
+CL:1000306	7	0	fibroblast of tunica adventitia of artery
+UBERON:0003063	7	0	prechordal plate
+DOID:863	7	1	nervous system disease
+UBERON:0005754	7	0	rostral part of nephrogenic cord
+CL:0000126	7	0	macroglial cell
+UBERON:0001040	7	0	yolk sac
+UBERON:0001768	7	0	uvea
+UBERON:0003422	7	0	mesenchyme of umbilical cord
+UBERON:0003928	7	0	digestive system duct
+FF:0000731	7	0	human adipocyte differentiation day4 sample
+UBERON:0004288	7	0	skeleton
+UBERON:0007690	7	0	early pharyngeal endoderm
+CL:0001019	7	0	CD115-positive monocyte OR common dendritic progenitor
+UBERON:0002120	7	0	pronephros
+UBERON:0006215	7	0	rhombic lip
+UBERON:0005311	7	0	mammary placode
+UBERON:0005721	7	0	pronephric mesoderm
+UBERON:0004664	7	0	aorta tunica adventitia
+UBERON:0001911	7	0	mammary gland
+UBERON:0004875	7	0	nephrogenic cord
+UBERON:0003834	7	0	thoracic segment blood vessel
+CL:0001029	7	0	common dendritic progenitor
+UBERON:0004663	7	0	aorta wall
+CL:0000667	7	0	collagen secreting cell
+CL:0000453	7	0	Langerhans cell
+FF:0010154	7	0	human thalamus - adult donor sample
+CL:0000058	7	0	chondroblast
+FF:0100067	7	0	kidney cell line sample
+FF:0000058	7	0	human fibroblast of the aortic adventitia sample
+CL:0000150	7	0	glandular epithelial cell
+DOID:686	7	1	liver carcinoma
+UBERON:0006915	7	0	stratified squamous epithelium
+CL:0000098	7	0	sensory epithelial cell
+UBERON:0000080	7	0	mesonephros
+CL:0002547	7	0	fibroblast of the aortic adventitia
+UBERON:0006904	7	0	head mesenchyme from mesoderm
+FF:0000015	7	0	human bronchial epithelial cell sample
+FF:0000733	7	0	human adipocyte differentiation day12 sample
+UBERON:0005742	7	0	adventitia
+FF:0102580	7	0	chronic myeloid leukemia cell line sample
+FF:0104976	7	0	human nasal epithelial cell sample
+UBERON:0005985	7	0	coronary vessel
+UBERON:0002394	7	0	bile duct
+UBERON:0000974	7	0	neck
+CL:0000197	7	0	receptor cell
+UBERON:0006799	7	0	glandular epithelium
+FF:0100578	7	0	hepatoma cell line sample
+CL:0000127	7	0	astrocyte
+FF:0000117	7	0	human mesenchymal stem cell of umbilical cord blood sample
+UBERON:0002031	7	0	epithelium of bronchus
+CL:0000039	7	0	germ line cell
+UBERON:0005734	7	0	tunica adventitia of blood vessel
+CL:0002540	7	0	mesenchymal stem cell of the bone marrow
+UBERON:0009842	7	0	acinus
+UBERON:0008425	7	0	mammary ridge
+DOID:684	7	1	hepatocellular carcinoma
+FF:0100306	7	0	teratocarcinoma cell line sample
+CL:0000138	7	0	chondrocyte
+UBERON:0009722	7	0	entire pharyngeal arch endoderm
+FF:0000097	7	0	human mesenchymal stem cell of bone marrow sample
+CL:0000840	7	0	immature conventional dendritic cell
+UBERON:0001872	7	0	parietal lobe
+FF:0000374	7	1	36 hr sample
+FF:0010031	7	0	human temporal lobe - adult sample
+UBERON:0003498	7	0	heart blood vessel
+CL:0002569	7	0	mesenchymal stem cell of umbilical cord
+UBERON:0001987	7	0	placenta
+DOID:2841	6	1	asthma
+FF:0000127	6	0	human osteoblast-Sciencell sample
+UBERON:0004348	6	0	optic eminence
+CL:0002573	6	0	Schwann cell
+CL:2000005	6	0	brain macroglial cell
+CL:0000062	6	0	osteoblast
+CL:0002543	6	0	vein endothelial cell
+FF:0000396	6	1	28 days sample
+CL:0007010	6	0	preosteoblast
+UBERON:0017672	6	0	abdominal viscera
+UBERON:0001178	6	0	visceral peritoneum
+DOID:363	6	1	uterine cancer
+UBERON:0005866	6	0	pre-cartilage condensation
+UBERON:0005103	6	0	mesonephric epithelium
+UBERON:0005863	6	0	cartilaginous condensation
+UBERON:0002358	6	0	peritoneum
+UBERON:0003697	6	0	abdominal wall
+UBERON:0008883	6	0	osteoid
+FF:0000128	6	0	human osteoblast-Cell applications sample
+UBERON:0004145	6	0	outflow tract
+UBERON:0006553	6	0	renal duct
+UBERON:0002108	6	0	small intestine
+CL:0002397	6	0	CD14-positive, CD16-positive monocyte
+UBERON:0010523	6	0	microcirculatory vessel
+UBERON:0002021	6	0	occipital lobe
+UBERON:0003060	6	0	pronephric duct
+FF:0000393	6	1	21 days sample
+DOID:2320	6	1	obstructive lung disease
+UBERON:0011138	6	0	post-cranial axial skeletal system
+UBERON:0005805	6	0	dorsal aorta
+FF:0000059	6	0	human cardiac fibroblast sample
+FF:0000388	6	1	9 days sample
+UBERON:0004908	6	0	upper digestive tract
+CL:0000079	6	0	stratified epithelial cell
+FF:0000385	6	1	6 days sample
+UBERON:0003296	6	0	gland of diencephalon
+CL:0002248	6	0	pluripotent stem cell
+FF:0000349	6	1	60 minutes sample
+DOID:0050161	6	1	lower respiratory tract disease
+UBERON:0014907	6	0	intersomitic vessel
+FF:0000534	6	0	human H9 Embryoid body cells 3 days after melanocytic induction sample
+FF:0101555	6	0	endometrial cancer cell line sample
+FF:0000382	6	1	2 days sample
+UBERON:0012430	6	0	tunica fibrosa of eyeball
+UBERON:0000964	6	0	cornea
+UBERON:0000002	6	0	uterine cervix
+FF:0300101	6	0	hIPS sample
+CL:0002255	6	0	stromal cell of endometrium
+FF:0000381	6	1	1 days sample
+FF:0100741	6	0	lymphocytic leukemia cell line sample
+FF:0000168	6	0	human aortic smooth muscle cell sample
+CL:0000114	6	0	surface ectodermal cell
+CL:0002556	6	0	fibroblast of periodontium
+CL:0000311	6	0	keratin accumulating cell
+UBERON:0002457	6	0	intersomitic artery
+UBERON:0003672	6	0	dentition
+DOID:850	6	1	lung disease
+UBERON:0001533	6	0	subclavian artery
+UBERON:0001758	6	0	periodontium
+FF:0000078	6	0	human hepatocyte sample
+CL:0000669	6	0	pericyte cell
+FF:0000067	6	0	human fibroblast of periodontium sample
+UBERON:0002066	6	0	umbilical vein
+UBERON:0001982	6	0	capillary
+FF:0000052	6	0	human endothelial cell of the vein sample
+UBERON:0000459	6	0	uterine wall
+UBERON:0010133	6	0	neuroendocrine gland
+UBERON:0010047	6	0	oral gland
+CL:0002551	6	0	fibroblast of dermis
+UBERON:0007475	6	0	matrix-based tissue
+UBERON:0001130	6	0	vertebral column
+UBERON:0000083	6	0	mesonephric tubule
+UBERON:0001295	6	0	endometrium
+FF:0011525	6	0	cortex- adult sample
+UBERON:0003688	6	0	omentum
+CL:0000775	6	0	neutrophil
+GS:0003	6	0	human CD4-positiveCD25-CD45RA-positive naive conventional T cells sample
+UBERON:0001043	6	0	esophagus
+UBERON:0001044	6	0	saliva-secreting gland
+CL:0000357	6	0	stratified epithelial stem cell
+FF:0103764	6	0	NCI cell sample
+CL:0002595	6	0	smooth muscle cell of the subclavian artery
+DOID:169	6	1	neuroendocrine tumor
+FF:0000175	6	0	human smooth muscle cell of subclavian artery sample
+DOID:1579	6	1	respiratory system disease
+FF:0000122	6	0	human neutrophil sample
+CL:0002548	6	0	cardiac fibroblast
+CL:0000035	6	0	single fate stem cell
+UBERON:0007844	6	0	cartilage element
+UBERON:0002072	6	0	hypodermis
+FF:0000021	6	0	hematopoietic stem cell sample
+CL:0002544	6	0	aortic endothelial cell
+FF:0000062	6	0	human dermal fibroblast sample
+FF:0011100	6	0	human CD14-CD16-positive Monocytes sample
+FF:0000390	6	1	14 days sample
+FF:0000048	6	0	human endothelial cell of the aorta sample
+UBERON:0003350	6	0	epithelium of mucosa
+UBERON:0005622	6	0	right dorsal aorta
+CL:0000240	6	0	stratified squamous epithelial cell
+DOID:1380	6	1	endometrial cancer
+UBERON:0001560	6	0	neck of organ
+DOID:1176	6	1	bronchial disease
+CL:0000622	6	0	acinar cell
+UBERON:0002481	6	0	bone tissue
+FF:0000386	6	1	7 days sample
+UBERON:0005427	6	0	corneal primordium
+CL:0000237	6	0	keratinizing barrier epithelial cell
+UBERON:0009201	6	0	nephric duct
+CL:0002149	6	0	epithelial cell of uterus
+CL:0000036	6	0	epithelial fate stem cell
+UBERON:0003074	6	0	mesonephric duct
+FF:0101967	5	0	cervical cancer cell line sample
+DOID:231	5	1	motor neuron disease
+UBERON:0005749	5	0	glomerular tuft
+DOID:12377	5	1	spinal muscular atrophy
+CL:0002188	5	0	glomerular endothelial cell
+FF:0103192	5	0	renal cancer cell line sample
+UBERON:0009113	5	0	thymic region
+UBERON:0011817	5	0	follicle placode
+UBERON:0002299	5	0	alveolus of lung
+UBERON:0001874	5	0	putamen
+UBERON:0010538	5	0	paired limb/fin segment
+UBERON:0000013	5	0	sympathetic nervous system
+UBERON:0010188	5	0	protuberance
+UBERON:0001229	5	0	renal corpuscle
+UBERON:0002118	5	0	right ovary
+UBERON:0002410	5	0	autonomic nervous system
+FF:0000251	5	0	human fibroblast - skin spinal muscular atrophy sample
+UBERON:0005562	5	0	thymus primordium
+UBERON:0003295	5	0	pharyngeal gland
+UBERON:0002240	5	0	spinal cord
+FF:0100932	5	0	neuroblastoma cell line sample
+DOID:1289	5	1	neurodegenerative disease
+UBERON:0001137	5	0	dorsum
+UBERON:0005086	5	0	hair follicle placode
+UBERON:0003215	5	0	alveolus
+UBERON:0011135	5	0	intervertebral cartilage
+CL:0000312	5	0	keratinocyte
+UBERON:0002370	5	0	thymus
+UBERON:0004209	5	0	renal vesicle
+CL:1000746	5	0	glomerular cell
+CL:0010003	5	0	epithelial cell of alveolus of lung
+DOID:0080000	5	1	muscular disease
+UBERON:0011134	5	0	nonsynovial joint
+DOID:450	5	1	myotonic disease
+UBERON:0001230	5	0	glomerular capsule
+UBERON:0004198	5	0	comma-shaped body
+FF:0010023	5	0	human skeletal muscle - adult sample
+DOID:4362	5	1	cervical cancer
+UBERON:0001468	5	0	intervertebral joint
+UBERON:0002073	5	0	hair follicle
+FF:0000275	5	0	human mesenchymal precursor cell- ovarian cancer-right ovary sample
+FF:0000152	5	0	human renal cortical epithelial cell sample
+UBERON:0002213	5	0	cartilaginous joint
+CL:0002559	5	0	hair follicle cell
+UBERON:0002529	5	0	limb segment
+UBERON:0016525	5	0	frontal lobe
+UBERON:0008874	5	0	pulmonary acinus
+FF:0000092	5	0	human amniotic membrane cell sample
+FF:0000072	5	0	human hair follicle cell sample
+UBERON:0001066	5	0	intervertebral disk
+UBERON:0006524	5	0	alveolar system
+FF:0000153	5	0	human renal glomerular endothelial cell sample
+CL:0000666	5	0	fenestrated cell
+UBERON:0002771	5	0	middle temporal gyrus
+UBERON:0002539	5	0	pharyngeal arch
+CL:0000322	5	0	pneumocyte
+UBERON:0009911	5	0	lobule
+FF:0100658	5	0	uterine adenocarcinoma cell sample
+UBERON:0010758	5	0	subdivision of organism along appendicular axis
+UBERON:0004199	5	0	S-shaped body
+CL:1000612	5	0	kidney corpuscule cell
+UBERON:0010707	5	0	appendage girdle complex
+UBERON:0004708	5	0	paired limb/fin
+UBERON:0007846	5	0	dense regular connective tissue
+UBERON:0010368	5	0	pulmonary lobule
+DOID:331	5	1	central nervous system disease
+FF:0000099	5	0	human mesothelial cell sample
+UBERON:0002209	5	0	fibrous joint
+DOID:10534	5	1	stomach cancer
+UBERON:0002101	5	0	limb
+FF:0000537	5	0	human H9 Embryoid body cells 12 days after melanocytic induction sample
+UBERON:0000988	5	0	pons
+UBERON:0008816	5	0	embryonic head
+UBERON:0000074	5	0	renal glomerulus
+GS:0002	5	0	human CD4-positiveCD25-positiveCD45RA- memory regulatory T cells sample
+UBERON:0005174	5	0	dorsal region element
+UBERON:0002216	5	0	symphysis
+FF:0010034	5	0	human parietal lobe - adult sample
+UBERON:0000026	5	0	appendage
+UBERON:0002169	5	0	alveolar sac
+FF:0100787	5	0	gastric cancer cell line sample
+DOID:11722	5	1	myotonic dystrophy
+UBERON:0003220	5	0	metanephric mesenchyme
+UBERON:0001870	5	0	frontal cortex
+UBERON:0005058	5	0	hemolymphoid system gland
+FF:0000094	5	0	human mesenchymal stem cell of umbilical cord-Sciencell sample
+FF:0102062	5	0	B-lymphoblastoid cell line sample
+DOID:263	5	1	kidney cancer
+DOID:423	5	1	myopathy
+UBERON:0004894	5	0	alveolar wall
+UBERON:0010536	5	0	nephron progenitor
+DOID:3996	5	1	urinary system cancer
+FF:0010010	5	0	human adipose tissue - adult sample
+UBERON:0010532	5	0	primitive nephron
+CL:0000068	5	0	duct epithelial cell
+FF:0000044	5	0	human monocyte immature derived dendritic cell sample
+UBERON:0005904	5	0	duct of male reproductive system
+UBERON:0007845	5	0	regular connective tissue
+UBERON:0002217	5	0	synovial joint
+FF:0000037	5	0	human chondrocyte sample
+FF:0000253	5	0	human fibroblast- skin dystrophia myotonica sample
+UBERON:0006241	5	0	future spinal cord
+FF:0010085	5	0	human brain - fetal sample
+UBERON:0004347	5	0	limb bud
+CL:0000083	5	0	epithelial cell of pancreas
+DOID:17	5	1	musculoskeletal system disease
+UBERON:0000014	5	0	zone of skin
+UBERON:0003351	5	0	pharyngeal epithelium
+CL:0002537	5	0	amnion mesenchymal stem cell
+DOID:66	5	1	muscle tissue disease
+UBERON:0000365	5	0	urothelium
+UBERON:0004357	5	0	paired limb/fin bud
+UBERON:0004821	5	0	pulmonary alveolus epithelium
+UBERON:0005282	4	0	ventricular system of brain
+UBERON:0010286	4	0	midbrain neural tube
+UBERON:0006331	4	0	brainstem nucleus
+CL:0000731	4	0	urothelial cell
+DOID:77	4	1	gastrointestinal system disease
+UBERON:0001896	4	0	medulla oblongata
+DOID:1091	4	1	tooth disease
+DOID:9893	4	1	periodontosis
+UBERON:0002012	4	0	pulmonary artery
+UBERON:0009662	4	0	hindbrain nucleus
+UBERON:0004277	4	0	eye muscle
+UBERON:0012168	4	0	umbilical cord blood
+UBERON:0000043	4	0	tendon
+UBERON:0005865	4	0	pre-muscle condensation
+FF:0000271	4	0	human cardiac mesenchymal precursor cell sample
+UBERON:0000166	4	0	oral opening
+FF:0100794	4	0	pancreatic cancer cell line sample
+UBERON:0003023	4	0	pontine tegmentum
+FF:0000139	4	0	human preadipocyte of the breast sample
+CL:0000244	4	0	transitional epithelial cell
+CL_0000057	4	0	fibroblast
+UBERON:0001954	4	0	Ammon's horn
+CL:0002504	4	0	enteric smooth muscle cell
+FF:0000380	4	1	0 days sample
+UBERON:0005283	4	0	tela choroidea
+FF:0000026	4	0	human CD34-positive hematopoietic stem cell sample
+UBERON:0005426	4	0	lens vesicle
+UBERON:0002114	4	0	duodenum
+DOID:403	4	1	mouth disease
+UBERON:0010096	4	0	future myelencephalon
+UBERON:0006531	4	0	oculomotor muscle
+FF:0102206	4	0	small cell lung cancer cell line sample
+UBERON:0000476	4	0	acellular anatomical structure
+CL:0002222	4	0	vertebrate lens cell
+UBERON:0004363	4	0	pharyngeal arch artery
+FF:0102202	4	0	lung squamous cell carcinoma cell line sample
+UBERON:0007303	4	0	pharyngeal vasculature
+UBERON:0002418	4	0	cartilage tissue
+FF:0000191	4	0	human urothelial cell sample
+FF:0000180	4	0	human smooth muscle cell of intestine sample
+UBERON:0002018	4	0	synovial membrane of synovial joint
+FF:0010087	4	0	human putamen - adult donor sample
+UBERON:0001891	4	0	midbrain
+UBERON:0000161	4	0	orifice
+UBERON:0005432	4	0	aortic sac
+UBERON:0003343	4	0	mucosa of oral region
+CL:0000569	4	0	cardiac mesenchymal cell
+FF:0011217	4	0	human Monocyte-derived macrophages 7h after udorn influenza infection sample
+UBERON:0003947	4	0	brain ventricle/choroid plexus
+FF:0102709	4	0	head and neck squamous cell carcinoma cell line sample
+FF:0100189	4	0	small cell lung cancer cell sample
+UBERON:0002061	4	0	truncus arteriosus
+FF:0100739	4	0	lymphoblastic leukemia cell line sample
+UBERON:0003504	4	0	respiratory system blood vessel
+FF:0100664	4	0	K-562 cell sample
+UBERON:0000965	4	0	lens of camera-type eye
+DOID:8618	4	1	oral cavity cancer
+UBERON:0002038	4	0	substantia nigra
+UBERON:0001886	4	0	choroid plexus
+UBERON:0010056	4	0	future tongue
+UBERON:0004086	4	0	brain ventricle
+FF:0000261	4	0	mast cell- heparinase treated sample
+UBERON:0003469	4	0	respiratory system artery
+UBERON:0003269	4	0	skeletal muscle tissue of eye
+CL:0002553	4	0	lung fibroblast
+UBERON:0010077	4	0	cuboidal epithelium
+CL:0002327	4	0	mammary gland epithelial cell
+FF:0011215	4	0	human Monocyte-derived macrophages 0h after udorn influenza infection sample
+FF:0102332	4	0	monocytic leukemia cell line sample
+FF:0011218	4	0	human Monocyte-derived macrophages 24h after udorn influenza infection sample
+UBERON:0000484	4	0	simple cuboidal epithelium
+UBERON:0011362	4	0	cranial blood vasculature
+UBERON:0005171	4	0	hepatic duct
+UBERON:0008886	4	0	pulmonary vascular system
+UBERON:0003073	4	0	lens placode
+UBERON:0001803	4	0	epithelium of lens
+FF:0010076	4	0	human occipital lobe - adult sample
+CL:0000632	4	0	hepatic stellate cell
+FF:0000158	4	0	human retinal pigment epithelial cell sample
+FF:0101370	4	0	THP-1 cell sample
+FF:0102027	4	0	oral cancer cell line sample
+UBERON:0000323	4	0	late embryo
+UBERON:0009616	4	0	presumptive midbrain
+DOID:5409	4	1	lung small cell carcinoma
+UBERON:0004647	4	0	liver lobule
+UBERON:0000488	4	0	atypical epithelium
+FF:0000176	4	0	human smooth muscle cell of umbilical artery sample
+UBERON:0005389	4	0	transparent eye structure
+UBERON:0005290	4	0	myelencephalon
+FF:0011219	4	0	human Monocyte-derived macrophages 24h after mock infection sample
+UBERON:0002702	4	0	middle frontal gyrus
+UBERON:0001875	4	0	globus pallidus
+UBERON:0001556	4	0	lower urinary tract
+DOID:1781	4	1	thyroid cancer
+FF:0011216	4	0	human Monocyte-derived macrophages 2h after udorn influenza infection sample
+FF:0010150	4	0	human medial temporal gyrus - adult sample
+CL:0000306	4	0	crystallin accumulating cell
+CL:0002594	4	0	smooth muscle cell of the umbilical artery
+UBERON:0006533	4	0	rectus extraocular muscle
+UBERON:0005629	4	0	vascular plexus
+DOID:1793	4	1	pancreatic cancer
+UBERON:0005358	4	0	ventricle of nervous system
+UBERON:0003643	4	0	respiratory system arterial blood vessel
+CL:0002224	4	0	lens epithelial cell
+UBERON:0006230	4	0	extrinsic ocular pre-muscle mass
+UBERON:0002148	4	0	locus ceruleus
+UBERON:0001280	4	0	liver parenchyma
+UBERON:0002600	4	0	limbic lobe
+CL:0000011	4	0	migratory trunk neural crest cell
+UBERON:0001601	4	0	extra-ocular muscle
+CL:0000214	4	0	synovial cell
+UBERON:0003496	4	0	head blood vessel
+UBERON:0001033	4	0	gustatory system
+UBERON:0015787	4	0	upper respiratory conduit
+FF:0000274	4	0	human mesenchymal precursor cell- ovarian cancer-metastasis sample
+UBERON:0001310	4	0	umbilical artery
+CL:0002580	4	0	preadipocyte of the breast
+UBERON:0006514	4	0	pallidum
+UBERON:0009661	4	0	midbrain nucleus
+UBERON:0002421	4	0	hippocampal formation
+UBERON:0011892	4	0	anterior uvea
+UBERON:0005281	4	0	ventricular system of central nervous system
+FF:0102211	4	0	oral squamous cell carcinoma cell line sample
+FF:0010033	4	0	human pons - adult sample
+FF:0000273	4	0	human mesenchymal precursor cell- ovarian cancer-left ovary sample
+FF:0011214	4	0	human Monocyte-derived macrophages 0h after mock infection sample
+UBERON:0004151	4	0	cardiac chamber
+UBERON:0015593	4	0	frontal gyrus
+UBERON:0001723	4	0	tongue
+UBERON:0002119	4	0	left ovary
+FF:0101610	4	0	thyroid cancer cell line sample
+UBERON:0002546	4	0	cranial placode
+UBERON:0007616	4	0	layer of synovial tissue
+CL:0002195	3	0	hepatic stem cell
+FF:0000172	3	0	human smooth muscle cell of coronary artery sample
+FF:0000575	3	0	human Monocyte-derived macrophages 3h after LPS treatment sample
+UBERON:0001529	3	0	brachiocephalic artery
+FF:0000593	3	0	human Saos2 osteosarcoma cell line 0min after induction of calcification with ascorbate and BPG sample
+FF:0000730	3	0	human melanocyte (MC) sample
+FF:0000544	3	0	human H9 Embryoid body cells 34 days after melanocytic induction sample
+FF:0000135	3	0	human peripheral blood mononuclear cell sample
+FF:0000602	3	0	human Saos2 osteosarcoma cell line 3h after induction of calcification with ascorbate and BPG sample
+FF:0000521	3	0	human K562 erythroblastic leukemia line 2hr after treatment with hemin sample
+CL:1000428	3	0	stem cell of epidermis
+DOID:0060084	3	1	cell type benign neoplasm
+CL:1000448	3	0	epithelial cell of sweat gland
+FF:0011227	3	0	human ES cells differentiated towards cardiomyocyte- day8 sample
+FF:0100811	3	0	ovary cancer cell line sample
+FF:0000590	3	0	human Monocyte-derived macrophages 36h after LPS treatment sample
+FF:0000013	3	0	human basophil sample
+FF:0000546	3	0	human Aortic Smooth Muscle cells 0min after treatment with FGF2 sample
+FF:0000372	3	1	22 hr sample
+UBERON:0002456	3	0	internal thoracic artery
+FF:0011134	3	0	human Hep-2 cells treated with Streptococci strain JRS4 sample
+FF:0100729	3	0	carcinoid cell sample
+FF:0000076	3	0	hepatic sinusoidal endothelial cell sample
+FF:0010153	3	0	hippocampus - adult sample
+FF:0102060	3	0	bronchioalveolar carcinoma cell sample
+FF:0000583	3	0	human Monocyte-derived macrophages 12h after LPS treatment sample
+DOID:3856	3	1	male reproductive organ cancer
+CL:0002304	3	0	non-pigmented ciliary epithelial cell
+CL:0002623	3	0	acinar cell of salivary gland
+FF:0000529	3	0	human K562 erythroblastic leukemia line 48hr after treatment with hemin sample
+UBERON:0004054	3	0	internal male genitalia
+FF:0011108	3	0	human CD14-positive monocytes - treated with lipopolysaccharide sample
+UBERON:0001949	3	0	gingival epithelium
+CL:0002144	3	0	capillary endothelial cell
+DOID:3350	3	1	mesenchymal cell neoplasm
+FF:0010158	3	0	human substantia nigra - adult donor sample
+FF:0000523	3	0	human K562 erythroblastic leukemia line 3hr after treatment with hemin sample
+FF:0000701	3	0	human mesenchymal stem cells adipose derived, 24 hours after adipogenic induction sample
+CL:0000771	3	0	eosinophil
+FF:0000453	3	0	human MCF7 breast cancer cell line 4h after HRG treatment sample
+FF:0011444	3	0	CD14-positive monocytes - treated with Trehalose dimycolate (TDM) sample
+FF:0000628	3	0	Bacillus Calmette-Guerin treatment sample
+UBERON:0002062	3	0	endocardial cushion
+UBERON:0001820	3	0	sweat gland
+FF:0000173	3	0	human smooth muscle cell of the internal thoracic artery sample
+FF:0010014	3	0	human colon - adult sample
+FF:0000419	3	0	human Lymphatic Endothelial cells 3h after VEGFC treatment sample
+FF:0000557	3	0	human Aortic Smooth Muscle cells 15min after treatment with IL1b sample
+UBERON:0015238	3	0	pineal complex
+FF:0000425	3	0	human Lymphatic Endothelial cells 8h after VEGFC treatment sample
+CL:0000650	3	0	mesangial cell
+CL:0002588	3	0	smooth muscle cell of the umbilical vein
+FF:0011472	3	0	human epitheloid carcinoma cell line: HelaS3 ENCODE sample
+FF:0010159	3	0	human spinal cord - adult sample
+FF:0000581	3	0	human Monocyte-derived macrophages 8h after LPS treatment sample
+CL:0000386	3	0	attachment cell
+FF:0000091	3	0	human leptomeningeal cell sample
+CL:0002566	3	0	dark melanocyte
+CL:0000746	3	0	cardiac muscle cell
+FF:0010038	3	0	human medulla oblongata - adult sample
+FF:0000514	3	0	human K562 erythroblastic leukemia line 0min after treatment with hemin sample
+FF:0000395	3	1	27 days sample
+FF:0000412	3	0	human Lymphatic Endothelial cells 30min after VEGFC treatment sample
+FF:0000542	3	0	human H9 Embryoid body cells 27 days after melanocytic induction sample
+UBERON:0002419	3	0	skin gland
+FF:0000533	3	0	human H9 Embryoid body cells 1 day after melanocytic induction sample
+CL:0002541	3	0	chorionic membrane mesenchymal stem cell
+FF:0102205	3	0	large cell lung cancer cell line sample
+FF:0000437	3	0	human MCF7 breast cancer cell line 4h after EGF1 treatment sample
+CL:0000575	3	0	corneal epithelial cell
+FF:0000608	3	0	human Saos2 osteosarcoma cell line 14d after induction of calcification with ascorbate and BPG sample
+FF:0000377	3	1	96 hr sample
+FF:0000446	3	0	human MCF7 breast cancer cell line 1hr after HRG treatment sample
+CL:0002618	3	0	endothelial cell of umbilical vein
+FF:0000056	3	0	human epithelial cell of esophagus sample
+FF:0000525	3	0	human K562 erythroblastic leukemia line 4hr after treatment with hemin sample
+CL:0002193	3	0	myelocyte
+UBERON:0006853	3	0	renal cortex tubule
+CL:0002582	3	0	visceral preadipocyte
+FF:0010026	3	0	human testis - adult sample
+FF:0000082	3	0	human epidermal keratinocyte sample
+CL:1000615	3	0	kidney cortex tubule cell
+UBERON:0001899	3	0	epithalamus
+CL:0000594	3	0	skeletal muscle satellite cell
+FF:0000370	3	1	18 hr sample
+FF:0000451	3	0	human MCF7 breast cancer cell line 3h after HRG treatment sample
+UBERON:0005408	3	0	circumventricular organ
+FF:0000070	3	0	granulocyte macrophage progenitor cell sample
+FF:0102058	3	0	non-small cell lung cancer cell sample
+FF:0000397	3	1	30 days sample
+FF:0000646	3	1	5 days sample
+FF:0000690	3	0	human mesenchymal stem cells adipose derived, 0 minutes after adipogenic induction sample
+FF:0000706	3	0	human mesenchymal stem cells adipose derived, 14 days after adipogenic induction sample
+FF:0000054	3	0	human eosinophil sample
+UBERON:0002424	3	0	oral epithelium
+FF:0000039	3	0	human adipocyte of omentum tissue sample
+FF:0000600	3	0	human Saos2 osteosarcoma cell line 2h after induction of calcification with ascorbate and BPG sample
+FF:0000454	3	0	human MCF7 breast cancer cell line 5h after HRG treatment sample
+CL:0000784	3	0	plasmacytoid dendritic cell
+FF:0000550	3	0	human Aortic Smooth Muscle cells 1hr after treatment with FGF2 sample
+FF:0011103	3	0	human CD14-positive monocytes - treated with BCG sample
+FF:0000704	3	0	human mesenchymal stem cells adipose derived, 8 days after adipogenic induction sample
+CL:0000388	3	0	tendon cell
+FF:0011136	3	0	human migratory langerhans cells sample
+FF:0000456	3	0	human MCF7 breast cancer cell line 7h after HRG treatment sample
+DOID:4045	3	1	muscle cancer
+FF:0000087	3	0	human Malassez derived epithelial cell sample
+FF:0000177	3	0	human smooth muscle cell of umbilical vein sample
+UBERON:0006267	3	0	notochordal plate
+FF:0000045	3	0	human plasmacytoid dendritic cell sample
+FF:0010040	3	0	human frontal lobe - adult sample
+UBERON:0003891	3	0	stroma
+FF:0011487	3	0	human locus coeruleus- adult sample
+FF:0000443	3	0	human MCF7 breast cancer cell line 15min after HRG treatment sample
+CL:0012000	3	0	astrocyte of the forebrain
+DOID:3910	3	1	lung adenocarcinoma
+DOID:127	3	1	leiomyoma
+FF:0000174	3	0	human smooth muscle cell of pulmonary artery sample
+FF:0101518	3	0	B-lymphoma cell line sample
+FF:0000353	3	1	120 minutes sample
+UBERON:0003978	3	0	valve
+FF:0000277	3	0	human prostate stromal cell sample
+UBERON:0002110	3	0	gallbladder
+FF:0000536	3	0	human H9 Embryoid body cells 9 days after melanocytic induction sample
+FF:0000522	3	0	human K562 erythroblastic leukemia line 2hr 30min after treatment with hemin sample
+FF:0000417	3	0	human Lymphatic Endothelial cells 2h after VEGFC treatment sample
+FF:0104802	3	0	bronchioloalveolar carcinoma cell sample
+FF:0000424	3	0	human Lymphatic Endothelial cells 7h after VEGFC treatment sample
+CL:0000623	3	0	natural killer cell
+FF:0000605	3	0	human Saos2 osteosarcoma cell line 24h after induction of calcification with ascorbate and BPG sample
+FF:0000577	3	0	human Monocyte-derived macrophages 4h after LPS treatment sample
+UBERON:0003129	3	0	skull
+FF:0000539	3	0	human H9 Embryoid body cells 18 days after melanocytic induction sample
+FF:0102694	3	0	leiomyoma cell sample
+FF:0000710	3	0	human Saos2 osteosarcoma cell line timecourse control sample
+CL:0002166	3	0	epithelial cell of Malassez
+FF:0000415	3	0	human Lymphatic Endothelial cells 80min  after VEGFC treatment sample
+FF:0000160	3	0	human sebocyte sample
+UBERON:0002081	3	0	cardiac atrium
+FF:0000607	3	0	human Saos2 osteosarcoma cell line 7d after induction of calcification with ascorbate and BPG sample
+UBERON:0001873	3	0	caudate nucleus
+CL:0000355	3	0	multi-potent skeletal muscle stem cell
+FF:0000520	3	0	human K562 erythroblastic leukemia line 1hr 40min after treatment with hemin sample
+FF:0000433	3	0	human MCF7 breast cancer cell line 2h after EGF1 treatment sample
+FF:0000579	3	0	human Monocyte-derived macrophages 6h after LPS treatment sample
+FF:0000009	3	0	human amniotic epithelial cell sample
+FF:0000165	3	0	human skeletal muscle satellite cell sample
+FF:0000212	3	0	human basophil heparinase treated sample
+UBERON:0010134	3	0	secretory circumventricular organ
+UBERON:0001876	3	0	amygdala
+FF:0000398	3	1	34 days sample
+FF:0000563	3	0	human Aortic Smooth Muscle cells 4hr after treatment with IL1b sample
+FF:0000428	3	0	human MCF7 breast cancer cell line 30min after EGF1 treatment sample
+UBERON:2005260	3	0	fenestrated capillary
+CL:0002605	3	0	astrocyte of the cerebral cortex
+UBERON:0000007	3	0	pituitary gland
+FF:0000592	3	0	human H9 Embryonic Stem cells sample
+FF:0000280	3	0	human tenocyte sample
+CL:0005012	3	0	multi-ciliated epithelial cell
+FF:0000169	3	0	human smooth muscle cell of the brachiocephalic vasculature sample
+FF:0011222	3	0	human ES cells differentiated towards cardiomyocyte- day3 sample
+FF:0000170	3	0	human smooth muscle cell of the brain vasculature sample
+FF:0000560	3	0	human Aortic Smooth Muscle cells 1hr after treatment with IL1b sample
+FF:0000194	3	0	human astrocyte of the cerebral cortex sample
+CL_0000056	3	0	myoblast
+FF:0000599	3	0	human Saos2 osteosarcoma cell line 100min after induction of calcification with ascorbate and BPG sample
+FF:0000705	3	0	human mesenchymal stem cells adipose derived, 12 days after adipogenic induction sample
+FF:0000455	3	0	human MCF7 breast cancer cell line 6h after HRG treatment sample
+UBERON:0003487	3	0	skin sebaceous gland
+UBERON:0009664	3	0	gut mesentery
+CL:2000021	3	0	sebaceous gland native cell
+FF:0000535	3	0	human H9 Embryoid body cells 6 days after melanocytic induction sample
+FF:0011224	3	0	human ES cells differentiated towards cardiomyocyte- day5 sample
+FF:0000050	3	0	human microvascular endothelial cell sample
+FF:0100599	3	0	Hep-G2 cell sample
+CL:0002306	3	0	epithelial cell of proximal tubule
+FF:0000548	3	0	human Aortic Smooth Muscle cells 30min after treatment with FGF2 sample
+FF:0000606	3	0	human Saos2 osteosarcoma cell line 4d after induction of calcification with ascorbate and BPG sample
+FF:0000569	3	0	human Monocyte-derived macrophages 45min after LPS treatment sample
+UBERON:0005089	3	0	sweat gland placode
+CL:0002564	3	0	nucleus pulposus cell of intervertebral disc
+FF:0000183	3	0	human smooth muscle cell of prostate sample
+FF:0000552	3	0	human Aortic Smooth Muscle cells 3hr after treatment with FGF2 sample
+UBERON:0003835	3	0	abdominal segment blood vessel
+CL:0002615	3	0	adipocyte of omentum tissue
+UBERON:0005088	3	0	sebaceous gland placode
+FF:0000090	3	0	human light melanocyte sample
+FF:0000452	3	0	human MCF7 breast cancer cell line 3.5h after HRG treatment sample
+UBERON:0005969	3	0	reticulum trabeculare
+CL:0000317	3	0	sebum secreting cell
+CL:0000377	3	0	tracheoblast
+UBERON:0002095	3	0	mesentery
+FF:0103225	3	0	neurilemoma cell line sample
+FF:0000181	3	0	human smooth muscle of colon sample
+FF:0000594	3	0	human Saos2 osteosarcoma cell line 15min after induction of calcification with ascorbate and BPG sample
+FF:0102144	3	0	acute lymphoblastic leukemia cell line sample
+FF:0000573	3	0	human Monocyte-derived macrophages 2h after LPS treatment sample
+FF:0000154	3	0	human renal mesangial cell sample
+UBERON:0016538	3	0	cortex of temporal lobe
+FF:0000610	3	0	human Saos2 osteosarcoma cell line 28d after induction of calcification with ascorbate and BPG sample
+UBERON:0005983	3	0	heart layer
+UBERON:0001775	3	0	ciliary body
+FF:0000098	3	0	human hepatic mesenchymal stem cell sample
+FF:0000426	3	0	human MCF7 breast cancer cell line 0min after EGF1 treatment sample
+FF:0000524	3	0	human K562 erythroblastic leukemia line 3hr 30min after treatment with hemin sample
+CL:0002252	3	0	epithelial cell of esophagus
+CL:0002262	3	0	endothelial cell of sinusoid
+FF:0000011	3	0	human subcutaneous adipocyte sample
+FF:0000269	3	0	human mesenchymal precursor cell of bone marrow sample
+GS:0004	3	0	human CD4-positiveCD25-CD45RA- memory conventional T cells sample
+FF:0000541	3	0	human H9 Embryoid body cells 24 days after melanocytic induction sample
+UBERON:0008784	3	0	lower limb segment
+UBERON:0000978	3	0	leg
+FF:0000596	3	0	human Saos2 osteosarcoma cell line 45min after induction of calcification with ascorbate and BPG sample
+FF:0000629	3	0	IFN and N-hexane treatment sample
+CL:0000005	3	0	fibroblast neural crest derived
+CL:0002521	3	0	subcutaneous fat cell
+FF:0000278	3	0	human salivary acinar cell sample
+CL:0002571	3	0	hepatic mesenchymal stem cell
+UBERON:0001777	3	0	substantia propria of cornea
+FF:0000376	3	1	72 hr sample
+FF:0000693	3	0	human mesenchymal stem cells adipose derived, 45 minutes after adipogenic induction sample
+CL:0002621	3	0	gingival epithelial cell
+FF:0000038	3	0	human chorionic membrane stem cell sample
+FF:0000650	3	1	11 days sample
+FF:0102869	3	0	transitional cell carcinoma cell line sample
+FF:0011106	3	0	human CD14-positive monocytes - treated with Group A streptococci sample
+UBERON:0009751	3	0	cardiac mesenchyme
+CL:1000280	3	0	smooth muscle cell of colon
+FF:0000119	3	0	human natural killer cell sample
+CL:0000767	3	0	basophil
+FF:0101530	3	0	glioblastoma cell line sample
+FF:0000077	3	0	hepatic stellate cell sample
+FF:0000088	3	0	human mammary epithelial cell sample
+UBERON:0001905	3	0	pineal body
+FF:0000348	3	0	human neuron samples
+FF:0000564	3	0	human Aortic Smooth Muscle cells 5hr after treatment with IL1b sample
+FF:0000598	3	0	human Saos2 osteosarcoma cell line 80min after induction of calcification with ascorbate and BPG sample
+UBERON:0006947	3	0	male genital duct
+CL:0002579	3	0	omentum preadipocyte
+FF:0000571	3	0	human Monocyte-derived macrophages 80min after LPS treatment sample
+GS:0001	3	0	human CD4-positiveCD25-positiveCD45RA-positive naive regulatory T cells sample
+FF:0000638	3	0	Streptococcus strain 5448 treatment sample
+FF:0000440	3	0	human MCF7 breast cancer cell line 7h after EGF1 treatment sample
+UBERON:0003210	3	0	blood-cerebrospinal fluid barrier
+FF:0000545	3	0	human H9 Embryoid body cells 41 days after melanocytic induction sample
+FF:0000418	3	0	human Lymphatic Endothelial cells 2.5h after VEGFC treatment sample
+CL:0002619	3	0	adult endothelial progenitor cell
+FF:0000631	3	0	trehalose dimycolate (TDM) treatment sample
+FF:0000558	3	0	human Aortic Smooth Muscle cells 30min after treatment with IL1b sample
+DOID:3069	3	1	astrocytoma
+UBERON:0001281	3	0	hepatic sinusoid
+CL:1000487	3	0	smooth muscle cell of prostate
+DOID:1192	3	1	peripheral nervous system neoplasm
+FF:0000567	3	0	human Monocyte-derived macrophages 15min after LPS treatment sample
+CL:0002558	3	0	fibroblast of villous mesenchyme
+UBERON:0004909	3	0	epithelium of gonad
+FF:0011225	3	0	human ES cells differentiated towards cardiomyocyte- day6 sample
+FF:0000422	3	0	human Lymphatic Endothelial cells 5h after VEGFC treatment sample
+FF:0000538	3	0	human H9 Embryoid body cells 15 days after melanocytic induction sample
+FF:0000189	3	0	human tracheal epithelial cell sample
+CL:0000069	3	0	branched duct epithelial cell
+FF:0000586	3	0	human Monocyte-derived macrophages 18h after LPS treatment sample
+UBERON:0010709	3	0	pelvic complex
+FF:0000728	3	0	Saos2 osteosarcoma cell line 28d untreated control sample
+CL:0002140	3	0	acinar cell of sebaceous gland
+CL:0000346	3	0	hair follicle dermal papilla cell
+FF:0011230	3	0	human ES cells differentiated towards cardiomyocyte- day11 sample
+UBERON:0002523	3	0	tunica intima
+CL:0000064	3	0	ciliated cell
+FF:0000570	3	0	human Monocyte-derived macrophages 1h after LPS treatment sample
+CL:0000226	3	0	single nucleate cell
+FF:0011132	3	0	human Hep-2 cells mock treated sample
+FF:0000159	3	0	human Schwann cell sample
+DOID:3594	3	1	choriocarcinoma
+FF:0000697	3	0	human mesenchymal stem cells adipose derived, 120 minutes after adipogenic induction sample
+FF:0000700	3	0	human mesenchymal stem cells adipose derived, 12 hours after adipogenic induction sample
+FF:0000585	3	0	human Monocyte-derived macrophages 16h after LPS treatment sample
+UBERON:0005418	3	0	hindlimb bud
+CL:0002583	3	0	subcutaneous preadipocyte
+UBERON:0012344	3	0	holocrine gland
+UBERON:0004880	3	0	chordamesoderm
+FF:0000694	3	0	human mesenchymal stem cells adipose derived, 60 minutes after adipogenic induction sample
+UBERON:0002165	3	0	endocardium
+UBERON:0003956	3	0	aqueous drainage system
+UBERON:0001778	3	0	ciliary epithelium
+CL:1000279	3	0	smooth muscle cell of large intestine
+FF:0000516	3	0	human K562 erythroblastic leukemia line 30min after treatment with hemin sample
+UBERON:0009034	3	0	stomach region
+FF:0000435	3	0	human MCF7 breast cancer cell line 3h after EGF1 treatment sample
+CL:0002577	3	0	placental epithelial cell
+CL:1001579	3	0	cerebral cortex glial cell
+FF:0011223	3	0	human ES cells differentiated towards cardiomyocyte- day4 sample
+FF:0000540	3	0	human H9 Embryoid body cells 21 days after melanocytic induction sample
+FF:0000246	3	0	human chondrocyte de-differentiated sample
+FF:0000145	3	0	human prostate epithelial cell sample
+FF:0000527	3	0	human K562 erythroblastic leukemia line 12hr after treatment with hemin sample
+FF:0000457	3	0	human MCF7 breast cancer cell line 8h after HRG treatment sample
+FF:0102057	3	0	lung adenocarcinoma cell sample
+UBERON:0004709	3	0	pelvic appendage
+FF:0104975	3	0	human myotube cell sample
+FF:0104053	3	0	umbilical cord blood sample
+DOID:0060072	3	1	benign neoplasm
+FF:0000429	3	0	human MCF7 breast cancer cell line 45min after EGF1 treatment sample
+CL:0000135	3	0	fibrocyte
+FF:0000692	3	0	human mesenchymal stem cells adipose derived, 30 minutes after adipogenic induction sample
+CL:0000835	3	0	myeloblast
+FF:0000431	3	0	human MCF7 breast cancer cell line 80min  after EGF1 treatment sample
+CL:0000817	3	0	precursor B cell
+UBERON:0001992	3	0	papillary layer of dermis
+UBERON:0006242	3	0	gall bladder primordium
+UBERON:0006268	3	0	notochordal process
+FF:0000414	3	0	human Lymphatic Endothelial cells 1hr after VEGFC treatment sample
+FF:0000555	3	0	human Aortic Smooth Muscle cells 6hr after treatment with FGF2 sample
+FF:0103803	3	0	serous adenocarcinoma cell line sample
+FF:0000698	3	0	human mesenchymal stem cells adipose derived, 150 minutes after adipogenic induction sample
+FF:0000432	3	0	human MCF7 breast cancer cell line 100min after EGF1 treatment sample
+FF:0011101	3	0	human CD14-positive monocytes - mock treated sample
+FF:0000530	3	0	human K562 erythroblastic leukemia line 72hr after treatment with hemin sample
+UBERON:0010227	3	0	future cardiac atrium
+FF:0010093	3	0	human salivary gland - adult sample
+FF:0000187	3	0	human synovial cell sample
+FF:0000445	3	0	human MCF7 breast cancer cell line 45min after HRG treatment sample
+FF:0010064	3	0	human small intestine - fetal sample
+FF:0000543	3	0	human H9 Embryoid body cells 30 days after melanocytic induction sample
+FF:0000589	3	0	human Monocyte-derived macrophages 24h after LPS treatment sample
+FF:0000587	3	0	human Monocyte-derived macrophages 20h after LPS treatment sample
+FF:0000604	3	0	human Saos2 osteosarcoma cell line 8h after induction of calcification with ascorbate and BPG sample
+CL:1001596	3	0	salivary gland glandular cell
+FF:0000420	3	0	human Lymphatic Endothelial cells 3.5h after VEGFC treatment sample
+FF:0000413	3	0	human Lymphatic Endothelial cells 45min after VEGFC treatment sample
+FF:0000247	3	0	human endothelial cell of umbilical vein sample
+UBERON:0003281	3	0	mesentery of stomach
+FF:0000423	3	0	human Lymphatic Endothelial cells 6h after VEGFC treatment sample
+FF:0011221	3	0	human ES cells differentiated towards cardiomyocyte- day2 sample
+FF:0000439	3	0	human MCF7 breast cancer cell line 6h after EGF1 treatment sample
+FF:0000040	3	0	human ciliary epithelial cell sample
+FF:0000635	3	0	Candida treatment sample
+DOID:2021	3	1	placenta cancer
+CL:0000067	3	0	ciliated epithelial cell
+FF:0000084	3	0	human keratocyte sample
+FF:0000368	3	1	14 hr sample
+UBERON:0007685	3	0	region of nephron tubule
+UBERON:0002103	3	0	hindlimb
+UBERON:0006293	3	0	spleen primordium
+UBERON:0004782	3	0	gastrointestinal system serosa
+FF:0000553	3	0	human Aortic Smooth Muscle cells 4hr after treatment with FGF2 sample
+UBERON:0001915	3	0	endothelium of capillary
+CL:0002567	3	0	light melanocyte
+CL:0002575	3	0	central nervous system pericyte
+FF:0000066	3	0	human fibroblast of mammary gland sample
+UBERON:0001133	3	0	cardiac muscle tissue
+CL:0000008	3	0	migratory cranial neural crest cell
+FF:0000531	3	0	human K562 erythroblastic leukemia line 96hr after treatment with hemin sample
+FF:0011104	3	0	human CD14-positive monocytes - treated with Candida sample
+FF:0000444	3	0	human MCF7 breast cancer cell line 30min after HRG treatment sample
+CL:0002308	3	0	epithelial cell of skin gland
+CL:0002603	3	0	astrocyte of the cerebellum
+FF:0100003	3	0	intestinal cell line sample
+FF:0000447	3	0	human MCF7 breast cancer cell line 80min  after HRG treatment sample
+FF:0000249	3	0	human eosinophil- heparinase treated sample
+FF:0000582	3	0	human Monocyte-derived macrophages 10h after LPS treatment sample
+CL_0002321	3	0	embryonic cell
+FF:0000630	3	0	beta-glucan treatment sample
+FF:0000578	3	0	human Monocyte-derived macrophages 5h after LPS treatment sample
+UBERON:0007280	3	0	presumptive endocardium
+FF:0010161	3	0	human globus pallidus - adult donor sample
+FF:0000085	3	0	human lens epithelial cell sample
+FF:0000707	3	0	human mesenchymal stem cells adipose derived, untreated control sample
+FF:0000576	3	0	human Monocyte-derived macrophages 3.5h after LPS treatment sample
+FF:0000248	3	0	human endothelial progenitor cell sample
+FF:0000691	3	0	human mesenchymal stem cells adipose derived, 15 minutes after adipogenic induction sample
+FF:0011105	3	0	human CD14-positive monocytes - treated with Cryptococcus sample
+FF:0000195	3	0	human astrocyte of the cerebellum sample
+FF:0000136	3	0	human placental epithelial cell sample
+UBERON:0002296	3	0	dorsal mesentery
+FF:0011229	3	0	human ES cells differentiated towards cardiomyocyte- day10 sample
+FF:0000588	3	0	human Monocyte-derived macrophages 22h after LPS treatment sample
+FF:0000411	3	0	human Lymphatic Endothelial cells 15min after VEGFC treatment sample
+CL:0002363	3	0	keratocyte
+UBERON:0004809	3	0	salivary gland epithelium
+CL:0000307	3	0	tracheal epithelial cell
+FF:0000394	3	1	24 days sample
+CL:0002622	3	0	prostate stromal cell
+FF:0000699	3	0	human mesenchymal stem cells adipose derived, 180 minutes after adipogenic induction sample
+FF:0000595	3	0	human Saos2 osteosarcoma cell line 30min after induction of calcification with ascorbate and BPG sample
+FF:0000526	3	0	human K562 erythroblastic leukemia line 6hr after treatment with hemin sample
+FF:0000448	3	0	human MCF7 breast cancer cell line 100min after HRG treatment sample
+FF:0000427	3	0	human MCF7 breast cancer cell line 15min after EGF1 treatment sample
+FF:0000392	3	1	18 days sample
+FF:0103212	3	0	T-lymphoma cell line sample
+UBERON:0007771	3	0	epidermis gland
+FF:0011102	3	0	human CD14-positive monocytes - treated with B-glucan sample
+UBERON:0000920	3	0	egg chorion
+CL:0010021	3	0	cardiac myoblast
+CL:0002231	3	0	epithelial cell of prostate
+UBERON:0005396	3	0	carotid artery segment
+FF:0000696	3	0	human mesenchymal stem cells adipose derived, 100 minutes after adipogenic induction sample
+FF:0000702	3	0	human mesenchymal stem cells adipose derived, 2 days after adipogenic induction sample
+FF:0000355	3	1	180 minutes sample
+FF:0000584	3	0	human Monocyte-derived macrophages 14h after LPS treatment sample
+FF:0010160	3	0	human pineal gland - adult sample
+FF:0000549	3	0	human Aortic Smooth Muscle cells 45min after treatment with FGF2 sample
+FF:0000416	3	0	human Lymphatic Endothelial cells 100min after VEGFC treatment sample
+FF:0000649	3	1	10 days sample
+UBERON:0004134	3	0	proximal tubule
+FF:0000695	3	0	human mesenchymal stem cells adipose derived, 80 minutes after adipogenic induction sample
+FF:0000371	3	1	20 hr sample
+FF:0000562	3	0	human Aortic Smooth Muscle cells 3hr after treatment with IL1b sample
+FF:0010162	3	0	human pituitary gland - adult sample
+FF:0000024	3	0	human CD14-positive monocyte sample
+DOID:3068	3	1	glioblastoma multiforme
+CL:0000513	3	0	cardiac muscle myoblast
+FF:0000449	3	0	human MCF7 breast cancer cell line 2h after HRG treatment sample
+FF:0000639	3	0	Streptococcus strain JRS4 treatment sample
+CL:1000398	3	0	endothelial cell of hepatic sinusoid
+UBERON:0002242	3	0	nucleus pulposus
+FF:0000142	3	0	human subcutaneous preadipocyte sample
+FF:0000369	3	1	16 hr sample
+CL:0002536	3	0	amniotic epithelial cell
+FF:0000515	3	0	human K562 erythroblastic leukemia line 15min after treatment with hemin sample
+FF:0000528	3	0	human K562 erythroblastic leukemia line 24hr after treatment with hemin sample
+FF:0000518	3	0	human K562 erythroblastic leukemia line 1hr after treatment with hemin sample
+FF:0000554	3	0	human Aortic Smooth Muscle cells 5hr after treatment with FGF2 sample
+CL:0002178	3	0	epithelial cell of stomach
+FF:0000547	3	0	human Aortic Smooth Muscle cells 15min after treatment with FGF2 sample
+UBERON:0005602	3	0	dorsal mesogastrium
+FF:0011443	3	0	CD14-positive monocytes - treated with IFN + N-hexane sample
+FF:0000410	3	0	human Lymphatic Endothelial cells 0min after VEGFC treatment sample
+FF:0000441	3	0	human MCF7 breast cancer cell line 8h after EGF1 treatment sample
+UBERON:0001821	3	0	sebaceous gland
+DOID:4556	3	1	lung large cell carcinoma
+UBERON:0005420	3	0	pelvic appendage bud
+UBERON:0002190	3	0	subcutaneous adipose tissue
+CL:0000239	3	0	brush border epithelial cell
+FF:0000144	3	0	human promyelocyte/myelocyte sample
+UBERON:0000154	3	0	posterior region of body
+FF:0011133	3	0	human Hep-2 cells treated with Streptococci strain 5448 sample
+FF:0000069	3	0	human fibroblast of villous mesenchyme sample
+CL:0002589	3	0	smooth muscle cell of the brachiocephalic vasculature
+FF:0101575	3	0	choriocarcinoma cell line sample
+FF:0000551	3	0	human Aortic Smooth Muscle cells 2hr after treatment with FGF2 sample
+FF:0000436	3	0	human MCF7 breast cancer cell line 3.5h after EGF1 treatment sample
+CL:0000842	3	0	mononuclear cell
+FF:0000434	3	0	human MCF7 breast cancer cell line 2.5h after EGF1 treatment sample
+FF:0000065	3	0	human fibroblast of lymphatic vessel sample
+CL:0000708	3	0	leptomeningeal cell
+FF:0011109	3	0	human CD14-positive monocytes - treated with Salmonella sample
+UBERON:0003909	3	0	sinusoid
+FF:0000517	3	0	human K562 erythroblastic leukemia line 45min after treatment with hemin sample
+CL:0000515	3	0	skeletal muscle myoblast
+FF:0011226	3	0	human ES cells differentiated towards cardiomyocyte- day7 sample
+FF:0000118	3	0	human cardiac myocyte sample
+FF:0000123	3	0	human nucleus pulposus cell of intervertebral disc sample
+FF:0000155	3	0	human renal proximal tubular epithelial cell sample
+FF:0010083	3	0	human cerebellum - adult sample
+FF:0000430	3	0	human MCF7 breast cancer cell line 1hr after EGF1 treatment sample
+CL:0002554	3	0	fibroblast of lymphatic vessel
+FF:0000568	3	0	human Monocyte-derived macrophages 30min after LPS treatment sample
+FF:0000634	3	0	Cryptococcus treatment sample
+UBERON:0004903	3	0	bronchoalveolar duct junction
+UBERON:0015796	3	0	liver blood vessel
+FF:0000060	3	0	human fibroblast of choroid plexus sample
+FF:0000574	3	0	human Monocyte-derived macrophages 2.5h after LPS treatment sample
+FF:0011220	3	0	human ES cells differentiated towards cardiomyocyte- day1 sample
+FF:0000421	3	0	human Lymphatic Endothelial cells 4h after VEGFC treatment sample
+FF:0000603	3	0	human Saos2 osteosarcoma cell line 4h after induction of calcification with ascorbate and BPG sample
+FF:0000532	3	0	human H9 Embryoid body cells 0 days after melanocytic induction sample
+FF:0000438	3	0	human MCF7 breast cancer cell line 5h after EGF1 treatment sample
+UBERON:0007204	3	0	brachiocephalic vasculature
+CL:0002591	3	0	smooth muscle cell of the pulmonary artery
+FF:0000071	3	0	human hair follicle dermal papilla cell sample
+FF:0000366	3	1	10 hr sample
+FF:0000597	3	0	human Saos2 osteosarcoma cell line 60min after induction of calcification with ascorbate and BPG sample
+FF:0000450	3	0	human MCF7 breast cancer cell line 2.5h after HRG treatment sample
+CL:0000825	3	0	pro-NK cell
+FF:0000064	3	0	human fibroblast of lung sample
+FF:0000010	3	0	human amniotic membrane cell- Amnion sample
+FF:0000133	3	0	human pericyte sample
+FF:0000171	3	0	human smooth muscle cell of the carotid artery sample
+FF:0000633	3	0	Salmonella treatment sample
+CL:0002590	3	0	smooth muscle cell of the brain vasculature
+FF:0000254	3	0	human gingival epithelial cell sample
+FF:0000519	3	0	human K562 erythroblastic leukemia line 1hr 20min after treatment with hemin sample
+FF:0000188	3	0	human trabecular meshwork cell sample
+FF:0000399	3	1	41 days sample
+FF:0000601	3	0	human Saos2 osteosarcoma cell line 2.5h after induction of calcification with ascorbate and BPG sample
+FF:0000561	3	0	human Aortic Smooth Muscle cells 2hr after treatment with IL1b sample
+FF:0000556	3	0	human Aortic Smooth Muscle cells 0min after treatment with IL1b sample
+UBERON:0001621	3	0	coronary artery
+FF:0000143	3	0	human visceral preadipocyte sample
+CL:0000898	3	0	naive T cell
+FF:0000089	3	0	human dark melanocyte sample
+FF:0000140	3	0	human omentum preadipocyte sample
+FF:0000391	3	1	15 days sample
+FF:0000566	3	0	human Monocyte-derived macrophages 0min after LPS treatment sample
+FF:0000703	3	0	human mesenchymal stem cells adipose derived, 4 days after adipogenic induction sample
+UBERON:0000412	3	0	dermal papilla
+FF:0000609	3	0	human Saos2 osteosarcoma cell line 21d after induction of calcification with ascorbate and BPG sample
+FF:0000565	3	0	human Aortic Smooth Muscle cells 6hr after treatment with IL1b sample
+UBERON:0002328	3	0	notochord
+CL:0002600	3	0	smooth muscle cell of trachea
+FF:0100977	3	0	ovary cell line sample
+FF:0011228	3	0	human ES cells differentiated towards cardiomyocyte- day9 sample
+FF:0000572	3	0	human Monocyte-derived macrophages 100min after LPS treatment sample
+UBERON:0003497	3	0	abdomen blood vessel
+UBERON:0006877	3	0	vasculature of liver
+UBERON:0006058	3	0	multi-limb segment region
+FF:0000164	3	0	human skeletal muscle myoblast sample
+CL:0002555	3	0	fibroblast of mammary gland
+CL:0002549	3	0	fibroblast of choroid plexus
+CL:0000836	3	0	promyelocyte
+CL:0002596	3	0	smooth muscle cell of the carotid artery
+CL:0002367	3	0	trabecular meshwork cell
+FF:0000559	3	0	human Aortic Smooth Muscle cells 45min after treatment with IL1b sample
+CL:0002592	3	0	smooth muscle cell of the coronary artery
+UBERON:0001255	3	0	urinary bladder
+UBERON:0000946	3	0	cardial valve
+FF:0000043	3	0	human corneal epithelial cell sample
+FF:0000184	3	0	human smooth muscle cell of trachea sample
+CL:0002593	3	0	smooth muscle cell of the internal thoracic artery
+FF:0000580	3	0	human Monocyte-derived macrophages 7h after LPS treatment sample
+UBERON:0002106	3	0	spleen
+UBERON:0004854	3	0	gastrointestinal system mesentery
+UBERON:0002757	3	0	regional part of epithalamus
+DOID:4159	2	1	skin cancer
+DOID:707	2	1	B-cell lymphocytic neoplasm
+UBERON:0012139	2	0	segment of autopod
+CL:0000816	2	0	immature B cell
+CL:0002601	2	0	uterine smooth muscle cell
+FF:0000161	2	0	human sertoli cell sample
+UBERON:0010743	2	0	meningeal cluster
+CL:0000954	2	0	small pre-B-II cell
+FF:0000182	2	0	human esophageal smooth muscle cell sample
+UBERON:0005406	2	0	perirenal fat
+UBERON:0001262	2	0	wall of intestine
+DOID:5672	2	1	large intestine cancer
+CL:0002598	2	0	bronchial smooth muscle cell
+UBERON:0003589	2	0	hindlimb connective tissue
+UBERON:0005932	2	0	bulb of hair follicle
+UBERON:0004089	2	0	midface
+UBERON:0003890	2	0	Mullerian duct
+FF:0104883	2	0	cystadenocarcinoma cell line sample
+UBERON:0007689	2	0	thyroid diverticulum
+FF:0102411	2	0	giant cell carcinoma cell line sample
+CL:0000807	2	0	DN3 thymocyte
+FF:0101914	2	0	colorectal adenocarcinoma cell line sample
+FF:0102267	2	0	rhabdomyosarcoma cell line sample
+FF:0101359	2	0	medulloblastoma cell line sample
+UBERON:0003889	2	0	fallopian tube
+FF:0010048	2	0	human smooth muscle - adult sample
+FF:0000156	2	0	human adipocyte of breast sample
+FF:0000670	2	0	human Fibroblast - skin spinal muscular atrophy, nuclear fraction sample
+FF:0200022	2	0	gamma delta positive T cells sample
+CL:0000805	2	0	immature single positive thymocyte
+CL:0000216	2	0	Sertoli cell
+UBERON:0007645	2	0	future meninx
+DOID:10283	2	1	prostate cancer
+UBERON:0005942	2	0	hair outer root sheath
+FF:0010203	2	0	human tongue - adult sample
+UBERON:0001045	2	0	midgut
+UBERON:0011820	2	0	atrioventricular region
+DOID:3193	2	1	peripheral nerve sheath neoplasm
+CL:0002617	2	0	adipocyte of breast
+UBERON:0005908	2	0	conjunctival sac
+FF:0101033	2	0	prostate cancer cell line sample
+CL:0000809	2	0	double-positive, alpha-beta thymocyte
+FF:0102504	2	0	T-lymphoblastic leukemia cell line sample
+CL:0000549	2	0	basophilic erythroblast
+FF:0102787	2	0	clear cell adenocarcinoma cell sample
+UBERON:0011159	2	0	primary subdivision of cranial skeletal system
+CL:0002425	2	0	early T lineage precursor
+CL:1001319	2	0	bladder cell
+UBERON:0005800	2	0	segment of aorta
+UBERON:0005295	2	0	sex cord
+DOID:9256	2	1	colorectal cancer
+UBERON:0003569	2	0	leg connective tissue
+FF:0011169	2	0	human reticulocyte sample
+UBERON:0002355	2	0	pelvis
+CL:0002599	2	0	smooth muscle cell of the esophagus
+DOID:1907	2	1	malignant fibroxanthoma
+FF:0103744	2	0	liposarcoma cell line sample
+UBERON:0003587	2	0	limb connective tissue
+UBERON:0005154	2	0	epithelial cord
+UBERON:0000121	2	0	perineurium
+FF:0103766	2	0	giant cell tumor cell line sample
+CL:0000186	2	0	myofibroblast cell
+FF:0101913	2	0	colonic adenocarcinoma cell line sample
+UBERON:0004813	2	0	seminiferous tubule epithelium
+CL:0000785	2	0	mature B cell
+UBERON:0004715	2	0	annulus fibrosus disci intervertebralis
+FF:0000075	2	0	human outer root sheath cell sample
+UBERON:0006955	2	0	uterine epithelium
+UBERON:0006858	2	0	adrenal/interrenal gland
+FF:0103910	2	0	bile duct cancer cell line sample
+FF:0101616	2	0	colorectal cancer cell line sample
+FF:0000673	2	0	human Small Airway Epithelial Cells, nuclear fraction sample
+CL:0000893	2	0	thymocyte
+FF:0100849	2	0	melanoma cell line sample
+UBERON:0001136	2	0	mesothelium
+UBERON:0001811	2	0	conjunctiva
+UBERON:0001515	2	0	thoracic aorta
+FF:0010074	2	0	human skin - adult sample
+DOID:3382	2	1	liposarcoma
+UBERON:0000122	2	0	neuron projection bundle
+FF:0010019	2	0	human lung - adult sample
+CL:0002550	2	0	fibroblast of the conjuctiva
+CL:0000955	2	0	pre-B-II cell
+UBERON:0006444	2	0	annulus fibrosus
+CL:0000818	2	0	transitional stage B cell
+FF:0103209	2	0	anaplastic thyroid cancer cell line sample
+FF:0000027	2	0	human CD133-positive hematopoeitic stem cell sample
+UBERON:0005891	2	0	coelomic epithelium
+UBERON:0005297	2	0	testis sex cord
+FF:0000276	2	0	human amniotic membrane cell- fetal sample
+DOID:2914	2	1	immune system disease
+DOID:1287	2	1	cardiovascular system disease
+DOID:10155	2	1	intestinal cancer
+FF:0011502	2	0	human ES cells differentiated towards cardiomyocyte- day12 sample
+DOID:3939	2	1	lipomatous cancer
+UBERON:0008846	2	0	skeletal ligament
+DOID:0060122	2	1	integumentary system cancer
+UBERON:0002470	2	0	autopod region
+CL:0000242	2	0	Merkel cell
+CL:0000511	2	0	androgen binding protein secreting cell
+DOID:962	2	1	neurofibroma
+FF:0101574	2	0	chondrosarcoma cell line sample
+UBERON:0011997	2	0	coelom
+FF:0000012	2	0	human alveolar epithelial cell sample
+FF:0100007	2	0	HEK-293 cell sample
+FF:0100583	2	0	bone marrow cancer cell sample
+FF:0102380	2	0	gastric adenocarcinoma cell line sample
+CL:1000600	2	0	lower urinary tract cell
+UBERON:0009617	2	0	head paraxial mesoderm
+CL:0002561	2	0	outer root sheath cell
+DOID:3371	2	1	chondrosarcoma
+UBERON:0001343	2	0	seminiferous tubule of testis
+DOID:4043	2	1	skeletal muscle cancer
+FF:0010151	2	0	human amygdala - adult donor sample
+CL:0000792	2	0	CD4-positive, CD25-positive, alpha-beta regulatory T cell
+DOID:3307	2	1	teratoma
+DOID:4468	2	1	clear cell adenocarcinoma
+CL:0002535	2	0	epithelial cell of cervix
+UBERON:0003091	2	0	thyroid primordium
+FF:0101019	2	0	prostate gland cell line sample
+EFO:0002090	2	1	technical replicate
+DOID:5517	2	1	stomach carcinoma
+DOID:3717	2	1	gastric adenocarcinoma
+DOID:3493	2	1	signet ring cell adenocarcinoma
+FF:0000660	2	0	human Fibroblast - skin normal, cytoplasmic fraction sample
+CL:0001016	2	0	immature CD1a-positive Langerhans cell
+FF:0102733	2	0	embryonic kidney cell line sample
+CL:0002625	2	0	seminiferous tubule epithelial cell
+DOID:8584	2	1	Burkitt's lymphoma
+FF:0103073	2	0	medullary thyroid carcinoma cell line sample
+FF:0010100	2	0	human uterus - adult sample
+FF:0000061	2	0	human fibroblast of conjuctivia sample
+UBERON:0000464	2	0	anatomical space
+UBERON:0006866	2	0	terminal part of digestive tract
+CL:0000552	2	0	orthochromatic erythroblast
+UBERON:0002025	2	0	stratum basale of epidermis
+FF:0000668	2	0	human Fibroblast - skin normal, nuclear fraction sample
+CL:0000808	2	0	DN4 thymocyte
+UBERON:0005294	2	0	genital ridge
+UBERON:0000211	2	0	ligament
+CL:0002545	2	0	thoracic aorta endothelial cell
+UBERON:0004910	2	0	epithelium of male gonad
+UBERON:0000466	2	0	immaterial anatomical entity
+FF:0000262	2	0	mast cell- stimulated sample
+DOID:4236	2	1	carcinosarcoma
+UBERON:0002133	2	0	atrioventricular valve
+FF:0010071	2	0	human temporal lobe - fetal sample
+DOID:4960	2	1	bone marrow cancer
+CL:0000550	2	0	polychromatophilic erythroblast
+FF:0000667	2	0	human Fibroblast - skin dystrophia myotonica, nuclear fraction sample
+UBERON:0005946	2	0	outflow tract of atrium
+FF:0104785	2	0	Ewing's sarcoma family tumor cell line sample
+UBERON:0001829	2	0	major salivary gland
+FF:0010164	2	0	human caudate nucleus - adult donor sample
+DOID:4905	2	1	pancreatic carcinoma
+CL:0001024	2	0	CD34-positive, CD38-negative hematopoietic stem cell
+UBERON:0001995	2	0	fibrocartilage
+DOID:3498	2	1	pancreatic ductal adenocarcinoma
+DOID:74	2	1	hematopoietic system disease
+FF:0011135	2	0	human immature langerhans cells sample
+UBERON:0004117	2	0	pharyngeal pouch
+CL:0001014	2	0	CD1a-positive Langerhans cell
+CL:1000415	2	0	epithelial cell of gall bladder
+UBERON:0005906	2	0	serous sac
+DOID:706	2	1	mature B-cell neoplasm
+FF:0011128	2	0	human CD4-positiveCD25-positiveCD45RA- naive regulatory T cells sample
+CL:0002489	2	0	double negative thymocyte
+UBERON:0002471	2	0	zeugopod
+FF:0000134	2	0	human perineural cell sample
+UBERON:0000341	2	0	throat
+FF:0000666	2	0	human Fibroblast - Aortic Adventitial, nuclear fraction sample
+FF:0000179	2	0	human bronchial smooth muscle cell sample
+FF:0100016	2	0	A-172 cell sample
+UBERON:0000094	2	0	membrane organ
+UBERON:0003823	2	0	hindlimb zeugopod
+UBERON:0010141	2	0	primitive sex cord of indifferent gonad
+UBERON:0001665	2	0	triceps surae
+UBERON:0004801	2	0	cervix epithelium
+UBERON:0007123	2	0	pharyngeal pouch 2
+CL:0000798	2	0	gamma-delta T cell
+UBERON:0005933	2	0	hair root sheath
+FF:0000665	2	0	human Small Airway Epithelial Cells, cytoplasmic fraction sample
+FF:0010079	2	0	human left atrium - adult sample
+DOID:4929	2	1	tubular adenocarcinoma
+FF:0000120	2	0	human neural stem cell sample
+DOID:2152	2	1	ovary epithelial cancer
+UBERON:0002046	2	0	thyroid gland
+FF:0101882	2	0	ovary adenocarcinoma cell line sample
+UBERON:0002079	2	0	left cardiac atrium
+DOID:200	2	1	giant cell tumor
+UBERON:0002360	2	0	meninx
+DOID:1909	2	1	melanoma
+CL:0002563	2	0	intestinal epithelial cell
+CL:0002602	2	0	annulus pulposus cell
+DOID:4231	2	1	histiocytoma
+FF:0000591	2	0	human Monocyte-derived macrophages 48h after LPS treatment sample
+UBERON:0004808	2	0	gastrointestinal system epithelium
+FF:0104078	2	0	non-small cell lung adenocarcinoma cell line sample
+UBERON:0010130	2	0	autopod plate
+FF:0100889	2	0	Burkitt lymphoma cell line sample
+CL:0000159	2	0	seromucus secreting cell
+DOID:154	2	1	mixed cell type cancer
+UBERON:0001242	2	0	intestinal mucosa
+FF:0000051	2	0	human thoracic endothelial cell sample
+FF:0101911	2	0	lung adenocarcinoma cell line sample
+CL:0000894	2	0	DN1 thymic pro-T cell
+FF:0000640	2	0	human Fibroblast - Aortic Adventitial, cytoplasmic fraction sample
+UBERON:0000328	2	0	gut wall
+CL:0000558	2	0	reticulocyte
+CL:0000815	2	0	regulatory T cell
+DOID:3451	2	1	skin carcinoma
+UBERON:0002369	2	0	adrenal gland
+FF:0000185	2	0	human uterine smooth muscle cell sample
+FF:0010063	2	0	human duodenum - fetal sample
+FF:0000245	2	0	human chondrocyte re-differentiated sample
+UBERON:0004804	2	0	oviduct epithelium
+UBERON:0011158	2	0	primary subdivision of skull
+DOID:6193	2	1	epithelioid sarcoma
+CL:0002576	2	0	perineural cell
+FF:0000041	2	0	common myeloid progenitor sample
+UBERON:0004786	2	0	gastrointestinal system mucosa
+DOID:3247	2	1	rhabdomyosarcoma
+UBERON:0001277	2	0	intestinal epithelium
+CL:0002677	2	0	naive regulatory T cell
+FF:0100383	2	0	renal cell carcinoma cell line sample
+FF:0000192	2	0	human anulus pulposus cell sample
+UBERON:0001052	2	0	rectum
+DOID:4074	2	1	pancreas adenocarcinoma
+CL:0000806	2	0	DN2 thymocyte
+UBERON:0011597	1	0	bone of upper jaw
+FF:0000663	1	0	human Preadipocyte - breast, cytoplasmic fraction sample
+DOID:5662	1	1	pleomorphic carcinoma
+UBERON:0001799	1	0	vitreous chamber of eyeball
+UBERON:0005056	1	0	external female genitalia
+FF:0010036	1	0	human occipital pole - adult sample
+FF:0104201	1	0	Ewing's sarcoma cell line sample
+CL:0002616	1	0	perirenal adipocyte cell
+UBERON:0001154	1	0	vermiform appendix
+FF:0000083	1	0	human oral mucosa keratinocyte sample
+FF:0011289	1	0	epididymis- adult sample
+DOID:5861	1	1	myxoid chondrosarcoma
+FF:0100834	1	0	Detroit 562 cell sample
+DOID:2513	1	1	basal cell carcinoma
+UBERON:0011095	1	0	vertebra pre-cartilage condensation
+CL:0002336	1	0	buccal mucosa cell
+FF:0010054	1	0	human eye - fetal sample
+CL:0002351	1	0	progenitor cell of endocrine pancreas
+UBERON:0008198	1	0	nail plate
+FF:0010057	1	0	human umbilical cord - fetal sample
+DOID:2998	1	1	testicular cancer
+UBERON:0010258	1	0	mesenchyme from rhombencephalic neural crest
+UBERON:0006284	1	0	early prosencephalic vesicle
+DOID:3112	1	1	papillary adenocarcinoma
+UBERON:0006256	1	0	knee joint primordium
+FF:0102586	1	0	G-401 cell sample
+CL:0002436	1	0	mature CD4 single-positive thymocyte
+UBERON:0004645	1	0	urinary bladder urothelium
+UBERON:0001000	1	0	vas deferens
+CL:0000501	1	0	granulosa cell
+UBERON:0010913	1	0	vertebral element
+UBERON:0015005	1	0	vertebra endochondral element
+FF:0010018	1	0	human liver - adult sample
+DOID:3277	1	1	thymus cancer
+DOID:1040	1	1	chronic lymphocytic leukemia
+UBERON:0000101	1	0	lobe of lung
+FF:0000664	1	0	Smooth Muscle Cells - Aortic, (cytoplasmic fraction) sample
+FF:0100197	1	0	carcinosarcoma cell sample
+FF:0103026	1	0	NCI-H82 cell sample
+DOID:178	1	1	vascular disease
+FF:0010195	1	0	human olfactory region - adult sample
+FF:0010017	1	0	human kidney - adult sample
+CL:0000319	1	0	mucus secreting cell
+UBERON:0001708	1	0	jaw skeleton
+FF:0010059	1	0	human tongue - fetal sample
+UBERON:0003457	1	0	head bone
+UBERON:0001726	1	0	papilla of tongue
+CL:0002597	1	0	smooth muscle cell of bladder
+FF:0101014	1	0	Mo-T cell sample
+UBERON:0010912	1	0	subdivision of skeleton
+UBERON:0002902	1	0	occipital pole
+UBERON:0001603	1	0	lateral rectus extra-ocular muscle
+UBERON:0013150	1	0	future brain vesicle
+UBERON:0001825	1	0	paranasal sinus
+FF:0102003	1	0	SW-1353 cell sample
+DOID:3369	1	1	peripheral primitive neuroectodermal tumor
+UBERON:0010259	1	0	1st arch mesenchyme from neural crest
+FF:0102788	1	0	mucinous adenocarcinoma cell sample
+UBERON:0002171	1	0	lower lobe of right lung
+FF:0101282	1	0	HT-1080 cell sample
+FF:0011177	1	0	human Skin - palm sample
+UBERON:0007914	1	0	head or neck bone
+UBERON:0010890	1	0	pelvic complex muscle
+FF:0011154	1	0	human eye - muscle lateral sample
+FF:0103296	1	0	bone marrow stromal cell line sample
+UBERON:0004362	1	0	pharyngeal arch 1
+UBERON:0002376	1	0	cranial muscle
+UBERON:0011156	1	0	facial skeleton
+DOID:9884	1	1	muscular dystrophy
+FF:0000211	1	0	human perirenal adipocyte cell sample
+UBERON:0004882	1	0	eponychium
+FF:0000146	1	0	human stromal cell of pancreas sample
+FF:0100919	1	0	8305C cell sample
+FF:0000020	1	0	human CD133-positive progenitor cell- bone marrow derived sample
+DOID:9119	1	1	acute myeloid leukemia
+UBERON:0005417	1	0	forelimb bud
+UBERON:0007647	1	0	ectomeninx
+FF:0102914	1	0	SK-N-MC cell sample
+FF:0102989	1	0	CHP-134 cell sample
+UBERON:0004461	1	0	musculature of head
+UBERON:0001259	1	0	mucosa of urinary bladder
+DOID:8649	1	1	tongue cancer
+UBERON:0017651	1	0	salivary gland primordium
+UBERON:0002084	1	0	heart left ventricle
+DOID:1037	1	1	lymphoblastic leukemia
+UBERON:0006312	1	0	ocular refractive media
+FF:0103109	1	0	CaSki cell sample
+FF:0010080	1	0	human breast - adult sample
+DOID:0050155	1	1	sensory system disease
+UBERON:0007779	1	0	transduate
+UBERON:0014716	1	0	interlobular duct
+UBERON:0011858	1	0	acinus of exocrine gland
+CL:0000980	1	0	plasmablast
+FF:0010196	1	0	human ductus deferens - adult sample
+UBERON:0014389	1	0	gustatory papilla of tongue
+UBERON:0011628	1	0	early premaxilla
+DOID:3149	1	1	keratoacanthoma
+FF:0101874	1	0	lens epithelial cell line sample
+FF:0101664	1	0	hepatoblastoma cell line sample
+UBERON:0001831	1	0	parotid gland
+FF:0103046	1	0	neurofibroma cell sample
+UBERON:0009494	1	0	pharyngeal arch mesenchymal region
+FF:0010052	1	0	human aorta - adult sample
+CL:0000819	1	0	B-1 B cell
+UBERON:0011094	1	0	vertebra cartilage element
+CL:0002427	1	0	resting double-positive thymocyte
+CL:0000092	1	0	osteoclast
+UBERON:0007238	1	0	1st arch maxillary component
+UBERON:0000997	1	0	mammalian vulva
+DOID:5614	1	1	eye disease
+FF:0101061	1	0	PC-3 cell sample
+UBERON:0006311	1	0	chamber of eyeball
+UBERON:0009526	1	0	maxillary process mesenchyme
+UBERON:0001235	1	0	adrenal cortex
+UBERON:0008878	1	0	palmar part of manus
+UBERON:0000471	1	0	compound organ component
+FF:0011460	1	0	Fingernail (including nail plate- eponychium and hyponychium) sample
+FF:0103288	1	0	NALM-6 cell sample
+UBERON:0001282	1	0	intralobular bile duct
+FF:0102047	1	0	Colo-320 cell sample
+FF:0101952	1	0	HPB-ALL cell sample
+UBERON:0003840	1	0	hindlimb joint
+UBERON:0001735	1	0	tonsillar ring
+FF:0000125	1	0	human oligodendrocyte precursor sample
+UBERON:0003531	1	0	forelimb skin
+FF:0010156	1	0	human medial temporal gyrus donor sample
+FF:0010188	1	0	human cerebral meninges - adult sample
+UBERON:0002316	1	0	white matter
+UBERON:0009749	1	0	limb mesenchyme
+CL:0002565	1	0	iris pigment epithelial cell
+UBERON:0003544	1	0	brain white matter
+UBERON:0001301	1	0	epididymis
+FF:0100018	1	0	A-549 cell sample
+FF:0010029	1	0	human trachea - adult sample
+UBERON:0012140	1	0	digitopodium region
+FF:0104205	1	0	RPMI-2650 cell sample
+CL:0000342	1	0	pigment cell (sensu Vertebrata)
+UBERON:0010064	1	0	open anatomical space
+FF:0010049	1	0	human pancreas - adult sample
+FF:0103568	1	0	mammary gland cell line sample
+UBERON:0009471	1	0	dorsum of tongue
+UBERON:0010046	1	0	entire pharyngeal arch associated mesenchyme
+FF:0100161	1	0	lung fibroblast cell line sample
+UBERON:0002581	1	0	postcentral gyrus
+UBERON:0001602	1	0	medial rectus extraocular muscle
+CL:0000814	1	0	mature NK T cell
+DOID:1357	1	1	maxillary sinus cancer
+FF:0010015	1	0	human esophagus - adult sample
+UBERON:0002285	1	0	telencephalic ventricle
+UBERON:0002307	1	0	choroid plexus of lateral ventricle
+UBERON:0001172	1	0	hepatic acinus
+FF:0100603	1	0	pre-B acute lymphoblastic leukemia cell line sample
+UBERON:0003860	1	0	hindlimb mesenchyme
+DOID:0070004	1	1	myeloma
+UBERON:0006875	1	0	handplate
+UBERON:0001018	1	0	axon tract
+UBERON:0003577	1	0	knee connective tissue
+UBERON:0001359	1	0	cerebrospinal fluid
+CL:0002174	1	0	follicular cell of ovary
+FF:0103071	1	0	HLEC-SRA 01/04 cell sample
+UBERON:0002372	1	0	tonsil
+UBERON:0005623	1	0	semi-lunar valve
+FF:0104079	1	0	H-650 cell sample
+UBERON:0003112	1	0	olfactory region
+DOID:1798	1	1	pancreatic endocrine carcinoma
+CL:0000911	1	0	effector T cell
+DOID:0050177	1	1	monogenic disease
+DOID:5844	1	1	myocardial infarction
+UBERON:0009204	1	0	medial nasal process mesenchyme
+UBERON:0001736	1	0	submandibular gland
+DOID:3603	1	1	mucinous cystadenocarcinoma
+UBERON:0005970	1	0	brain commissure
+DOID:3151	1	1	skin squamous cell carcinoma
+UBERON:0004529	1	0	anatomical projection
+UBERON:0005966	1	0	outflow part of left atrium
+CL:0002428	1	0	double-positive blast
+DOID:771	1	1	retinal cell cancer
+UBERON:0003714	1	0	neural tissue
+UBERON:0001153	1	0	caecum
+FF:0104965	1	0	8505C cell sample
+DOID:0050749	1	1	peripheral T-cell lymphoma
+FF:0104137	1	0	KCL-22 cell sample
+UBERON:0002513	1	0	endochondral bone
+DOID:8691	1	1	mycosis fungoides
+UBERON:0005352	1	0	spermatic cord
+UBERON:0008229	1	0	craniocervical region musculature
+UBERON:0003128	1	0	cranium
+DOID:4235	1	1	spindle cell sarcoma
+FF:0102025	1	0	HSC-3 cell sample
+FF:0010207	1	0	human heart, tricuspid valve - adult sample
+UBERON:0001171	1	0	portal lobule
+CL:0002432	1	0	CD24-positive, CD4 single-positive thymocyte
+FF:0010045	1	0	human kidney - fetal sample
+FF:0103911	1	0	HuCCT-1 cell sample
+UBERON:0011139	1	0	synovial limb joint
+UBERON:0002167	1	0	right lung
+DOID:1967	1	1	leiomyosarcoma
+DOID:3030	1	1	mucinous adenocarcinoma
+FF:0100792	1	0	urinary bladder cancer cell line sample
+UBERON:0003661	1	0	limb muscle
+DOID:6496	1	1	extraskeletal myxoid chondrosarcoma
+UBERON:0005451	1	0	segment of manus
+UBERON:0003831	1	0	respiratory system muscle
+FF:0103137	1	0	5637 cell sample
+UBERON:0002078	1	0	right cardiac atrium
+FF:0010069	1	0	human diaphragm - fetal sample
+UBERON:0001519	1	0	skin of manus
+FF:0010027	1	0	thymus - adult human sample
+FF:0000093	1	0	human vertebral mesenchymal stem cell sample
+UBERON:0010253	1	0	1st arch maxillary mesenchyme from neural crest
+FF:0011153	1	0	human eye - muscle inferior rectus sample
+DOID:687	1	1	hepatoblastoma
+DOID:0060119	1	1	pharynx cancer
+UBERON:0001705	1	0	nail
+CL:0002581	1	0	perirenal preadipocyte
+FF:0010035	1	0	human paracentral gyrus - adult sample
+UBERON:0004710	1	0	pectoral appendage
+FF:0010070	1	0	human colon - fetal sample
+UBERON:0002146	1	0	pulmonary valve
+FF:0101332	1	0	DU-145 cell sample
+FF:0010024	1	0	human small intestine - adult sample
+UBERON:0003704	1	0	intrahepatic bile duct
+UBERON:0008811	1	0	intromittent organ
+FF:0101583	1	0	T-98G cell sample
+FF:0103191	1	0	SNU-387 cell sample
+FF:0102835	1	0	NCI-H358 cell sample
+UBERON:0004068	1	0	medial nasal prominence
+DOID:2671	1	1	transitional cell carcinoma
+UBERON:0004066	1	0	frontonasal prominence
+CL:0002429	1	0	CD69-positive double-positive thymocyte
+CL:0002040	1	0	immature NK T cell stage II
+UBERON:0005868	1	0	maxillary prominence
+UBERON:0006659	1	0	cruciate ligament of knee
+UBERON:0002135	1	0	mitral valve
+FF:0102868	1	0	bladder transitional cell carcinoma cell line sample
+UBERON:0015790	1	0	autopod skin
+DOID:4549	1	1	extraosseous chondrosarcoma
+FF:0011122	1	0	human CD4-positiveCD25-CD45RA- naive conventional T cells sample
+FF:0010192	1	0	human bone marrow - adult sample
+FF:0010191	1	0	human vein - adult sample
+DOID:0060116	1	1	sensory system cancer
+FF:0103743	1	0	SW-872 cell sample
+UBERON:0004914	1	0	duodenal papilla
+FF:0100899	1	0	myeloma cell line sample
+UBERON:0004067	1	0	lateral nasal prominence
+FF:0100678	1	0	G-402 cell sample
+UBERON:0002514	1	0	intramembranous bone
+UBERON:0002336	1	0	corpus callosum
+FF:0010077	1	0	human lymph node - adult sample
+FF:0101092	1	0	KATO-III cell sample
+FF:0010073	1	0	human occipital lobe - fetal sample
+FF:0011231	1	0	human ES cells differentiated towards cardiomyocyte- day13 sample
+UBERON:0001419	1	0	skin of limb
+FF:0000095	1	0	human mesenchymal stem cell of Wharton's jelly sample
+FF:0102877	1	0	PC-14 cell sample
+FF:0101910	1	0	NCI-H441 cell sample
+FF:0010066	1	0	human skeletal muscle - fetal sample
+UBERON:0003321	1	0	mesenchyme of knee
+CL:0002039	1	0	immature NK T cell stage I
+FF:0101154	1	0	RAJI cell sample
+FF:0103533	1	0	NOR-P1 cell sample
+FF:0011155	1	0	human eye - muscle medial sample
+FF:0102992	1	0	ARH-77 cell sample
+FF:0102384	1	0	MKN-1 cell sample
+FF:0103519	1	0	LI90 cell sample
+UBERON:0012354	1	0	acropodium region
+UBERON:0001785	1	0	cranial nerve
+FF:0104086	1	0	mammary gland tumor cell line sample
+FF:0010209	1	0	human throat - adult sample
+UBERON:0002363	1	0	dura mater
+UBERON:0003323	1	0	mesenchyme of upper jaw
+UBERON:0008837	1	0	palmar/plantar part of autopod
+FF:0000178	1	0	human smooth muscle cell of bladder sample
+FF:0010081	1	0	human adrenal gland - adult sample
+UBERON:0006322	1	0	inferior rectus extraocular muscle
+FF:0010201	1	0	human seminal vesicle - adult sample
+FF:0010061	1	0	human throat - fetal sample
+UBERON:0008001	1	0	irregular bone
+FF:0010058	1	0	human trachea - fetal sample
+FF:0100661	1	0	JURKAT cell sample
+FF:0010086	1	0	human liver - fetal sample
+UBERON:0003277	1	0	skeleton of upper jaw
+DOID:0050557	1	1	congenital muscular dystrophy
+CL:0000810	1	0	CD4-positive, alpha-beta thymocyte
+UBERON:0009676	1	0	early telencephalic vesicle
+UBERON:0001389	1	0	soleus muscle
+FF:0100790	1	0	pharyngeal cancer cell line sample
+FF:0011156	1	0	human eye - muscle superior sample
+CL:0000502	1	0	type D enteroendocrine cell
+UBERON:0007195	1	0	stroma of bone marrow
+UBERON:0001744	1	0	lymphoid tissue
+UBERON:0008801	1	0	parotid gland primordium
+UBERON:0008785	1	0	upper limb segment
+DOID:870	1	1	neuropathy
+DOID:0050739	1	1	autosomal genetic disease
+FF:0010204	1	0	human vagina - adult sample
+UBERON:0000941	1	0	cranial nerve II
+UBERON:0001797	1	0	vitreous humor
+UBERON:0004904	1	0	nerve connecting eye with brain
+UBERON:0007702	1	0	tract of brain
+DOID:3393	1	1	coronary artery disease
+UBERON:0002241	1	0	chondrocranium
+FF:0103681	1	0	hairy cell leukemia cell line sample
+CL:0002572	1	0	vertebral mesenchymal stem cell
+UBERON:0001383	1	0	muscle of leg
+DOID:0050560	1	1	Walker-Warburg syndrome
+DOID:0050427	1	1	xeroderma pigmentosum
+UBERON:0000029	1	0	lymph node
+DOID:9597	1	1	Krukenberg carcinoma
+UBERON:0002082	1	0	cardiac ventricle
+UBERON:0001764	1	0	maxillary sinus
+UBERON:0003921	1	0	pancreas primordium
+UBERON:0001961	1	0	mucosa-associated lymphoid tissue
+FF:0010189	1	0	human appendix - adult sample
+FF:0000022	1	0	human CD133-positive stem cell - cord blood derived sample
+DOID:0050743	1	1	mature T-cell and NK-cell neoplasm
+DOID:4645	1	1	retinal cancer
+CL:0002574	1	0	stromal cell of pancreas
+CL:0002433	1	0	CD69-positive, CD4-positive single-positive thymocyte
+FF:0101908	1	0	MDA-MB-453 cell sample
+UBERON:0006323	1	0	superior rectus extraocular muscle
+UBERON:0001021	1	0	nerve
+FF:0102912	1	0	neuroepithelioma cell line sample
+UBERON:0003902	1	0	retinal neural layer
+UBERON:0005208	1	0	right atrium valve
+DOID:225	1	1	syndrome
+UBERON:0004756	1	0	dermal skeletal element
+UBERON:0003462	1	0	facial bone
+FF:0104398	1	0	meningioma cell line sample
+FF:0103008	1	0	NCI-H226 cell sample
+UBERON:0002464	1	0	nerve trunk
+FF:0000141	1	0	human perirenal preadipocyte sample
+CL:0000786	1	0	plasma cell
+FF:0101591	1	0	PA-1 cell sample
+UBERON:0010042	1	0	1st arch mesenchyme
+DOID:3963	1	1	thyroid carcinoma
+DOID:285	1	1	hairy cell leukemia
+FF:0000672	1	0	human Smooth Muscle Cells - Aortic, nuclear fraction sample
+UBERON:0009564	1	0	distal limb integumentary appendage
+UBERON:0001703	1	0	neurocranium
+UBERON:0001256	1	0	wall of urinary bladder
+DOID:3565	1	1	meningioma
+DOID:4305	1	1	bone giant cell tumor
+CL:0002379	1	0	meningothelial cell
+UBERON:0002473	1	0	intercerebral commissure
+UBERON:0010363	1	0	endochondral element
+UBERON:0004256	1	0	hindlimb zeugopod muscle
+FF:0000252	1	0	human fibroblast - skin walker warburg sample
+FF:0010202	1	0	human submaxillary gland - adult sample
+FF:0010043	1	0	human thymus - fetal sample
+FF:0000661	1	0	acute myeloid leukemia (FAB M5) cell line:THP-1 cytoplasmic fraction sample
+UBERON:0010084	1	0	future diaphragm
+CL:0002431	1	0	CD4-positive, CD8-intermediate double-positive thymocyte
+FF:0101225	1	0	MKN-45 cell sample
+UBERON:0012102	1	0	buccal salivary gland
+UBERON:0012314	1	0	embryonic facial prominence
+FF:0010199	1	0	human parotid gland - adult sample
+UBERON:0004480	1	0	musculature of limb
+UBERON:0013700	1	0	axial musculature
+UBERON:0000057	1	0	urethra
+UBERON:0010364	1	0	dermal skeleton
+DOID:0050619	1	1	paranasal sinus cancer
+UBERON:0002284	1	0	hyponychium
+UBERON:0007270	1	0	pelvic appendage musculature
+UBERON:0009501	1	0	mesenchyme of fronto-nasal process
+UBERON:0007190	1	0	paracentral gyrus
+FF:0100898	1	0	myeloma cell sample
+UBERON:0004761	1	0	cartilaginous neurocranium
+DOID:12603	1	1	acute leukemia
+UBERON:0005620	1	0	primary palate
+FF:0102842	1	0	cholangioma cell sample
+UBERON:0005881	1	0	limb outgrowth
+UBERON:0009899	1	0	pole of cerebral hemisphere
+FF:0010200	1	0	human penis - adult sample
+FF:0100798	1	0	BeWo cell sample
+UBERON:0002544	1	0	digit
+UBERON:0010375	1	0	pancreas dorsal primordium
+CL:0000172	1	0	somatostatin secreting cell
+UBERON:0006518	1	0	right lung lobe
+FF:0010060	1	0	human thyroid - fetal sample
+FF:0011147	1	0	human achilles tendon sample
+UBERON:0004466	1	0	musculature of leg
+CL:0000174	1	0	steroid hormone secreting cell
+FF:0100819	1	0	pharyngeal cell line sample
+UBERON:0001962	1	0	gut-associated lymphoid tissue
+UBERON:0007271	1	0	appendage musculature
+FF:0010072	1	0	human parietal lobe - fetal sample
+CL:0002127	1	0	innate effector T cell
+FF:0011152	1	0	human cruciate ligament sample
+CL:0000173	1	0	pancreatic D cell
+DOID:0060073	1	1	lymphatic system cancer
+FF:0010055	1	0	human uterus - fetal sample
+UBERON:0003701	1	0	calcaneal tendon
+UBERON:0000016	1	0	endocrine pancreas
+FF:0011151	1	0	human cerebrospinal fluid sample
+FF:0010025	1	0	human spleen - adult sample
+FF:0200020	1	0	osteoclast, bone marrow-derived sample
+UBERON:0003566	1	0	head connective tissue
+UBERON:0001769	1	0	iris
+FF:0010021	1	0	human placenta - adult sample
+UBERON:0003663	1	0	hindlimb muscle
+UBERON:0010959	1	0	craniocervical muscle
+FF:0100195	1	0	CACO-2 cell sample
+UBERON:0006283	1	0	future cardiac ventricle
+DOID:8552	1	1	chronic myeloid leukemia
+CL:0002557	1	0	fibroblast of pulmonary artery
+UBERON:0009551	1	0	distal segment of digit
+UBERON:0005020	1	0	mucosa of tongue
+UBERON:0004913	1	0	hepatopancreatic ampulla
+FF:0100017	1	0	A-431 cell sample
+FF:0010028	1	0	human thyroid - adult sample
+FF:0102919	1	0	retinoblastoma cell line sample
+FF:0102920	1	0	Y-79 cell sample
+UBERON:0005340	1	0	dorsal telencephalic commissure
+UBERON:0003852	1	0	rhombencephalon neural crest
+UBERON:0005425	1	0	presumptive neural retina
+DOID:3111	1	1	cystadenocarcinoma
+DOID:114	1	1	heart disease
+FF:0103001	1	0	EBC-1 cell sample
+FF:0010078	1	0	human left ventricle - adult sample
+UBERON:0003922	1	0	pancreatic epithelial bud
+UBERON:0013776	1	0	skin of palmar/plantar part of autopod
+FF:0102595	1	0	leiomyosarcoma cell line sample
+UBERON:0001709	1	0	upper jaw region
+CL:0000895	1	0	naive thymus-derived CD4-positive, alpha-beta T cell
+CL:0000167	1	0	peptide hormone secreting cell
+UBERON:0007842	1	0	membrane bone
+CL:0000946	1	0	antibody secreting cell
+FF:0010022	1	0	human prostate - adult sample
+UBERON:0002553	1	0	anatomical cavity
+DOID:0050737	1	1	autosomal recessive disease
+DOID:913	1	1	atrophic muscular disease
+UBERON:0003113	1	0	dermatocranium
+DOID:4230	1	1	smooth muscle cancer
+FF:0010013	1	0	human cervix - adult sample
+DOID:0060061	1	1	cutaneous T cell lymphoma
+FF:0011157	1	0	human eye - vitreous humor sample
+FF:0010044	1	0	human spleen - fetal sample
+UBERON:0002506	1	0	iris epithelium
+UBERON:0002102	1	0	forelimb
+FF:0103505	1	0	T-cell chronic lymphocytic leukemia cell sample
+UBERON:0008907	1	0	dermal bone
+FF:0101524	1	0	WIL2-NS cell sample
+FF:0101584	1	0	G-361 cell sample
+UBERON:0013241	1	0	embryonic urethral groove
+UBERON:0010045	1	0	1st arch maxillary mesenchyme
+FF:0101670	1	0	HuH-6 cell sample
+UBERON:0002134	1	0	tricuspid valve
+DOID:4430	1	1	somatostatinoma
+CL:0002170	1	0	keratinized cell of the oral mucosa
+FF:0101455	1	0	thymic carcinoma cell sample
+FF:0010056	1	0	human spinal cord - fetal sample
+FF:0010047	1	0	human tonsil - adult sample
+UBERON:0000078	1	0	mixed ectoderm/mesoderm/endoderm-derived structure
+FF:0103732	1	0	TUHR-10TKB cell sample
+FF:0010198	1	0	human gall bladder - adult sample
+FF:0010039	1	0	human insula - adult sample
+UBERON:0001485	1	0	knee joint
+FF:0010205	1	0	human heart, mitral valve - adult sample
+FF:0104973	1	0	Hodgkin lymphoma cell line sample
+FF:0103513	1	0	hepatic stellate cell line sample
+FF:0101560	1	0	testicular cancer cell line sample
+CL:0002041	1	0	immature NK T cell stage III
+UBERON:0006868	1	0	seminal fluid secreting gland
+FF:0010042	1	0	human corpus callosum - adult sample
+DOID:8675	1	1	lymphosarcoma
+UBERON:0010708	1	0	pectoral complex
+DOID:1799	1	1	islet cell tumor
+UBERON:0005965	1	0	outflow part of right atrium
+CL:0000164	1	0	enteroendocrine cell
+FF:0010011	1	0	human bladder - adult sample
+FF:0102403	1	0	OS-RC-2 cell sample
+UBERON:0001882	1	0	nucleus accumbens
+UBERON:0001798	1	0	vitreous body
+CL:0000914	1	0	immature NK T cell
+CL:0002568	1	0	mesenchymal stem cell of Wharton's jelly
+FF:0010062	1	0	human stomach - fetal sample
+UBERON:0014792	1	0	musculature of pelvic complex
+FF:0011173	1	0	human skeletal muscle - soleus muscle sample
+UBERON:0000998	1	0	seminal vesicle
+DOID:440	1	1	neuromuscular disease
+FF:0010041	1	0	human dura mater - adult sample
+UBERON:0010359	1	0	pharyngeal arch mesenchyme from neural crest
+UBERON:0002448	1	0	fungiform papilla
+UBERON:0011088	1	0	ligament of knee joint
+UBERON:0005419	1	0	pectoral appendage bud
+DOID:5679	1	1	retinal disease
+FF:0000080	1	0	human intestinal epithelial cell sample
+UBERON:0009292	1	0	embryonic nasal process
+FF:0010046	1	0	human heart - fetal sample
+FF:0102285	1	0	granulosa cell line sample
+FF:0010190	1	0	human artery - adult sample
+FF:0011181	1	0	human Urethra sample
+FF:0010020	1	0	human ovary - adult sample
+FF:0101561	1	0	DAUDI cell sample
+UBERON:0004270	1	0	lower leg connective tissue
+UBERON:0002437	1	0	cerebral hemisphere white matter
+FF:0100101	1	0	astrocytoma cell line sample
+DOID:3284	1	1	thymic carcinoma
+UBERON:0002022	1	0	insula
+UBERON:0003923	1	0	dorsal pancreatic bud
+UBERON:0000989	1	0	penis
+CL:0000313	1	0	serous secreting cell
+FF:0102207	1	0	NCI-H460 cell sample
+FF:0000081	1	0	human iris pigment epithelial cell sample
+DOID:1492	1	1	eye and adnexa disease
+UBERON:0005403	1	0	ventral striatum
+FF:0103981	1	0	SAS cell sample
+FF:0010037	1	0	human nucleus accumbens - adult sample
+CL:0002453	1	0	oligodendrocyte precursor cell
+DOID:10165	1	1	endocrine pancreas cancer
+UBERON:0001174	1	0	common bile duct
+UBERON:0002398	1	0	manus
+UBERON:0001465	1	0	knee
+DOID:2174	1	1	ocular cancer
+UBERON:0006298	1	0	submandibular gland primordium
+UBERON:0000996	1	0	vagina
+UBERON:0014795	1	0	pelvic appendage muscle
+UBERON:0013777	1	0	skin of palm of manus
+UBERON:0012069	1	0	epithelium-associated lymphoid tissue
+UBERON:0009714	1	0	intermaxillary process
+UBERON:0004482	1	0	musculature of lower limb
+FF:0000068	1	0	human fibroblast of pulmonary artery sample
+FF:0104049	1	0	adult T-cell lymphoma cell line sample
+DOID:0050828	1	1	artery disease
+CL:0002042	1	0	immature NK T cell stage IV
+FF:0104204	1	0	nasal squamous cell carcinoma cell line sample
+FF:0300110	1	1	13 days sample
+FF:0000671	1	0	human Preadipocyte - breast, nuclear fraction sample
+FF:0010030	1	0	human retina - adult sample
+UBERON:0010334	1	0	maxillary process mesenchyme from neural crest
+UBERON:0008949	1	0	lower lobe of lung
+DOID:768	1	1	retinoblastoma
+FF:0010067	1	0	human rectum - fetal sample
+UBERON:5002544	1	0	digit plus metapodial segment
+UBERON:0001020	1	0	nervous system commissure
+FF:0011166	1	0	human optic nerve sample
+UBERON:0007375	1	0	roof of mouth
+FF:0102581	1	0	MEG-01 cell sample
+DOID:2355	1	1	anemia
+FF:0100732	1	0	KU-812 cell sample
+UBERON:0011299	1	0	white matter of telencephalon
+FF:0010032	1	0	human postcentral gyrus - adult sample
+FF:0010065	1	0	human skin - fetal sample
+UBERON:0002244	1	0	premaxilla
+UBERON:0012360	1	0	bone of jaw
+UBERON:0000006	1	0	islet of Langerhans
+UBERON:0006067	1	0	musculature of hindlimb zeugopod
+FF:0101532	1	0	rectal cancer cell line sample
+CL:0002261	1	0	endothelial cell of viscerocranial mucosa
+UBERON:0003703	1	0	extrahepatic bile duct
+FF:0010206	1	0	human heart, pulmonic valve - adult sample
+FF:0011458	1	0	tongue epidermis (fungiform papillae) sample
+UBERON:0013703	1	0	integumentary projection
+FF:0100786	1	0	tongue cancer cell line sample
+UBERON:0001567	1	0	cheek
+FF:0102521	1	0	diffuse large B-cell lymphoma cell sample
+UBERON:0005876	1	0	undifferentiated genital tubercle
+FF:0104868	1	0	anaplastic large cell lymphoma cell line sample
+UBERON:0004911	1	0	epithelium of female gonad
+UBERON:0003975	1	0	internal female genitalia
+FF:0103980	1	0	tongue squamous cell carcinoma cell line sample
+UBERON:0001103	1	0	diaphragm
+FF:0103493	1	0	SUIT-2 cell sample
+FF:0010068	1	0	human lung - fetal sample
+UBERON:0002412	1	0	vertebra
+FF:0100969	1	0	osteoclastoma cell sample
+UBERON:0005705	1	0	primary palate mesenchyme
+UBERON:0003657	1	0	limb joint
+FF:0104511	1	0	serous cystadenocarcinoma cell sample

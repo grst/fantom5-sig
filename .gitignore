@@ -1,5 +1,4 @@
 ##### Custom Rules
-data
 .idea
 networks/*
 !networks/*.cys
