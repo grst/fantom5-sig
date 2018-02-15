@@ -12,6 +12,7 @@ library(readr)
 ```{r}
 data.file = file.path("../data/hg19.cage_peak_phase1and2combined_tpm_ann.osc.txt")
 data.tab = read_tsv(data.file, col_names=TRUE, comment="#")
+data.tab = data.frame(data.tab)
 rownames(data.tab) = data.tab[,1]
 exprs.mat = as.matrix(data.tab[3:nrow(data.tab),8:ncol(data.tab)]) # skip statistics and annotation
 

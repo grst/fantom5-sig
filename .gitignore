@@ -4,6 +4,7 @@ networks/*
 !networks/*.cys
 results
 results_*
+data/*.Rdata
 
 R/R_tmp
 
