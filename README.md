@@ -18,10 +18,13 @@ Unfortunately, the three sources are to some extend inconsistent and some inform
 * The python module that implements the stragety for mergin entries is here: [parse_ontoloby.py](pyfantom/parse_ontology.py)
 * The final, improved annotation is here: [column_vars.processed.csv](data/column_vars.processed.csv). 
 
+## Generating signatures
+To generate gene signatures from the samples, we developed the [pygenesig](https://github.com/grst/pygenesig) package. 
 
-## Results
-The improved annotation file is found in
-```
-data/column_vars.processed.csv
-```
+* We prepare the gene expression data and sample annotations from FANTOM5 for the use with pygenesig: [07_prepare_data_for_pygenesig.ipynb](notebooks/07_prepare_data_for_pygenesig.ipynb). 
+* We generate signatures and perform two-fold cross-validation. We exclude signatures that don't meet our sensitivity and specificity criteria: [08_signature_corssvalidation](notebooks/08_signature_crossvalidation.ipynb). 
 
+## Final signatures
+The final signatures are available as gmt file: 
+* TODO
+* TODO 
