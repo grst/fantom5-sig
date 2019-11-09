@@ -29,10 +29,11 @@ To generate gene signatures from the samples, we developed the [pygenesig](https
 Signature genes are selected using a stragegy based on gini-information gain we described in the [BioQC publication](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3661-2). 
 In brief, the method calculates Gini-index to identify genes with a high information gain, according to the following steps: 
 
-1. Aggregate samples of the same tissue or cell-type by their median gene expression, resulting in a $\text{genes} \times \text{cell-type}$ matrix. 
-2. Compute gini index on that matrix, resulting in a vector of length $\text{cell-types}$. 
-
-Similar to the approach we described earlier (2), for a certain tissue or cell-type, we included a gene into the signatures if (1) gini-index > 0.8, (2) among tissues/cell types, the expression of the gene is among the top 3, (3) the minimal absolute expression value of the gene in the tissue/cell-type > 5 TPM and (4) the gene is among the 33% highest expressed genes of the tissue/cell-type. 
+1. Aggregate samples of the same tissue or cell-type by their median gene expression, resulting in a `genes` x `cell-type` matrix `X`. 
+2. Compute gini index on that matrix, resulting in a vector `g` of length `genes`. 
+3. Compute the ranks of the gene expression `X` for each gene across all cell-types, resulting in another `genes` x `cell-types` matrix `R`.
+4. Compute the quantiles of the gene expression `X` for each gene across each sample, resulting in another `genes` x `cell-types` matrix `Q`. 
+5. For each gene `i` and cell-type `j`, include a gene into the signature, if (1) `g(i) > 0.8` and (2) `R(i, j) <= 3` and (3) `X(i,j) > 5` and (4) `Q(i, j) > 0.66`. In prose, this means that the gene needs to be (1+2) highly specific to the cell-type, (3) robustly expressed (4) among the top 33% of highest expressed genes in the respective cell-type. 
 
 
 ## Final signatures
