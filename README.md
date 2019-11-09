@@ -27,7 +27,12 @@ To generate gene signatures from the samples, we developed the [pygenesig](https
 * We generate signatures and perform two-fold cross-validation. We exclude signatures that don't meet our sensitivity and specificity criteria: [08_signature_corssvalidation](notebooks/08_signature_crossvalidation.ipynb). 
 
 Signature genes are selected using a stragegy based on gini-information gain we described in the [BioQC publication](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-017-3661-2). 
-In brief, the method calculates Gini-index to identify genes with a high information gain. We aggregated samples of the same tissue/cell-type by the median gene expression for each gene. Similar to the approach we described earlier (2), for a certain tissue or cell-type, we included a gene into the signatures if (1) gini-index > 0.8, (2) among tissues/cell types, the expression of the gene is among the top 3, (3) the minimal absolute expression value of the gene in the tissue/cell-type > 5 TPM and (4) the gene is among the 33% highest expressed genes of the tissue/cell-type. 
+In brief, the method calculates Gini-index to identify genes with a high information gain, according to the following steps: 
+
+1. Aggregate samples of the same tissue or cell-type by their median gene expression, resulting in a $\text{genes} \times \text{cell-type}$ matrix. 
+2. Compute gini index on that matrix, resulting in a vector of length $\text{cell-types}$. 
+
+Similar to the approach we described earlier (2), for a certain tissue or cell-type, we included a gene into the signatures if (1) gini-index > 0.8, (2) among tissues/cell types, the expression of the gene is among the top 3, (3) the minimal absolute expression value of the gene in the tissue/cell-type > 5 TPM and (4) the gene is among the 33% highest expressed genes of the tissue/cell-type. 
 
 
 ## Final signatures
