@@ -1,28 +1,23 @@
-# Extract cell specific gene signatures from FANTOM5 gene expression data
+# Extract tissue and cell-type signatures from FANTOM5 gene expression data
 
-## 1. Preprocessing
-In the first step, we load the whole FANTOM5 expression matrix into a R/Bioconductor ExpressionSet.
-The expression matrix is a huge, ca. 200000x1800 table. The column names,
-e.g. `tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4`
-contain the library id `CNhs14406` which is unique for each sample, an accession number `13541-145H4` and
-addition covariates (e.g. `00hr`) that are relevant for the analysis.
+## Input Data
+* We obtained gene expression data and the FANTOM5 ontology from the [FANTOM5 project, phase 2.2](http://fantom.gsc.riken.jp/5/datafiles/phase2.2/). 
+* We obtained additional sample annotation from the supplementary table S1 from the [FANTOM5 publication](https://doi.org/10.1038/nature13182)
 
-Since the examples names are not consistently annotated, we use the
-[ontology provided by FANTOM5](http://fantom.gsc.riken.jp/5/datafiles/latest/extra/Ontology/ff-phase2-140729.obo.txt)
-to extract the information. Additionally, we check, if the annotation from the ontology
-is consistent with the annotation in the sample name.
-This process is documented in [`process_headers.ipynb`](process_headers.ipynb).
+## Reconciling the sample annotation
+There are three sources for sample annotations:
+1. **The sample name.** e.g. `tpm of 293SLAM rinderpest infection, 00hr, biol_rep1.CNhs14406.13541-145H4`
+contain the library id `CNhs14406` which is unique for each sample, a sample description (`293SLAM rinderpest infection`), an accession number `13541-145H4` and
+addition covariates (e.g. `00hr`, `biol_repl`) that are relevant for the analysis.
+2. **The FANTOM5 ontology** (provided as an obo-file and linked to the accession number of each sample. 
+3. **The table S1**. 
 
-We discover in `explorer_ontology.ipynb` that the ontology also comes with some caveats, namely
-* there are inconsistencies in the annotation of the sample type (i.e. primary cell vs. cell line vs. tissue)
-* a siginificant amount of samples appears as singletons in the network,
-i.e. they are not grouped according to replicates and tissue of origin.
+Unfortunately, the three sources are to some extend inconsistent and some information available in one source is lacking in another. We, therefore, attempt to reconcile the three sources to obtain an as-accurate-as-possible sample annotation. 
 
-Based on these findings, we attempt to adress these problems in `improve_ontology.ipynb`.
+* The jupyter notebook used to reconcile the annotations can be found here: [01_process_sample_annotation.ipynb](notebooks/01_process_sample_annotation.ipynb)
+* The python module that implements the stragety for mergin entries is here: [parse_ontoloby.py](pyfantom/parse_ontology.py)
+* The final, improved annotation is here: [column_vars.processed.csv](data/column_vars.processed.csv). 
 
-### Converting to R Expression set
-We then read the matrix and the column annotation into an R Expression Object.
-This process is documented in [`load_f5.Rmd`](load_f5.Rmd).
 
 ## Results
 The improved annotation file is found in
