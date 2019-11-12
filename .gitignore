@@ -5,6 +5,7 @@ networks/*
 results
 results_*
 data/*.Rdata
+data
 
 R/R_tmp
 

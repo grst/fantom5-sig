@@ -1,0 +1,227 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.1'
+      jupytext_version: 1.2.4
+  kernelspec:
+    display_name: Python [conda env:.conda-fantom5]
+    language: python
+    name: conda-env-.conda-fantom5-py
+---
+
+```{python jupyter={'outputs_hidden': False}}
+import sys
+sys.path.append("../../pygenesig")
+
+# %load_ext autoreload
+# %autoreload 1
+# %aimport pygenesig
+# %aimport pygenesig.tools
+# %matplotlib inline
+
+import numpy as np
+import pandas as pd
+from collections import OrderedDict
+import dask.dataframe as dd
+from pygenesig.tools import collapse_matrix
+from pygenesig.file_formats import * 
+```
+
+# Preprocess FANTOM5 data
+
+In this notebook, we process the fantom5 data for the use with *pygenesig* so that we can easily create and validate signatures. 
+
+For the crossvalidation we need a
+* matrix of gene expression data
+* list of target classes (signatures) 
+
+Here, we extract the relevant information from the fantom5 expression and annotation files
+
+
+## Load data
+
+```{python jupyter={'outputs_hidden': False}}
+# !ls ../data
+```
+
+```{python jupyter={'outputs_hidden': True}}
+col_vars = pd.read_csv("../data/column_vars.processed.csv", sep=",", index_col=0)
+```
+
+```{python jupyter={'outputs_hidden': False}}
+gct = pd.read_csv("../data/hg19.cage_peak_phase1and2combined_tpm_ann.osc.txt", sep="\t", 
+                  index_col=0, comment='#')
+gct = gct.iloc[4:, ] # remove stats
+```
+
+## process data
+
+```{python jupyter={'outputs_hidden': False}}
+gene_id_map = pd.read_csv("../data/pygenesig/FANTOM5cage_TX_ELEMENTS", sep="\t")
+f5_to_geneid = dict(zip(gene_id_map.PROMOTERID, gene_id_map.GENEID))
+```
+
+```{python jupyter={'outputs_hidden': False}}
+gct = gct[gct.short_description.isin(f5_to_geneid.keys())] # gene symbols only 
+```
+
+```{python jupyter={'outputs_hidden': False}}
+geneids = gct.short_description.apply(lambda x: f5_to_geneid[x])
+fdata = gct.iloc[:,:6].assign(ora_gene_id=geneids)
+```
+
+```{python jupyter={'outputs_hidden': False}}
+exprs = gct.iloc[:,6:].as_matrix()
+```
+
+```{python jupyter={'outputs_hidden': False}}
+fdata.shape, exprs.shape, col_vars.shape
+```
+
+### aggregate by gene
+
+```{python jupyter={'outputs_hidden': True}}
+exprs_by_gene_sum = collapse_matrix(exprs, fdata.ora_gene_id.tolist(), axis=0, aggregate_fun=np.sum)
+fdata_by_gene_sum = pd.DataFrame().assign(ora_id=exprs_by_gene_sum.index)
+exprs_by_gene_sum = exprs_by_gene_sum.as_matrix()
+```
+
+## store fdata
+
+```{python jupyter={'outputs_hidden': True}}
+# !mkdir -p ../data/pygenesig/by_promotor ../data/pygenesig/by_gene_sum
+```
+
+```{python jupyter={'outputs_hidden': True}}
+fdata.to_csv("../data/pygenesig/by_promotor/fdata.csv")
+fdata_by_gene_sum.to_csv("../data/pygenesig/by_gene_sum/fdata.csv")
+```
+
+### annotate oracle ids
+
+```{python jupyter={'outputs_hidden': False}}
+# !Rscript 07_annotate_oracle_id.R
+```
+
+```{python jupyter={'outputs_hidden': True}}
+gene_symbols = pd.read_csv("../data/pygenesig/by_gene_sum/gene_symbols.csv", header=None)
+```
+
+```{python jupyter={'outputs_hidden': False}}
+exprs_by_gene_sum.shape, fdata_by_gene_sum.shape, gene_symbols.shape
+```
+
+## tissues
+Extract data for tissue samples
+
+```{python jupyter={'outputs_hidden': False}}
+pdata_t = col_vars[col_vars.sample_type == "tissue"]
+pdata_t = pdata_t.assign(tissue=pdata_t.name.apply(lambda x: x.split(",")[0].lower()))
+```
+
+```{python jupyter={'outputs_hidden': True}}
+exprs_t = exprs[:, pdata_t.index]
+exprs_by_gene_sum_t = exprs_by_gene_sum[:, pdata_t.index]
+```
+
+```{python jupyter={'outputs_hidden': False}}
+grouped = pdata_t.groupby("tissue")
+tissue_count = grouped.count().name
+tissue_count
+```
+
+```{python jupyter={'outputs_hidden': True}}
+target_t = pdata_t.tissue.as_matrix()
+```
+
+```{python jupyter={'outputs_hidden': False}}
+exprs_t.shape, exprs_by_gene_sum_t.shape, target_t.shape
+```
+
+### store results
+
+```{python jupyter={'outputs_hidden': False}}
+write_expr(exprs_t, "../data/pygenesig/by_promotor/tissue_exprs.npy")
+write_expr(exprs_by_gene_sum_t, "../data/pygenesig/by_gene_sum/tissue_exprs.npy")
+```
+
+```{python jupyter={'outputs_hidden': False}}
+np.savetxt("../data/pygenesig/tissue_target.csv", target_t, delimiter=",", fmt="%s")
+```
+
+## primary cells
+Extract data for primary cell samples. 
+
+We distinguish between *fine* and *coarse*. We take the pragmatic approach to rely on the sample name as annotation. 
+We split the sample name at the dash. The part before the dash is 'coarse' the part behind 'fine'. 
+
+For the *coarse* dataset, we discard all cell types that do not have at least 2 samples. 
+
+```{python jupyter={'outputs_hidden': True}}
+pdata_p = col_vars[col_vars.sample_type == "primary cell"]
+```
+
+```{python jupyter={'outputs_hidden': False}}
+pdata_p = pdata_p.assign(type_fine=pdata_p.name.apply(lambda x: x.split(",")[0].lower()))
+pdata_p = pdata_p.assign(type_coarse=pdata_p.type_fine.apply(lambda x: x.split("-")[0].strip().lower()))
+```
+
+```{python jupyter={'outputs_hidden': False}}
+grouped = pdata_p.groupby("type_fine")
+tissue_count = grouped.count().name
+tissue_count
+```
+
+```{python jupyter={'outputs_hidden': False}}
+grouped = pdata_p.groupby("type_coarse")
+with pd.option_context('display.max_rows', None):
+    tissue_count = grouped.count().name
+    print(tissue_count)
+```
+
+Choos only cells that have at least 2 samples (otherwise we can't do crossvalidation and are even more likely to learn batch effects) 
+
+```{python jupyter={'outputs_hidden': True}}
+multi_sample_tissues = list(tissue_count.index[tissue_count >= 2])
+pdata_p = pdata_p[pdata_p.type_coarse.isin(multi_sample_tissues)]
+```
+
+```{python jupyter={'outputs_hidden': True}}
+exprs_p = exprs[:, pdata_p.index]
+exprs_by_gene_sum_p = exprs_by_gene_sum[:, pdata_p.index]
+```
+
+```{python jupyter={'outputs_hidden': True}}
+target_p = pdata_p.type_coarse.as_matrix()
+```
+
+```{python jupyter={'outputs_hidden': False}}
+exprs_p.shape, exprs_by_gene_sum_p.shape, target_p.shape
+```
+
+### store data
+
+```{python jupyter={'outputs_hidden': True}}
+np.save("../data/pygenesig/by_promotor/primary_exprs.npy", exprs_p)
+np.save("../data/pygenesig/by_gene_sum/primary_exprs.npy", exprs_by_gene_sum_p)
+```
+
+```{python jupyter={'outputs_hidden': True}}
+np.savetxt("../data/pygenesig/primary_target_fine.csv", pdata_p.type_fine, delimiter=",", fmt="%s")
+np.savetxt("../data/pygenesig/primary_target_coarse.csv", pdata_p.type_coarse, delimiter=",", fmt="%s")
+```
+
+```{python jupyter={'outputs_hidden': False}}
+pdata_p.to_csv("../data/pygenesig/primary_col_vars.csv")
+```
+
+```{python jupyter={'outputs_hidden': True}}
+
+```
+
+```{python jupyter={'outputs_hidden': True}}
+
+```
