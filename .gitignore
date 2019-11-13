@@ -6,6 +6,7 @@ results
 results_*
 data/*.Rdata
 data
+notebooks/*.Rmd
 
 R/R_tmp
 
