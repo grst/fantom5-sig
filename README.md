@@ -43,4 +43,4 @@ For the *coarse* signatures, we grouped primary cells of the same type, but diff
 The final signatures are available as gmt file:
 * [Primary cell fine](gmt/exp.fantom5.primary_cells_HQ.roche.symbol.gmt)
 * [Primary cell coarse](gmt/exp.fantom5.primary_cell_coarse.grst.symbol.gmt)
-* [Tissues](gmt/exp.gtex.tissue.grst.symbol.gmt)
+* [Tissues](gmt/exp.fantom5.tissue.grst.symbol.gmt)
