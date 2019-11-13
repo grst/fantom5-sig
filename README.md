@@ -35,8 +35,12 @@ In brief, the method calculates Gini-index to identify genes with a high informa
 4. Compute the quantiles of the gene expression `X` for each gene across each sample, resulting in another `genes` x `cell-types` matrix `Q`.
 5. For each gene `i` and cell-type `j`, include a gene into the signature, if (1) `g(i) >= 0.7` and (2) `R(i, j) <= 3` and (3) `X(i, j) >= 1 TPM` and (4) `Q(i, j) > 0.66`. In other words, this means that the gene needs to be (1+2) highly specific to the cell-type, (3) robustly expressed (4) among the top 33% of highest expressed genes in the respective cell-type.
 
+For primary cells signatures, we differntiate between *fine* and *coarse* signatures. 
+For the *coarse* signatures, we grouped primary cells of the same type, but different tissue origin into a single signature. For instance, breast, omental, perirenal and subcutaneous adipocytes were grouped into `adipocytes`. 
+
 
 ## Final signatures
 The final signatures are available as gmt file:
-* TODO
-* TODO
+* [Primary cell fine](gmt/exp.fantom5.primary_cells_HQ.roche.symbol.gmt)
+* [Primary cell coarse)(gmt/exp.fantom5.primary_cell_coarse.grst.symbol.gmt)
+* [Tissues](gmt/exp.gtex.tissue.grst.symbol.gmt)
